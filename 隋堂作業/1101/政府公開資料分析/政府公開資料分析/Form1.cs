@@ -14,9 +14,6 @@ namespace 政府公開資料分析
 {
     public partial class form1 : Form
     {
-        //private Data data;
-        //private Data_cal all, male, female;
-
         private Panel_total panel_total;
         private Panel_U20 panel_U20;
         private Panel_20_24 panel_20_24;

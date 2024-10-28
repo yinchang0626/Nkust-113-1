@@ -208,10 +208,10 @@ namespace 政府公開資料分析
                 if (data[i] > max)
                 {
                     max = data[i];
-                    year = i + 57; // 根據索引計算年份
+                    year = i + 57;
                 }
             }
-            return (max, year); // 返回元組，包含最大值和對應的年份
+            return (max, year); 
         }
 
 
@@ -226,10 +226,10 @@ namespace 政府公開資料分析
                 if (data[i] < min)
                 {
                     min = data[i];
-                    year = i + 57; // 根據索引計算年份
+                    year = i + 57; 
                 }
             }
-            return (min, year); // 返回元組，包含最小值和對應的年份
+            return (min, year);
         }
     }
 }
