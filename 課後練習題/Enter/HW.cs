@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Numerics;
 using CsvHelper;
 using Analysis;
+using System.Runtime.CompilerServices;
 
 namespace Enter
 {
@@ -13,12 +14,42 @@ namespace Enter
             using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
             
             var records = csv.GetRecords<Entry>();
+            Dictionary<string, string> Max_year = new Dictionary<string, string>();
+            Dictionary<string, int> Max_person = new Dictionary<string, int>();
+            Dictionary<string, int> Sum_person = new Dictionary<string, int>();
+            int drugs_other = 1;
+            string item;
+
             foreach (var record in records)
             {
-                if(record.Year == "105" && record.Education == "國中")
+                if(Convert.ToInt32(record.Female) > Convert.ToInt32(record.Male))
                 {
-                    Console.WriteLine($"total: {record.Total}  item: {record.Item}  male: {record.Male}  female: {record.Female}");
+                    Console.WriteLine($"{record.Year},{record.Education},{record.Item}");
                 }
+                if(record.Education == "總計")
+                {
+                    (item, drugs_other) = (record.Item == "其他") ? record.Other(drugs_other) : (record.Item, drugs_other);
+                    
+                    if(record.Year == "105")
+                    {
+                        Max_year.Add(item, record.Year);
+                        Max_person.Add(item, Convert.ToInt32(record.Total));
+                        Sum_person.Add(item, Convert.ToInt32(record.Total));
+                    }
+                    else if(Convert.ToInt32(record.Total) > Max_person[record.Item]){
+                        Max_year[item] = record.Year;
+                        Max_person[item] = Convert.ToInt32(record.Total);
+                    }
+                    Sum_person[item] += Convert.ToInt32(record.Total);
+                }
+            }
+            Console.WriteLine("各項目最多人數的年份:");
+            foreach (var key in Max_year.Keys)
+            {
+                string year = Max_year[key];
+                int person = Max_person[key];
+                double avg = Sum_person[key] / 8;
+                Console.WriteLine($"最多為{person}人({year}年)；\t每年平均:{avg}人；  ({key})");
             }
         }
     }
