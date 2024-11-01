@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter", "Enter\Enter.csproj", "{1D12C98F-00CF-4EEA-B3D5-90E4AC10EB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-ticket", "E-ticket\E-ticket.csproj", "{19AE422D-2183-4DE6-BFCE-26DF1DDDDF7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D12C98F-00CF-4EEA-B3D5-90E4AC10EB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D12C98F-00CF-4EEA-B3D5-90E4AC10EB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D12C98F-00CF-4EEA-B3D5-90E4AC10EB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D12C98F-00CF-4EEA-B3D5-90E4AC10EB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19AE422D-2183-4DE6-BFCE-26DF1DDDDF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19AE422D-2183-4DE6-BFCE-26DF1DDDDF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19AE422D-2183-4DE6-BFCE-26DF1DDDDF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19AE422D-2183-4DE6-BFCE-26DF1DDDDF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
