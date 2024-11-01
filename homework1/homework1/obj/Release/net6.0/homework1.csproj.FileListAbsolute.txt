@@ -1,0 +1,17 @@
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\bin\Release\net6.0\homework1.exe
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\bin\Release\net6.0\homework1.deps.json
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\bin\Release\net6.0\homework1.runtimeconfig.json
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\bin\Release\net6.0\homework1.dll
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\bin\Release\net6.0\homework1.pdb
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.csproj.AssemblyReference.cache
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.AssemblyInfoInputs.cache
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.AssemblyInfo.cs
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.csproj.CoreCompileInputs.cache
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.csproj.CopyComplete
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.dll
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\refint\homework1.dll
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.pdb
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\homework1.genruntimeconfig.cache
+C:\Users\jerry\Desktop\高科\軟體工程\homework\homework1\homework1\obj\Release\net6.0\ref\homework1.dll
