@@ -2,20 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
 
+/*
+2. * *數據分析與處理：**
+   -使用 C# 撰寫程式讀取並分析該資料集。
+   - 根據數據的結構，提取出有意義的資訊，如：
+     - 數據的總量
+     - 不同類別的數據分布
+     - 最大值、最小值、平均值等統計數據
 
+3. **應用統計與展示：**
+   - 使用 C# 進行一些簡單的應用統計，例如：
+     - 類別統計（如不同地區、不同種類的數量對比）
+     - 數據趨勢分析（如隨著時間的變化趨勢）
+   - 將統計結果顯示在控制台，或使用簡單的圖形庫將結果視覺化展示（可選）。
+*/
 
 namespace ConsoleApplication5
 {
     struct Data
     {
-        public string number, date, sumload;
+        public int number, date, sumload;
 
         public string week, update;
 
-        public Data(string x, string y, string z, string i, string j) {
+        public Data(int x, int y, int z, string i, string j) {
 
             number = x;
             date = y;
@@ -29,19 +44,62 @@ namespace ConsoleApplication5
     }
     class Test
     {
+        static void Swap(int a, int b, ref List<int> s)
+        {
+            int temp = s[a];
+            s[a] = s[b];
+            s[b] = temp;
+        }
+        static void Partition(int low, int high, ref int pivotpoint,ref List<int> s)
+        {
+            int pivotpointitem = s[low];
+
+            int j = low;
+            for (int i = low + 1; i <= high; i++)
+            {
+                if (s[i] < pivotpointitem)
+                {
+                    j++;
+                    /*
+                    int temp = s[i];
+                    s[i] = s[j];
+                    s[j] = temp;
+                    */
+                    Swap(i, j, ref s);
+                }
+            }
+            pivotpoint = j;
+            /*
+            int ttemp = s[low];
+            s[low] = s[pivotpoint];
+            s[pivotpoint] = ttemp;
+            */
+            Swap(low,  pivotpoint, ref s);
+        }
+        static void Quicksort(int low, int high,ref List<int> s)
+        {
+            int pivotpoint = 0;
+            if (low < high)
+            {
+                Partition(low, high,ref pivotpoint,ref s);
+                Quicksort(low, pivotpoint - 1,ref s);
+                Quicksort(pivotpoint + 1, high,ref s);
+            }
+        }
+
         public static void Main()
         {
             try
             {
                 //path @"C:\Users\user\Desktop\202408.csv" or "C:\\Users\\user\\Desktop\\202408.csv"
-                StreamReader reader = new StreamReader(@"C:\Users\user\Desktop\202408.csv", Encoding.UTF8);
+                using StreamReader reader = new StreamReader(@"臺中捷運全系統旅運量統計202408.csv", Encoding.UTF8);
                 
                 string readstr = string.Empty;
                 List<Data> data = new List<Data>();
                 int start = 0;
                 while ((readstr = reader.ReadLine()) != null)
                 {
-                    Console.WriteLine(readstr);
+                    //Console.WriteLine(readstr);
                     string item = "";
                     Data d = new Data();
                     int order = 1;
@@ -55,16 +113,16 @@ namespace ConsoleApplication5
                                 switch (order)
                                 {
                                     case 1:
-                                        d.number = item;
+                                        d.number = Convert.ToInt32(item);
                                         break;
                                     case 2:
-                                        d.date = item;
+                                        d.date = Convert.ToInt32(item);
                                         break;
                                     case 3:
                                         d.week = item;
                                         break;
                                     case 4:
-                                        d.sumload = item;
+                                        d.sumload = Convert.ToInt32(item);
                                         break;
                                     case 5:
                                         d.update = item;
@@ -76,13 +134,28 @@ namespace ConsoleApplication5
                                 item = "";
                             }
                         }
-                        Console.WriteLine(d.sumload);
+                        //Console.WriteLine(d.sumload);
                         data.Add(d);
                     }
                     start++;
-                }
-                    
+                } 
                 reader.Close();
+
+                List<int>sumloadlist = new List<int> ();
+                int allsumload = 0;
+                foreach(Data i in data)
+                {
+                    allsumload = allsumload + i.sumload;
+                    sumloadlist.Add(i.sumload);
+                    //Console.WriteLine(i.sumload);
+                }
+                Console.WriteLine("全部的總運量: " + allsumload.ToString());
+                Quicksort(0, sumloadlist.Count-1,ref sumloadlist);
+                foreach (int i in sumloadlist)
+                {
+                    Console.WriteLine(i);
+                }
+
             }
             catch (Exception e)
             {
