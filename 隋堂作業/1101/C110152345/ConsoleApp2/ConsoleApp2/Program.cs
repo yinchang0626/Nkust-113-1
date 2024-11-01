@@ -44,15 +44,15 @@ namespace ConsoleApplication5
     }
     class Test
     {
-        static void Swap(int a, int b, ref List<int> s)
+        static void Swap(int a, int b, ref List<Int64> s)
         {
-            int temp = s[a];
+            Int64 temp = s[a];
             s[a] = s[b];
             s[b] = temp;
         }
-        static void Partition(int low, int high, ref int pivotpoint,ref List<int> s)
+        static void Partition(int low, int high, ref int pivotpoint,ref List<Int64> s)
         {
-            int pivotpointitem = s[low];
+            Int64 pivotpointitem = s[low];
 
             int j = low;
             for (int i = low + 1; i <= high; i++)
@@ -76,7 +76,7 @@ namespace ConsoleApplication5
             */
             Swap(low,  pivotpoint, ref s);
         }
-        static void Quicksort(int low, int high,ref List<int> s)
+        static void Quicksort(int low, int high,ref List<Int64> s)
         {
             int pivotpoint = 0;
             if (low < high)
@@ -141,7 +141,7 @@ namespace ConsoleApplication5
                 } 
                 reader.Close();
 
-                List<int>sumloadlist = new List<int> ();
+                List<Int64> sumloadlist = new List<Int64> ();
                 int allsumload = 0;
                 foreach(Data i in data)
                 {
@@ -149,12 +149,20 @@ namespace ConsoleApplication5
                     sumloadlist.Add(i.sumload);
                     //Console.WriteLine(i.sumload);
                 }
-                Console.WriteLine("全部的總運量: " + allsumload.ToString());
+                int num = 1;
                 Quicksort(0, sumloadlist.Count-1,ref sumloadlist);
                 foreach (int i in sumloadlist)
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine(num.ToString() + ": " + i.ToString());
+                    num++;
                 }
+                Console.WriteLine("幾筆總運量: " + sumloadlist.Count);
+                Console.WriteLine("全部的總運量: " + allsumload.ToString());
+                Console.WriteLine("最大的總運量: " + sumloadlist[sumloadlist.Count - 1].ToString());
+                Console.WriteLine("最小的總運量: " + sumloadlist[0].ToString());
+                Console.WriteLine("中位數的總運量: " + sumloadlist[((sumloadlist.Count + 1) / 2) - 1].ToString());
+                Console.WriteLine("平均的總運量: " + (allsumload/sumloadlist.Count).ToString());
+                
 
             }
             catch (Exception e)
