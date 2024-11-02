@@ -149,6 +149,7 @@ namespace ConsoleApplication5
                     sumloadlist.Add(i.sumload);
                     //Console.WriteLine(i.sumload);
                 }
+                Console.WriteLine("排序後資料(低到高): ");
                 int num = 1;
                 Quicksort(0, sumloadlist.Count-1,ref sumloadlist);
                 foreach (int i in sumloadlist)
