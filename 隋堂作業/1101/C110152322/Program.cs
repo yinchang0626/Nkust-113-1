@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -25,8 +25,6 @@ namespace hw1
             // 使用 Dictionary 來儲存統計結果
             var periodInCount = new Dictionary<string, int>();
             var periodOutCount = new Dictionary<string, int>();
-            var stationInCount = new Dictionary<string, int>();
-            var stationOutCount = new Dictionary<string, int>();
 
             // 用來儲存進站人數最多的捷運站及其統計期
             string maxStation1 = "";
@@ -80,19 +78,22 @@ namespace hw1
                             maxStation1 = station;
                             maxPeriod1 = period;
                         }
+                        // 判斷是否為出站人數最多的捷運站
                         if (outCount > maxOutCount)
                         {
                             maxOutCount = outCount;
                             maxStation2 = station;
                             maxPeriod2 = period;
                         }
+                        // 判斷是否為進站人數最少的捷運站
                         if (inCount < minInCount)
                         {
                             minInCount = inCount;
                             minStation3 = station;
                             minPeriod3 = period;
                         }
-                        if (outCount < maxOutCount)
+                        // 判斷是否為出站人數最少的捷運站
+                        if (outCount < minOutCount)
                         {
                             minOutCount = outCount;
                             minStation4 = station;
