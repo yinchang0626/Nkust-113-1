@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\softwareeng\softwareeng\bin\Debug\net8.0\softwareeng.exe
+C:\Users\User\source\repos\softwareeng\softwareeng\bin\Debug\net8.0\softwareeng.deps.json
+C:\Users\User\source\repos\softwareeng\softwareeng\bin\Debug\net8.0\softwareeng.runtimeconfig.json
+C:\Users\User\source\repos\softwareeng\softwareeng\bin\Debug\net8.0\softwareeng.dll
+C:\Users\User\source\repos\softwareeng\softwareeng\bin\Debug\net8.0\softwareeng.pdb
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\softwareeng.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\softwareeng.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\softwareeng.AssemblyInfo.cs
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\softwareeng.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\softwareeng.dll
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\refint\softwareeng.dll
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\softwareeng.pdb
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\softwareeng.genruntimeconfig.cache
+C:\Users\User\source\repos\softwareeng\softwareeng\obj\Debug\net8.0\ref\softwareeng.dll
