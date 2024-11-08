@@ -1,0 +1,17 @@
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.exe
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.deps.json
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.runtimeconfig.json
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.dll
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.pdb
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.dll
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\refint\ConsoleApp1.dll
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\Lo\OneDrive\桌面\軟體工程\ConsoleApp1\obj\Debug\net8.0\ConsoleA.CB28C8CC.Up2Date
