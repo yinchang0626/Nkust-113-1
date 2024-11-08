@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -39,7 +39,7 @@ namespace WinFormsApp1
             chartArea.AxisX.MajorGrid.Enabled = false;
             chart.ChartAreas.Add(chartArea);
 
-            Title chartTitle = new Title("2024/10/18¥xÆW¤W¥«ªÑ²¼¸ê°T", Docking.Top, new System.Drawing.Font("Verdana", 16, System.Drawing.FontStyle.Bold), System.Drawing.Color.Black);
+            Title chartTitle = new Title("2024/10/18å°ç£ä¸Šå¸‚è‚¡ç¥¨è³‡è¨Š", Docking.Top, new System.Drawing.Font("Verdana", 16, System.Drawing.FontStyle.Bold), System.Drawing.Color.Black);
             chart.Titles.Add(chartTitle);
 
             Series series = new Series("Stock Data")
@@ -51,11 +51,11 @@ namespace WinFormsApp1
 
             var dataPoints = new[]
             {
-                new { Label = "ªÑ»ù¤Wº¦", Value = stockUp, Color = System.Drawing.Color.Red },
-                new { Label = "ªÑ»ù¤U¶^", Value = stockDown, Color = System.Drawing.Color.Green },
-                new { Label = "ªÑ»ù¥­½L", Value = stockNoChange, Color = System.Drawing.Color.RoyalBlue },
-                new { Label = "¦¨¥æªÑ¼Æ > 1M", Value = transactionVolumeOverMillion, Color = System.Drawing.Color.Orange },
-                new { Label = "¦¨¥æªÑ¼Æ < 10,000", Value = transactionVolumeBelowTenThousand, Color = System.Drawing.Color.Orange }
+                new { Label = "è‚¡åƒ¹ä¸Šæ¼²", Value = stockUp, Color = System.Drawing.Color.Red },
+                new { Label = "è‚¡åƒ¹ä¸‹è·Œ", Value = stockDown, Color = System.Drawing.Color.Green },
+                new { Label = "è‚¡åƒ¹å¹³ç›¤", Value = stockNoChange, Color = System.Drawing.Color.RoyalBlue },
+                new { Label = "æˆäº¤è‚¡æ•¸ > 1M", Value = transactionVolumeOverMillion, Color = System.Drawing.Color.Orange },
+                new { Label = "æˆäº¤è‚¡æ•¸ < 10,000", Value = transactionVolumeBelowTenThousand, Color = System.Drawing.Color.Orange }
             };
 
             foreach (var dataPoint in dataPoints)
@@ -100,31 +100,31 @@ namespace WinFormsApp1
     }
     public class StockData
     {
-        [CsvHelper.Configuration.Attributes.Name("ÃÒ¨é¥N¸¹")]
+        [CsvHelper.Configuration.Attributes.Name("è­‰åˆ¸ä»£è™Ÿ")]
         public string StockCode { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("ÃÒ¨é¦WºÙ")]
+        [CsvHelper.Configuration.Attributes.Name("è­‰åˆ¸åç¨±")]
         public string StockName { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("¦¨¥æªÑ¼Æ")]
+        [CsvHelper.Configuration.Attributes.Name("æˆäº¤è‚¡æ•¸")]
         public int? TransactionVolume { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("¦¨¥æª÷ÃB")]
+        [CsvHelper.Configuration.Attributes.Name("æˆäº¤é‡‘é¡")]
         public decimal? TransactionAmount { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("¶}½L»ù")]
+        [CsvHelper.Configuration.Attributes.Name("é–‹ç›¤åƒ¹")]
         public decimal? OpenPrice { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("³Ì°ª»ù")]
+        [CsvHelper.Configuration.Attributes.Name("æœ€é«˜åƒ¹")]
         public decimal? HighPrice { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("³Ì§C»ù")]
+        [CsvHelper.Configuration.Attributes.Name("æœ€ä½åƒ¹")]
         public decimal? LowPrice { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("¦¬½L»ù")]
+        [CsvHelper.Configuration.Attributes.Name("æ”¶ç›¤åƒ¹")]
         public decimal? ClosePrice { get; set; }
 
-        [CsvHelper.Configuration.Attributes.Name("¦¨¥æµ§¼Æ")]
+        [CsvHelper.Configuration.Attributes.Name("æˆäº¤ç­†æ•¸")]
         public int? TransactionCount { get; set; }
     }
 }
