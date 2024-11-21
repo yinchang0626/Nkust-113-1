@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Upload CSV";
+}
+
+<h2>Upload Drunk Driving Statistics CSV File</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input asp-for="UploadedFile" type="file" class="form-control-file" />
+        <span asp-validation-for="UploadedFile" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload and Process</button>
+</form>
