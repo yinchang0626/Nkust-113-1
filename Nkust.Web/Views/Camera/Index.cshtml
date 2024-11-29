@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Nkust.Web.Entities.Camera>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Camera list</h1>
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("Details", "Camera", new { id = item.Id })">@item.Location</a>
+        </li>
+    }
+</ul>
