@@ -6,7 +6,7 @@
 }
 
 <h1>Camera list</h1>
-<ul>
+@* <ul>
 
     @foreach (var item in Model)
     {
@@ -14,4 +14,28 @@
             <a href="@Url.Action("Details", "Camera", new { id = item.Id })">@item.Location</a>
         </li>
     }
-</ul>
+</ul> *@
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>PoliceOffice</td>
+            <td>PoliceStation</td>
+            <td>Code</td>
+            <td>Number</td>
+            <td>Location</td>
+        </tr>
+    </thead>
+    <tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.PoliceOffice</td>
+            <td>@item.PoliceStation</td>
+            <td>@item.Code</td>
+            <td>@item.Number</td>
+            <td>@item.Location</td>
+        </tr>
+        }
+    </tr>
+</table>

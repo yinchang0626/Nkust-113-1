@@ -22,6 +22,10 @@ namespace Nkust.Web.Entities
 
         public string PoliceStation { get; set; } = null!;
 
+        public int PoliceStationId { get; set; }
+
+        public int PoliceOfficeId { get; set; }
+
         [JsonPropertyName("位置")]
 
         public string? Location { get; set; } = null!;

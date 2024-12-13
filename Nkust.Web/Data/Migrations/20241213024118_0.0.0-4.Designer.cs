@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nkust.Web.Data;
 
@@ -11,9 +12,11 @@ using Nkust.Web.Data;
 namespace Nkust.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241213024118_0.0.0-4")]
+    partial class _0004
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -263,7 +266,7 @@ namespace Nkust.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cameras", (string)null);
+                    b.ToTable("Cameras");
                 });
 
             modelBuilder.Entity("Nkust.Web.Entities.PoliceOffice", b =>
@@ -280,7 +283,7 @@ namespace Nkust.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PoliceOffices", (string)null);
+                    b.ToTable("PoliceOffices");
                 });
 
             modelBuilder.Entity("Nkust.Web.Entities.PoliceStation", b =>
@@ -302,7 +305,7 @@ namespace Nkust.Web.Data.Migrations
 
                     b.HasIndex("PoliceOfficeId");
 
-                    b.ToTable("PoliceStation", (string)null);
+                    b.ToTable("PoliceStation");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
