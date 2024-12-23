@@ -14,11 +14,26 @@ namespace Nkust.Web.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? policeOfficeId, int? policeStationId)
         {
-            var datas = _context.Cameras.ToList();
+            var query = _context.Cameras.AsQueryable();
 
-            return View(datas);
+            if (policeOfficeId != null)
+            {
+                query = query.Where(x => x.PoliceOfficeId == policeOfficeId);
+            }
+
+            if (policeStationId != null)
+            {
+                query = query.Where(x => x.PoliceStationId == policeStationId);
+            }
+
+            query = query.Skip(10).Take(10);
+
+            query.Count();
+
+
+            return View(query.ToList());
         }
 
         public async Task<IActionResult> Seeding()
@@ -99,6 +114,8 @@ namespace Nkust.Web.Controllers
                     PoliceOfficeId = group.First().PoliceOfficeId
                 };
                 _context.PoliceStation.Add(policeStation);
+
+
                 await _context.SaveChangesAsync();
 
 

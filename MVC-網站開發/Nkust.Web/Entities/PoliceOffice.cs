@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Nkust.Web.Entities
 {
@@ -7,9 +8,10 @@ namespace Nkust.Web.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public string DisplayName { get; set; } = null!;
+        public string DisplayName { get; set; }
 
-        public ICollection<PoliceStation> PoliceStations { get; set; } = null!;
+
+        public ICollection<PoliceStation>? PoliceStations { get; set; }
 
     }
 }

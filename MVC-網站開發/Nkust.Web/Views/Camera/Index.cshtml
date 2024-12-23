@@ -30,8 +30,8 @@
         @foreach (var item in Model)
         {
         <tr>
-            <td>@item.PoliceOffice</td>
-            <td>@item.PoliceStation</td>
+            <td>(@item.PoliceOffice)((@item.PoliceOfficeId))</td>
+            <td>(@item.PoliceStation)((@item.PoliceStationId))</td>
             <td>@item.Code</td>
             <td>@item.Number</td>
             <td>@item.Location</td>

@@ -9,7 +9,7 @@ namespace Nkust.Web.Entities
 
         public int PoliceOfficeId { get; set; }
 
-        public PoliceOffice PoliceOffice { get; set; }
+        public PoliceOffice? PoliceOffice { get; set; }
 
         public string DisplayName { get; set; } = null!;
 
