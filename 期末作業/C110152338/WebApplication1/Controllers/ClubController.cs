@@ -17,6 +17,7 @@ namespace WebApplication1.Controllers
         }
         public async Task<IActionResult> Index()    //contorler
         {
+            //ApplicationDbContext context
             //List<Club> clubs = _context.Clubs.ToList();   //model
             IEnumerable<Club> clubs = await _clubRepository.GetAll();
             return View(clubs);     //view
