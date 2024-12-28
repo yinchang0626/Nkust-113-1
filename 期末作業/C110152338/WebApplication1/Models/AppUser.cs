@@ -11,6 +11,6 @@ namespace WebApplication1.Models
 
         public ICollection<Club> clubs { get; set; } //集合屬性
 
-        public ICollection<Races> races { get; set; } //集合屬性
+        public ICollection<Race> races { get; set; } //集合屬性
     }
 }

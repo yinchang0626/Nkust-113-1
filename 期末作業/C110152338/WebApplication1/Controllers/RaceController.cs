@@ -5,22 +5,23 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class ClubController : Controller
+    public class RaceController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public ClubController(ApplicationDbContext context)
+        public RaceController(ApplicationDbContext context)
         {
             _context = context;
         }
         public IActionResult Index()    //contorler
         {
-            List<Club> clubs = _context.Clubs.ToList();   //model
-            return View(clubs);     //view
+            List<Race> race = _context.Races.ToList();   //model
+            return View(race);     //view
         }
         public IActionResult Detail(int id)
         {
-            Club club = _context.Clubs.Include(a => a.Address).FirstOrDefault(c => c.Id == id);
-            return View(club); 
+            Race race = _context.Races.Include(a => a.Address).FirstOrDefault(c => c.Id == id);
+            return View(race);
         }
+
     }
 }

@@ -76,9 +76,9 @@ namespace WebApplication1.Data
                 //Races
                 if (!context.Races.Any())
                 {
-                    context.Races.AddRange(new List<Races>()
+                    context.Races.AddRange(new List<Race>()
                     {
-                        new Races()
+                        new Race()
                         {
                             Title = "Running Race 1",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
@@ -91,7 +91,7 @@ namespace WebApplication1.Data
                                 State = "NC"
                             }
                         },
-                        new Races()
+                        new Race()
                         {
                             Title = "Running Race 2",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",

@@ -1,3 +1,7 @@
+/*/
+ * My SQL create on 
+ * C:\Users\krameri120\AppData\Local\Microsoft\VisualStudio\SSDT\RunGroups.mdf
+ */
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
 
@@ -16,9 +20,13 @@ var app = builder.Build();
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
 {
     //await Seed.SeedUsersAndRolesAsync(app);
-    Seed.SeedData(app);
+    Seed.SeedData(app);         //把資料載入
 }
-
+/* 
+ * Add-Migration InitialCreate用於生成資料庫的遷移檔案
+ * Update-Database 需要更新database
+* donet run seeddata
+ */
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
