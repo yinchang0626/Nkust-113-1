@@ -4,11 +4,16 @@
  */
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
+using WebApplication1.Interfaces;
+using WebApplication1.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IClubRepository, ClubRepository>(); // 設定 IClubRepository 和 ClubRepository 之間的依賴關係。
+builder.Services.AddScoped<IRaceRepository, RaceRepository>();
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {

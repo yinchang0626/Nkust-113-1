@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Independent Study";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Independent Study (Supervisor: Shao-I Chu)</h2>
+<p>Application of Reinforcement Learning Based on Image Processing in the Side-Scrolling Action Game 《Hollow Knight》</p>
+<p>Related Video Introduction:</p>
+@* <iframe width="560" height="315" src="https://youtu.be/nSWwqOAj6XE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> *@
+@* <iframe width="560" height="315" src="https://youtu.be/nSWwqOAj6XE?si=3f3sGqqFrxLuOuEl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> *@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nSWwqOAj6XE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3>Project Image Gallery</h3>
+<div class="image-gallery">
+    <div class="image-item">
+        <img src="https://hackmd.io/_uploads/By5-nPaBJx.png" alt="Image 1" class="project-image" />
+    </div>
+    <div class="image-item">
+        <img src="https://hackmd.io/_uploads/ryvYsPpHkg.png" alt="Image 2" class="project-image" />
+    </div>
+    <div class="image-item">
+        <img src="https://hackmd.io/_uploads/Sku1nP6SJg.png" alt="Image 3" class="project-image" />
+    </div>
+</div>
+
+<style>
+    /* Title styles */
+    h1, h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    /* Video styles */
+    iframe {
+        display: block;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Image gallery styles */
+    .image-gallery {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .image-item {
+        margin-bottom: 20px; /* Space between images */
+    }
+
+    .project-image {
+        width: 100%; /* Use full container width */
+        height: auto;
+        max-width: 1000px; /* Set a max width for large screens */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .project-image:hover {
+            transform: scale(1.05);
+        }
+</style>

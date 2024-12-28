@@ -1,47 +1,57 @@
-﻿using WebApplication1.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using WebApplication1.Data;
+using WebApplication1.Interfaces;
 using WebApplication1.Models;
 
 namespace WebApplication1.Repository
 {
     public class ClubRepository : IClubRepository
     {
-        public ClubRepository()
+        private readonly ApplicationDbContext _context;
+
+        public ClubRepository(ApplicationDbContext context)
         {
-            
+            _context = context;
         }
         public bool Add(Club club)
         {
-            throw new NotImplementedException();
+            _context.Add(club);     // 並非新增，只是呼叫
+            return Save();          // 真正存放資料
         }
 
         public bool Delete(Club club)
         {
-            throw new NotImplementedException();
+            _context.Remove(club);
+            return Save();
         }
 
-        public Task<IEnumerable<Club>> GetAll()
+        public async Task<IEnumerable<Club>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Clubs.ToListAsync();
         }
 
-        public Task<Club> GetByIdAsync(int id)
+        public async Task<Club> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Clubs.FirstOrDefaultAsync(i => i.Id == id);
         }
 
-        public Task<IEnumerable<Club>> GetClubByCity(string city)
+        public async Task<IEnumerable<Club>> GetClubByCity(string city)
         {
-            throw new NotImplementedException();
+            return await _context.Clubs.Where(c => c.Address.City.Contains(city)).Distinct().ToListAsync();
         }
 
         public bool Save()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            var saved = _context.SaveChanges();
+            return saved > 0;
         }
 
         public bool Updata(Club club)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            _context.Update(club);
+            return Save();
         }
     }
 }
