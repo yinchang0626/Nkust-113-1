@@ -1,14 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication1.Data;
-using WebApplication1.Data.Enum;
 using WebApplication1.Interfaces;
 using WebApplication1.Models;
+using WebApplication1.Data.Enum;
+using WebApplication1.Data;
+
 
 namespace WebApplication1.Repository
 {
     public class RaceRepository : IRaceRepository
     {
         private readonly ApplicationDbContext _context;
+
         public RaceRepository(ApplicationDbContext context)
         {
             _context = context;
@@ -16,14 +18,14 @@ namespace WebApplication1.Repository
 
         public bool Add(Race race)
         {
-            _context.Add(race);     // 並非新增，只是呼叫
-            return Save();          // 真正存放資料
+            _context.Add(race);
+            return Save();
         }
 
         public bool Delete(Race race)
         {
-            _context.Remove(race);     // 並非新增，只是呼叫
-            return Save();          // 真正存放資料
+            _context.Remove(race);
+            return Save();
         }
 
         public async Task<IEnumerable<Race>> GetAll()
@@ -33,38 +35,43 @@ namespace WebApplication1.Repository
 
         public async Task<IEnumerable<Race>> GetAllRacesByCity(string city)
         {
-            //return await _context.Races.Where(c => c.Address.City.Contains(city)).Distinct().ToListAsync();
             return await _context.Races.Where(c => c.Address.City.Contains(city)).ToListAsync();
         }
 
         public async Task<Race?> GetByIdAsync(int id)
         {
-            return await _context.Races.FirstOrDefaultAsync(i => i.Id == id);
+            return await _context.Races.Include(i => i.Address).FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public Task<Race?> GetByIdAsyncNoTracking(int id)
+        public async Task<Race?> GetByIdAsyncNoTracking(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Races.Include(i => i.Address).AsNoTracking().FirstOrDefaultAsync();
         }
 
-        public Task<int> GetCountAsync()
+        public async Task<int> GetCountAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Races.CountAsync();
         }
 
-        public Task<int> GetCountByCategoryAsync(RacesCategory category)
+        public async Task<int> GetCountByCategoryAsync(RacesCategory category)
         {
-            throw new NotImplementedException();
+            return await _context.Races.CountAsync(r => r.RacesCategory == category);
         }
 
-        public Task<IEnumerable<Race>> GetRacesByCategoryAndSliceAsync(RacesCategory category, int offset, int size)
+        public async Task<IEnumerable<Race>> GetSliceAsync(int offset, int size)
         {
-            throw new NotImplementedException();
+            return await _context.Races.Include(a => a.Address).Skip(offset).Take(size).ToListAsync();
         }
 
-        public Task<IEnumerable<Race>> GetSliceAsync(int offset, int size)
+        public async Task<IEnumerable<Race>> GetRacesByCategoryAndSliceAsync(RacesCategory category, int offset, int size)
         {
-            throw new NotImplementedException();
+            return await _context.Races
+                .Where(r => r.RacesCategory == category)
+                .OrderBy(r => r.Id) // 添加排序條件
+                .Include(a => a.Address)
+                .Skip(offset)
+                .Take(size)
+                .ToListAsync();
         }
 
         public bool Save()
