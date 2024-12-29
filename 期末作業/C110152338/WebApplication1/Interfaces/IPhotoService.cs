@@ -1,11 +1,11 @@
-﻿//using CloudinaryDotNet.Actions;
+﻿using CloudinaryDotNet.Actions;
 
-//namespace WebApplication1.Interfaces
-//{
-//    public interface IPhotoService
-//    {
-//        Task<ImageUploadResult> AddPhotoAsync(IFormFile file);
+namespace WebApplication1.Interfaces
+{
+    public interface IPhotoService
+    {
+        Task<ImageUploadResult> AddPhotoAsync(IFormFile file);
 
-//        Task<DeletionResult> DeletePhotoAsync(string publicUrl);
-//    }
-//}
+        Task<DeletionResult> DeletePhotoAsync(string publicUrl);
+    }
+}

@@ -12,11 +12,12 @@ namespace WebApplication1.Controllers
     {
         //private readonly ApplicationDbContext _context;
         private readonly IClubRepository _clubRepository;
-        //private readonly IPhotoService _photoService;
-        public ClubController(IClubRepository clubRepository)
+        private readonly IPhotoService _photoService;
+
+        public ClubController(IClubRepository clubRepository, IPhotoService photoService)
         {
-            //_context = context;   // NO use this
             _clubRepository = clubRepository;
+            _photoService = photoService;
         }
         //public async Task<IActionResult> Index()    //contorler
         //{
@@ -71,23 +72,39 @@ namespace WebApplication1.Controllers
         {
             //var curUserId = HttpContext.User.GetUserId();
             //var createClubViewModel = new CreateClubViewModel { AppUserId = curUserId };
-            //return View(createClubViewModel);
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Club club)
+        public async Task<IActionResult> Create(CreateClubViewModel clubVM)
         {
             if (!ModelState.IsValid)
             {
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                var result = await _photoService.AddPhotoAsync(clubVM.Image);
+
+                var club = new Club
                 {
-                    Console.WriteLine(error.ErrorMessage); // Debug 驗證錯誤
-                }
-                return View(club);
+                    Title = clubVM.Title,
+                    Description = clubVM.Description,
+                    Image = result.Url.ToString(),
+                    ClubCategory = clubVM.ClubCategory,
+                    AppUserId = clubVM.AppUserId,
+                    Address = new Address
+                    {
+                        Street = clubVM.Address.Street,
+                        City = clubVM.Address.City,
+                        State = clubVM.Address.State,
+                    }
+                };
+                _clubRepository.Add(club);
+                return RedirectToAction("Index");
             }
-            _clubRepository.Add(club);
-            return View();
+            else
+            {
+                ModelState.AddModelError("", "Photo upload failed");
+            }
+
+            return View(clubVM);
         }
         //    public async Task<IActionResult> Create(CreateClubViewModel clubVM)
         //    {
