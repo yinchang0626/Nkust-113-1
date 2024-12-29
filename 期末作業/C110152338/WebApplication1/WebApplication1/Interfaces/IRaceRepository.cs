@@ -16,6 +16,7 @@ namespace WebApplication1.Interfaces
         Task<IEnumerable<Race>> GetAll();
 
         Task<IEnumerable<Race>> GetAllRacesByCity(string city);
+
         Task<IEnumerable<Race>> GetSliceAsync(int offset, int size);
 
         Task<IEnumerable<Race>> GetRacesByCategoryAndSliceAsync(RacesCategory category, int offset, int size);
