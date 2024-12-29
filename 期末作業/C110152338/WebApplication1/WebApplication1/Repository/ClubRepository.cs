@@ -14,10 +14,11 @@ namespace WebApplication1.Repository
         {
             _context = context;
         }
+
         public bool Add(Club club)
         {
-            _context.Add(club);     // 並非新增，只是呼叫
-            return Save();          // 真正存放資料
+            _context.Add(club);
+            return Save();
         }
 
         public bool Delete(Club club)
@@ -31,20 +32,21 @@ namespace WebApplication1.Repository
             return await _context.Clubs.ToListAsync();
         }
 
-        //public async Task<List<State>> GetAllStates()
-        //{
-        //    return await _context.States.ToListAsync();
-        //}
-
         public async Task<IEnumerable<Club>> GetSliceAsync(int offset, int size)
         {
-            return await _context.Clubs.Include(i => i.Address).Skip(offset).Take(size).ToListAsync();
+            return await _context.Clubs
+                .Include(i => i.Address)
+                .OrderBy(r => r.Id) // 添加排序條件
+                .Skip(offset)
+                .Take(size)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<Club>> GetClubsByCategoryAndSliceAsync(ClubCategory category, int offset, int size)
         {
             return await _context.Clubs
                 .Include(i => i.Address)
+                .OrderBy(r => r.Id) // 添加排序條件
                 .Where(c => c.ClubCategory == category)
                 .Skip(offset)
                 .Take(size)
@@ -92,10 +94,6 @@ namespace WebApplication1.Repository
         {
             return await _context.Clubs.Where(c => c.Address.State.Contains(state)).ToListAsync();
         }
-
-        //public async Task<List<City>> GetAllCitiesByState(string state)
-        //{
-        //    return await _context.Cities.Where(c => c.StateCode.Contains(state)).ToListAsync();
-        //}
+        
     }
 }

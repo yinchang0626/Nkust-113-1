@@ -4,6 +4,7 @@ using WebApplication1.Data;
 using WebApplication1.Data.Enum;
 using WebApplication1.Interfaces;
 using WebApplication1.Models;
+using WebApplication1.Repository;
 using WebApplication1.ViewModels;
 
 namespace WebApplication1.Controllers
@@ -58,6 +59,28 @@ namespace WebApplication1.Controllers
 
             return View(viewModel);
         }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            //var curUserId = HttpContext.User.GetUserId();
+            //var createClubViewModel = new CreateClubViewModel { AppUserId = curUserId };
+            //return View(createClubViewModel);
+            return View();
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> Create(Race race)
+        {
+            if (ModelState.IsValid)
+            {
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine(error.ErrorMessage); // Debug 驗證錯誤
+                }
+                return View(race); // 返回表單和錯誤訊息
+            }
+            _raceRepository.Add(race);
+            return View();
+        }
     }
 }

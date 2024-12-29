@@ -78,8 +78,12 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Club club)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine(error.ErrorMessage); // Debug 驗證錯誤
+                }
                 return View(club);
             }
             _clubRepository.Add(club);
