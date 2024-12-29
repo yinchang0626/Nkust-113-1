@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WebApplication1.Data;
+using WebApplication1;
 using WebApplication1.Data.Enum;
+//using WebApplication1.Helpers;
 using WebApplication1.Interfaces;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
@@ -12,6 +12,7 @@ namespace WebApplication1.Controllers
     {
         //private readonly ApplicationDbContext _context;
         private readonly IClubRepository _clubRepository;
+        //private readonly IPhotoService _photoService;
         public ClubController(IClubRepository clubRepository)
         {
             //_context = context;   // NO use this
@@ -64,9 +65,55 @@ namespace WebApplication1.Controllers
             Club club = await _clubRepository.GetByIdAsync(id);
             return View(club); 
         }
+
+        [HttpGet]
         public IActionResult Create()
         {
+            //var curUserId = HttpContext.User.GetUserId();
+            //var createClubViewModel = new CreateClubViewModel { AppUserId = curUserId };
+            //return View(createClubViewModel);
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Club club)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(club);
+            }
+            _clubRepository.Add(club);
+            return View();
+        }
+        //    public async Task<IActionResult> Create(CreateClubViewModel clubVM)
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            //var result = await _photoService.AddPhotoAsync(clubVM.Image);
+
+        //            var club = new Club
+        //            {
+        //                Title = clubVM.Title,
+        //                Description = clubVM.Description,
+        //                //Image = result.Url.ToString(),
+        //                ClubCategory = clubVM.ClubCategory,
+        //                AppUserId = clubVM.AppUserId,
+        //                Address = new Address
+        //                {
+        //                    Street = clubVM.Address.Street,
+        //                    City = clubVM.Address.City,
+        //                    State = clubVM.Address.State,
+        //                }
+        //            };
+        //            _clubRepository.Add(club);
+        //            return RedirectToAction("Index");
+        //        }
+        //        else
+        //        {
+        //            ModelState.AddModelError("", "Photo upload failed");
+        //        }
+
+        //        return View(clubVM);
+        //    }
     }
 }

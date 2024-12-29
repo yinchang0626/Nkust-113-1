@@ -2,10 +2,10 @@
 {
     public enum ClubCategory
     {
-        RoadRunner,
-        Womens,
-        City,
-        Trail,
-        Endurance
+        RoadRunner, // 公路跑步俱樂部
+        Womens,     // 女性專屬俱樂部
+        City,       // 城市跑步俱樂部
+        Trail,      // 越野跑步俱樂部
+        Endurance   // 耐力跑步俱樂部
     }
 }
