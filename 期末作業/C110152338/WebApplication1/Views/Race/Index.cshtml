@@ -4,7 +4,7 @@
 @model IndexRaceViewModel
 
 @{
-    bool isAuthenticated = User.Identity?.IsAuthenticated == true;
+    bool isAuthenticated = true;
 
     int resultStart = ((Model.Page - 1) * Model.PageSize) + 1;
     int resultEnd = Math.Min(resultStart + Model.PageSize - 1, Model.TotalRaces);
@@ -74,7 +74,8 @@
                             <div>
                                 <small>@race.RacesCategory</small>
                             </div>
-                            @if (isAuthenticated && User.IsInRole("admin"))
+                            @* @if (isAuthenticated && User.IsInRole("admin")) *@
+                            @if(true)
                             {
                                 <div>
                                     <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Race" asp-action="Edit" asp-route-id="@race.Id">

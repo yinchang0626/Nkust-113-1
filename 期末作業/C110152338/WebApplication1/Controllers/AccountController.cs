@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Azure.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Data;
 using WebApplication1.Interfaces;
@@ -83,8 +84,12 @@ namespace RunGroopWebApp.Controllers
             var newUser = new AppUser()
             {
                 Email = registerViewModel.EmailAddress,
-                UserName = registerViewModel.EmailAddress
+                UserName = registerViewModel.EmailAddress,
+                //console.WriteLine()
+                
             };
+            //Console.WriteLine("Yes " + newUser.UserName);  // Corrected print statement
+            //Console.WriteLine($"New user created with email: {registerViewModel.EmailAddress}");
             var newUserResponse = await _userManager.CreateAsync(newUser, registerViewModel.Password);
 
             if (newUserResponse.Succeeded)
