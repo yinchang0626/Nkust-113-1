@@ -12,8 +12,8 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241230083621_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241230154406_NullAddressFix")]
+    partial class NullAddressFix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
