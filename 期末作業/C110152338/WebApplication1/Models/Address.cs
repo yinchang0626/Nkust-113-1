@@ -5,7 +5,7 @@ namespace WebApplication1.Models
     {
         //Plain Old Class Object (POCO->SQL)
         [Key]
-        //pribate int Id {get; set;}
+        //pribate int Id {get; set; }
         public int Id { get; set; }
         public string Street { get; set; }
         public string City { get; set; }

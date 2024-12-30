@@ -2,10 +2,13 @@
  * My SQL create on 
  * C:\Users\krameri120\AppData\Local\Microsoft\VisualStudio\SSDT\RunGroups.mdf
  */
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
 using WebApplication1.Helpers;
 using WebApplication1.Interfaces;
+using WebApplication1.Models;
 using WebApplication1.Repository;
 using WebApplication1.Services;
 
@@ -13,15 +16,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IClubRepository, ClubRepository>(); // 設定 IClubRepository 和 ClubRepository 之間的依賴關係。
+builder.Services.AddScoped<IClubRepository, ClubRepository>();
 builder.Services.AddScoped<IRaceRepository, RaceRepository>();
+//builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+//builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<IPhotoService, PhotoService>();
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

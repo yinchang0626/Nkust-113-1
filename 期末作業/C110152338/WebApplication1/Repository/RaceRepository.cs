@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WebApplication1.Data;
+using WebApplication1.Data.Enum;
 using WebApplication1.Interfaces;
 using WebApplication1.Models;
-using WebApplication1.Data.Enum;
-using WebApplication1.Data;
-
 
 namespace WebApplication1.Repository
 {
@@ -58,6 +57,10 @@ namespace WebApplication1.Repository
             return await _context.Races.CountAsync(r => r.RacesCategory == category);
         }
 
+        //public async Task<IEnumerable<Race>> GetSliceAsync(int offset, int size)
+        //{
+        //    return await _context.Races.Include(a => a.Address).Skip(offset).Take(size).ToListAsync();
+        //}
         public async Task<IEnumerable<Race>> GetSliceAsync(int offset, int size)
         {
             return await _context.Races.Include(a => a.Address).Skip(offset).Take(size).ToListAsync();
@@ -67,7 +70,6 @@ namespace WebApplication1.Repository
         {
             return await _context.Races
                 .Where(r => r.RacesCategory == category)
-                .OrderBy(r => r.Id) // 添加排序條件
                 .Include(a => a.Address)
                 .Skip(offset)
                 .Take(size)

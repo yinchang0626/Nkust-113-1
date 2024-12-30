@@ -13,9 +13,9 @@ namespace WebApplication1.Interfaces
 
         Task<IEnumerable<Club>> GetClubsByCategoryAndSliceAsync(ClubCategory category, int offset, int size);
 
-        //Task<List<State>> GetAllStates();
+        Task<List<State>> GetAllStates();
 
-        //Task<List<City>> GetAllCitiesByState(string state);
+        Task<List<City>> GetAllCitiesByState(string state);
 
         Task<Club?> GetByIdAsync(int id);
 
