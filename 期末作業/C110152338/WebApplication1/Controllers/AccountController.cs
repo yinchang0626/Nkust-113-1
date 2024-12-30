@@ -5,7 +5,7 @@ using WebApplication1.Interfaces;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
 
-namespace WebApplication1.Controllers
+namespace RunGroopWebApp.Controllers
 {
     public class AccountController : Controller
     {
@@ -14,8 +14,8 @@ namespace WebApplication1.Controllers
         private readonly ApplicationDbContext _context;
         private readonly ILocationService _locationService;
 
-        public AccountController(UserManager<AppUser> userManager, 
-            SignInManager<AppUser> signInManager, 
+        public AccountController(UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager,
             ApplicationDbContext context,
             ILocationService locationService)
         {
@@ -104,18 +104,18 @@ namespace WebApplication1.Controllers
         [Route("Account/Welcome")]
         public async Task<IActionResult> Welcome(int page = 0)
         {
-            if(page == 0)
+            if (page == 0)
             {
                 return View();
             }
             return View();
-            
+
         }
 
         [HttpGet]
         public async Task<IActionResult> GetLocation(string location)
         {
-            if(location == null)
+            if (location == null)
             {
                 return Json("Not found");
             }
