@@ -76,7 +76,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateRaceViewModel raceVM)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 var result = await _photoService.AddPhotoAsync(raceVM.Image);
 

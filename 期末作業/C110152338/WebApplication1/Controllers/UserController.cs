@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
             _photoService = photoService;
         }
 
-        [HttpGet("users")]
+        [HttpGet("admin")]
         public async Task<IActionResult> Index()
         {
             var users = await _userRepository.GetAllUsers();
