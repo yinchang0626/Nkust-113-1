@@ -4,6 +4,7 @@ namespace Final_Project.Entities
 {
     public class Ticket_deals
     {
+        public int Id { get; set; }
         public string Year { get; set; } = null!;
         public int Cumulative_amount { get; set; }
         public int Deal_payment { get; set; }
