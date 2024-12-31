@@ -11,7 +11,7 @@ using final_project.Data;
 namespace final_project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241231141214_InitialCreate")]
+    [Migration("20241231155755_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -88,7 +88,13 @@ namespace final_project.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 

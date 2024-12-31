@@ -6,36 +6,32 @@ namespace final_project;
 
 public static class SeedData
 {
-    public static void Initialize(IServiceProvider serviceProvider)
+    public static async Task InitializeAsync(IServiceProvider serviceProvider)
     {
         using (var context = new ApplicationDbContext(
             serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
         {
-            // 如果資料庫中已經有資料，則不執行任何操作
-            if (context.Users.Any() || context.Courses.Any() || context.Enrollments.Any())
+            if (await IsDatabaseInitializedAsync(context))
             {
                 return;
             }
 
-            // 新增學生
             var students = new[]
             {
-                new User { Name = "Alice", Email = "alice@example.com" },
-                new User { Name = "Bob", Email = "bob@example.com" },
-                new User { Name = "Charlie", Email = "charlie@example.com" }
+                new User { Name = "Alice", Email = "alice@example.com", Password = "Password123" },
+                new User { Name = "Bob", Email = "bob@example.com", Password = "Password123" },
+                new User { Name = "Charlie", Email = "charlie@example.com", Password = "Password123" }
             };
-            context.Users.AddRange(students);
+            await context.Users.AddRangeAsync(students);
 
-            // 新增課程
             var courses = new[]
             {
                 new Course { Name = "Mathematics", Description = "Introductory Math", Credits = 3 },
                 new Course { Name = "History", Description = "World History Overview", Credits = 2 },
                 new Course { Name = "Programming", Description = "Learn C# Programming", Credits = 4 }
             };
-            context.Courses.AddRange(courses);
+            await context.Courses.AddRangeAsync(courses);
 
-            // 新增註冊資料
             var enrollments = new[]
             {
                 new Enrollment { Student = students[0], Course = courses[0], Progress = 0.75 },
@@ -43,10 +39,14 @@ public static class SeedData
                 new Enrollment { Student = students[1], Course = courses[2], Progress = 0.30 },
                 new Enrollment { Student = students[2], Course = courses[0], Progress = 0.90 }
             };
-            context.Enrollments.AddRange(enrollments);
+            await context.Enrollments.AddRangeAsync(enrollments);
 
-            // 儲存變更到資料庫
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
+    }
+
+    private static async Task<bool> IsDatabaseInitializedAsync(ApplicationDbContext context)
+    {
+        return await context.Users.AnyAsync() || await context.Courses.AnyAsync() || await context.Enrollments.AnyAsync();
     }
 }

@@ -4,14 +4,20 @@ namespace final_project.Models
 {
     public class User
     {
-        [Key]
         public int Id { get; set; }
+
         [Required]
+        [StringLength(100)]
         public string Name { get; set; }
+
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
+
         [Required]
-        // 學生的註冊資訊
-        public ICollection<Enrollment> Enrollments { get; set; }
+        [StringLength(100, MinimumLength = 6)]
+        public string Password { get; set; }
+
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
     }
 }

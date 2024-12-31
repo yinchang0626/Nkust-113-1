@@ -1,0 +1,10 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap-modal@2.2.6",
+      "destination": "wwwroot/lib/bootstrap-modal/"
+    }
+  ]
+}

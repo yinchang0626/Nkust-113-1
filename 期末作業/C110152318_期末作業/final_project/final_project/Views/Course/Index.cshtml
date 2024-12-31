@@ -1,0 +1,23 @@
+﻿@model List<final_project.Models.Course>
+
+<h2>課程列表</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>課程名稱</th>
+            <th>描述</th>
+            <th>學分</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.Name</td>
+                <td>@course.Description</td>
+                <td>@course.Credits</td>
+            </tr>
+        }
+    </tbody>
+</table>
