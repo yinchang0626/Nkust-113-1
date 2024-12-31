@@ -1,0 +1,30 @@
+﻿@using final_project.Models
+@model List<Enrollment>
+
+
+<h2>@ViewData["StudentName"] 的課程進度</h2>
+
+@if (!Model.Any())
+{
+    <p>此學生尚未註冊任何課程。</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>課程名稱</th>
+                <th>進度 (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var enrollment in Model)
+            {
+                <tr>
+                    <td>@enrollment.Course.Name</td>
+                    <td>@(enrollment.Progress * 100)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
