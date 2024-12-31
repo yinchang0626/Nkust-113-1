@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using final_project.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace final_project.Controllers
 {
@@ -31,28 +29,28 @@ namespace final_project.Controllers
         public async Task<IActionResult> Login(string email, string password)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-            if (user == null || !VerifyPassword(password, user.Password))
+
+            if (user == null || user.Password != password) // 直接比較密碼
             {
                 // 如果登入失敗，將錯誤訊息加入 ModelState
                 ModelState.AddModelError("", "無效的帳號或密碼");
                 return View();
             }
 
-            // 登入成功，將用戶設置為登錄狀態（你可以根據需要設置 Cookie 認證）
-            var claims = new List<Claim>
-                    {
-                        new Claim(ClaimTypes.Name, user.Name),
-                        new Claim(ClaimTypes.Email, user.Email),
-                        new Claim("UserId", user.Id.ToString())
-                    };
+            //var claims = new List<Claim>
+            //{
+            //    new Claim(ClaimTypes.Name, user.Name),
+            //    new Claim(ClaimTypes.Email, user.Email),
+            //    new Claim("UserId", user.Id.ToString())
+            //};
 
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var authProperties = new AuthenticationProperties
-            {
-                IsPersistent = true
-            };
+            //var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            //var authProperties = new AuthenticationProperties
+            //{
+            //    IsPersistent = true
+            //};
 
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+            //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
             return RedirectToAction("StudentProgress", "Enrollment", new { studentId = user.Id });
         }
@@ -105,7 +103,7 @@ namespace final_project.Controllers
             var user = new User
             {
                 Email = email,
-                Password = HashPassword(password),
+                Password = password, // 不加密密碼
                 Name = email.Split('@')[0] // 默認使用電子郵件的前綴作為用戶名
             };
 
@@ -113,22 +111,6 @@ namespace final_project.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Login", "Account");
-        }
-
-
-        private string HashPassword(string password)
-        {
-            using (var sha256 = SHA256.Create())
-            {
-                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
-            }
-        }
-
-        private bool VerifyPassword(string inputPassword, string storedHash)
-        {
-            var inputHash = HashPassword(inputPassword);
-            return inputHash == storedHash;
         }
     }
 }

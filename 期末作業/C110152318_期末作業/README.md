@@ -1,0 +1,4 @@
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+SqlServer
+dotnet add package Microsoft.AspNetCore.Authentication.Cookies

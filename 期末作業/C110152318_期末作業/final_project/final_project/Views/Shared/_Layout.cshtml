@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/final_project.styles.css" asp-append-version="true" />
+    <style>
+        /* 設定整個網站的背景 */
+        body {
+            background-image: url('/images/Savin-NY-Website-Background-Web.jpg'); /* 使用相對路徑來引用圖片 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh; /* 保證背景覆蓋整個頁面 */
+            font-family: Arial, sans-serif; /* 設置字體 */
+        }
+
+        /* 如果有需要讓內容區域在頁面中居中顯示 */
+        .container {
+            padding-top: 20px; /* 根據需要調整間距 */
+        }
+
+        /* 你可以設置其他樣式，如卡片的透明度 */
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* 使卡片背景半透明，讓背景圖顯示出來 */
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
