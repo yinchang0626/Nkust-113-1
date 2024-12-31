@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "F1csJ5DCHp9SRPrCkf5i/Gpi/WjWvLFTwQWXniOa9cdUknmZLq3FCc53dmN81KvMvSWaMPouvjqveCvDT20a5w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ramet\\demo\\demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ramet\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
+    "C:\\Users\\ramet\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
