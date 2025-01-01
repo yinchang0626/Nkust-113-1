@@ -84,9 +84,8 @@ else
         <thead>
             <tr>
                 <th>課程名稱</th>
-                <th>課程概述</th>
+                <th>課程描述</th>
                 <th>進度 (%)</th>
-                @* <th>作業檔案</th> *@
                 <th>操作</th>
             </tr>
         </thead>
@@ -95,28 +94,8 @@ else
             {
                 <tr>
                     <td>@enrollment.Course.Name</td>
+                    <td>@enrollment.Course.Description</td>  <!-- 顯示課程描述 -->
                     <td>@(enrollment.Progress * 100)</td>
-                    @* <td> *@
-                    @*     @if (enrollment.Assignments != null && enrollment.Assignments.Any()) *@
-                    @*     { *@
-                    @*         @foreach (var assignment in enrollment.Assignments) *@
-                    @*         { *@
-                    @*             <p> *@
-                    @*                 作業檔案: *@
-                    @*                 <a href="@Url.Action("DownloadFile", "Assignment", new { studentId = enrollment.StudentId, courseId = enrollment.CourseId, fileName = assignment.FilePath })" target="_blank"> *@
-                    @*                     下載 *@
-                    @*                 </a> *@
-                    @*             </p> *@
-
-                    @*             <p>上傳時間: @assignment.UploadedAt.ToString("yyyy-MM-dd HH:mm:ss")</p> *@
-                    @*             <br /> *@
-                    @*         } *@
-                    @*     } *@
-                    @*     else *@
-                    @*     { *@
-                    @*         <span>尚未上傳作業</span> *@
-                    @*     } *@
-                    @* </td> *@
                     <td>
                         <!-- 上傳作業的按鈕 -->
                         <a href="@Url.Action("Upload", "Assignment", new { enrollmentId = enrollment.Id })" class="btn" style="background-color: #28a745;">
