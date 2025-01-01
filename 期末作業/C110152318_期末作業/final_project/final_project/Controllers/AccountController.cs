@@ -30,7 +30,8 @@ namespace final_project.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            var users = await _context.Users.ToListAsync();
+            var user = users.FirstOrDefault(u => u.Email.Equals(email, StringComparison.Ordinal));
 
             if (user == null)
             {
