@@ -1,6 +1,59 @@
 ﻿@using final_project.Models
 @model Enrollment
 
+<style>
+    /* 表格樣式 */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+    /* 按鈕樣式 */
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+    /* 標題樣式 */
+    h2 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: #555;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #666;
+    }
+</style>
+
 <h2>@Model.Course?.Name 的作業詳細資訊</h2>
 
 @if (Model.Assignments != null && Model.Assignments.Any())
@@ -8,7 +61,8 @@
     <table>
         <thead>
             <tr>
-                <th>作業檔案</th>
+                <th>作業檔案名稱</th>
+                <th>下載連結</th>
                 <th>上傳時間</th>
             </tr>
         </thead>
@@ -16,6 +70,9 @@
             @foreach (var assignment in Model.Assignments)
             {
                 <tr>
+                    <td class="file-name" data-file-path="@assignment.FilePath">
+                        <!-- 這裡檔案名稱會由 JS 處理 -->
+                    </td>
                     <td>
                         <a href="@Url.Action("DownloadFile", "Assignment", new { studentEmail = Model.Student.Email, fileName = assignment.FilePath })" target="_blank">
                             下載
@@ -36,3 +93,12 @@ else
 <p>用戶 Email: @Model.Student.Email</p>  <!-- 顯示用戶的 Email -->
 
 <a href="@Url.Action("StudentProgress", "Enrollment")" class="btn">返回課程進度</a>
+
+<script>
+    // 使用 JavaScript 提取檔案名稱
+    document.querySelectorAll('.file-name').forEach(function(cell) {
+        var filePath = cell.getAttribute('data-file-path');
+        var fileName = filePath.split(/[\/\\]/).pop(); // 處理正斜線和反斜線
+        cell.textContent = fileName; // 顯示檔案名稱
+    });
+</script>
