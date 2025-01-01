@@ -123,7 +123,6 @@ public class AssignmentController : Controller
         return RedirectToAction("StudentProgress", "Enrollment");
     }
 
-
     // 下載作業檔案
     public async Task<IActionResult> DownloadFile(string studentEmail, string fileName)
     {
@@ -174,4 +173,44 @@ public class AssignmentController : Controller
         string fileNameWithoutPath = Path.GetFileName(fileName);
         return Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", studentEmail, courseName, fileNameWithoutPath);
     }
+
+    [HttpPost]
+    public IActionResult DeleteFile(string studentEmail, string fileName, int enrollmentId)
+    {
+        // 構造完整檔案路徑
+        string uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", studentEmail);
+        string filePath = Path.Combine(uploadsDirectory, fileName);
+
+        if (System.IO.File.Exists(filePath))
+        {
+            try
+            {
+                // 刪除檔案
+                System.IO.File.Delete(filePath);
+
+                // 從資料庫中刪除對應的 Assignment 記錄
+                var assignment = _context.Assignments.FirstOrDefault(a => a.FilePath == filePath);
+                if (assignment != null)
+                {
+                    _context.Assignments.Remove(assignment);
+                    _context.SaveChanges();
+                }
+
+                TempData["SuccessMessage"] = "檔案已成功刪除。";
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"刪除檔案時發生錯誤：{ex.Message}";
+            }
+        }
+        else
+        {
+            TempData["ErrorMessage"] = "檔案不存在，無法刪除。";
+        }
+
+        // 返回至作業詳細頁面
+        return RedirectToAction("ViewAssignments", new { enrollmentId });
+    }
+
+
 }

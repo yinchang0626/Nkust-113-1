@@ -54,7 +54,7 @@
     }
 </style>
 
-<h2>@Model.Course?.Name 的作業詳細資訊</h2>
+<h2>作業詳細資訊</h2>
 
 @if (Model.Assignments != null && Model.Assignments.Any())
 {
@@ -64,6 +64,7 @@
                 <th>作業檔案名稱</th>
                 <th>下載連結</th>
                 <th>上傳時間</th>
+                <th>刪除</th>
             </tr>
         </thead>
         <tbody>
@@ -79,9 +80,19 @@
                         </a>
                     </td>
                     <td>@assignment.UploadedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>
+                        <form method="post" action="@Url.Action("DeleteFile", "Assignment")" onsubmit="return confirm('確定要刪除此檔案嗎？');">
+                            <input type="hidden" name="studentEmail" value="@Model.Student.Email" />
+                            <input type="hidden" name="fileName" value="@assignment.FilePath" />
+                            <input type="hidden" name="enrollmentId" value="@Model.Id" />
+                            <button type="submit" class="btn" style="background-color: #dc3545;">刪除</button>
+                        </form>
+                    </td>
+
                 </tr>
             }
         </tbody>
+
     </table>
 }
 else

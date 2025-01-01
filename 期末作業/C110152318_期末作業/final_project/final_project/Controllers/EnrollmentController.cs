@@ -111,7 +111,10 @@ namespace final_project.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteEnrollment(int enrollmentId)
         {
-            var enrollment = await _context.Enrollments.FindAsync(enrollmentId);
+            var enrollment = await _context.Enrollments
+                .Include(e => e.Course) // 包含課程資訊
+                .Include(e => e.Student) // 包含學生資訊
+                .FirstOrDefaultAsync(e => e.Id == enrollmentId);
 
             if (enrollment == null)
             {
@@ -119,11 +122,32 @@ namespace final_project.Controllers
                 return RedirectToAction("StudentProgress", new { studentId = User.FindFirst("UserId")?.Value });
             }
 
+            // 構造上傳檔案的路徑
+            string studentEmail = enrollment.Student.Email; // 假設 Student 實體有 Email 屬性
+            string courseName = enrollment.Course.Name; // 假設 Course 實體有 Name 屬性
+            string uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", studentEmail, courseName);
+
+            // 刪除檔案和目錄
+            if (Directory.Exists(uploadsDirectory))
+            {
+                try
+                {
+                    Directory.Delete(uploadsDirectory, true); // true 表示遞歸刪除子目錄和檔案
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = $"刪除檔案時發生錯誤：{ex.Message}";
+                    return RedirectToAction("StudentProgress", new { studentId = User.FindFirst("UserId")?.Value });
+                }
+            }
+
+            // 刪除報名資料
             _context.Enrollments.Remove(enrollment);
             await _context.SaveChangesAsync();
 
-            TempData["SuccessMessage"] = "課程已成功刪除。";
+            TempData["SuccessMessage"] = "課程及相關檔案已成功刪除。";
             return RedirectToAction("StudentProgress", new { studentId = User.FindFirst("UserId")?.Value });
         }
+
     }
 }
