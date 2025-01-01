@@ -8,37 +8,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/css/style.css">  <!-- 引用CSS -->
 </head>
 <body>
+    <!-- Hero區塊 -->
     <div class="hero-section">
         <div class="container">
-            <h1 class="hero-title">歡迎來到我們的網站</h1>
-            <p class="hero-description">探索更多功能，立即登入以開始您的學習旅程。</p>
+            <h1 class="hero-title">開啟您的數位之旅</h1>
             <a href="@Url.Action("Login", "Account")" class="btn btn-primary">立即登入</a>
         </div>
     </div>
 
-    <div class="features-section">
-        <div class="container">
-            <h2 class="features-title">我們的特色</h2>
-            <div class="features-cards">
-                <div class="card">
-                    <h3>多樣化課程</h3>
-                    <p>提供多種不同領域的課程，滿足各種學習需求。</p>
-                </div>
-                <div class="card">
-                    <h3>互動式學習</h3>
-                    <p>我們的課程採用互動式學習，讓學習變得更有趣。</p>
-                </div>
-                <div class="card">
-                    <h3>專業師資</h3>
-                    <p>我們的老師都來自各大學術機構，提供高品質的教學。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 你的網站名稱。所有權利保留。</p>
@@ -48,104 +29,53 @@
     <style>
         /* 基本樣式 */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f3f4f6;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #fff;
+            background-color: #34495e;
         }
 
         /* Hero區塊 */
         .hero-section {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            padding: 120px 20px;
-            text-align: center;
-            height: 100vh;
+            position: relative;
+            height: 60vh; /* 調整高度 */
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            text-align: center;
+            color: white;
+            overflow: hidden; /* 確保動畫不會溢出 */
+            animation: backgroundColorChange 6s infinite alternate; /* 加入動畫效果 */
         }
 
         .hero-title {
-            font-size: 40px;
+            font-size: 50px;
             font-weight: bold;
             margin-bottom: 20px;
-        }
-
-        .hero-description {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.85;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease-out;
         }
 
         .btn {
-            padding: 14px 30px;
-            font-size: 18px;
+            padding: 18px 40px;
+            font-size: 22px;
             text-decoration: none;
             color: white;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            border-radius: 50px;
+            background-color: #e74c3c;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.5);
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .btn-primary {
-            background-color: #FF6F61; /* 減少對比度，選擇柔和的橙色 */
-        }
-
-        .btn:hover {
-            background-color: #FF3B30; /* 懸停效果顏色 */
-        }
-
-        /* 特色區塊 */
-        .features-section {
-            background-color: #ffffff;
-            padding: 80px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .features-title {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .features-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background-color: #f7f7f7;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-            .card h3 {
-                font-size: 22px;
-                color: #333;
-                margin-bottom: 15px;
-            }
-
-            .card p {
-                font-size: 16px;
-                color: #666;
-                line-height: 1.6;
-            }
-
-            .card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            .btn:hover {
+                transform: scale(1.1);
+                background-color: #c0392b;
             }
 
         footer {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -155,6 +85,50 @@
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        /* 動畫效果 */
+        @@keyframes fadeIn {
+            0%
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+
+        /* 背景顏色變換的動畫 */
+        @@keyframes backgroundColorChange {
+            0%
+
+        {
+            background: #1c92d2; /* 藍色 */
+        }
+
+        20% {
+            background: #3aa0c6; /* 偏綠藍色 */
+        }
+
+        40% {
+            background: #63afba; /* 淺藍色 */
+        }
+
+        60% {
+                background: #7bbfca; /* 更淺的藍色 */
+        }
+
+        80% {
+            background: #8dbcd1; /* 淺天藍色 */
+        }
+
+        100% {
+            background: #1c92d2; /* 回到原來的藍色 */
         }
 
         }
