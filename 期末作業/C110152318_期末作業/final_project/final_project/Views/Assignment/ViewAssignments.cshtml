@@ -1,15 +1,38 @@
-﻿public IActionResult ViewAssignments(int enrollmentId)
+﻿@using final_project.Models
+@model Enrollment
+
+<h2>@Model.Course?.Name 的作業詳細資訊</h2>
+
+@if (Model.Assignments != null && Model.Assignments.Any())
 {
-    var enrollment = _context.Enrollments
-        .Include(e => e.Assignments)
-        .Include(e => e.Course)
-        .FirstOrDefault(e => e.Id == enrollmentId);
-
-    if (enrollment == null)
-    {
-        TempData["ErrorMessage"] = "找不到該課程的作業資料。";
-        return RedirectToAction("Index", "Home");
-    }
-
-    return View(enrollment);
+    <table>
+        <thead>
+            <tr>
+                <th>作業檔案</th>
+                <th>上傳時間</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var assignment in Model.Assignments)
+            {
+                <tr>
+                    <td>
+                        <a href="@Url.Action("DownloadFile", "Assignment", new { studentEmail = Model.Student.Email, fileName = assignment.FilePath })" target="_blank">
+                            下載
+                        </a>
+                    </td>
+                    <td>@assignment.UploadedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
+else
+{
+    <p>此課程尚未上傳任何作業。</p>
+}
+
+<h3>用戶資訊：</h3>
+<p>用戶 Email: @Model.Student.Email</p>  <!-- 顯示用戶的 Email -->
+
+<a href="@Url.Action("StudentProgress", "Enrollment")" class="btn">返回課程進度</a>

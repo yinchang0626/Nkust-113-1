@@ -1,6 +1,8 @@
 ﻿using final_project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using final_project.Models;
 
 public class AssignmentController : Controller
 {
@@ -14,7 +16,6 @@ public class AssignmentController : Controller
     // 顯示作業上傳表單
     public IActionResult Upload(int enrollmentId)
     {
-        // 從資料庫查詢 Enrollment 資料
         var enrollment = _context.Enrollments
             .Include(e => e.Course)
             .FirstOrDefault(e => e.Id == enrollmentId);
@@ -33,20 +34,34 @@ public class AssignmentController : Controller
 
     public IActionResult ViewAssignments(int enrollmentId)
     {
+        // 從資料庫中獲取具體的 Enrollment 物件，並確保加載相關的作業資料
         var enrollment = _context.Enrollments
-            .Include(e => e.Assignments)
-            .Include(e => e.Course)
+            .Include(e => e.Student)    // 確保加載 Student 物件
+            .Include(e => e.Assignments) // 確保加載作業資料
             .FirstOrDefault(e => e.Id == enrollmentId);
 
+        // 若找不到對應的 Enrollment，返回 404
         if (enrollment == null)
         {
-            TempData["ErrorMessage"] = "找不到該課程的作業資料。";
-            return RedirectToAction("Index", "Home");
+            return NotFound();
         }
 
+        // 如果 Student 為 null，返回錯誤訊息或預設頁面
+        if (enrollment.Student == null)
+        {
+            TempData["ErrorMessage"] = "無法找到對應的學生資料。";
+            return RedirectToAction("Index", "Home"); // 可根據需要導向首頁或其他頁面
+        }
+
+        // 如果沒有作業資料，顯示對應訊息
+        if (enrollment.Assignments == null || !enrollment.Assignments.Any())
+        {
+            TempData["Message"] = "該學生尚未提交作業。";
+        }
+
+        // 返回視圖並傳遞 Enrollment 物件
         return View(enrollment);
     }
-
 
     // 處理作業上傳
     [HttpPost]
@@ -58,9 +73,16 @@ public class AssignmentController : Controller
             return RedirectToAction("Upload", new { enrollmentId });
         }
 
+        // 檢查檔案大小，限制為10MB
+        if (file.Length > 10 * 1024 * 1024)
+        {
+            TempData["ErrorMessage"] = "檔案大小不能超過 10MB。";
+            return RedirectToAction("Upload", new { enrollmentId });
+        }
+
         var enrollment = await _context.Enrollments
             .Include(e => e.Course)
-            .Include(e => e.Student)  // 確保 Student 也被載入
+            .Include(e => e.Student)
             .FirstOrDefaultAsync(e => e.Id == enrollmentId);
 
         if (enrollment == null)
@@ -69,40 +91,28 @@ public class AssignmentController : Controller
             return RedirectToAction("Index", "Home");
         }
 
-        // 取得原始檔案的副檔名
-        string fileExtension = Path.GetExtension(file.FileName);
-
-        // 取得原始檔案名稱（不包含副檔名）
+        // 生成唯一的檔案名稱
         string originalFileName = Path.GetFileNameWithoutExtension(file.FileName);
-
-        // 取得當前日期
+        string fileExtension = Path.GetExtension(file.FileName);
         string currentDate = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+        string uniqueFileName = $"{currentDate}_{originalFileName}{fileExtension}";
 
-        // 使用 GUID + 原始檔案名稱 + 副檔名組合成唯一的檔案名稱
-        string uniqueFileName = currentDate + "_" + originalFileName + fileExtension;
-
-        // 取得學生的 email 和課程名稱
         string studentEmail = enrollment.Student?.Email ?? "未提供電子郵件";
         string courseName = enrollment.Course?.Name ?? "未提供課程名稱";
 
-        // 設定儲存路徑，使用學生 email 和課程名稱作為路徑
         string uploadsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", studentEmail, courseName);
-
-        // 確保資料夾存在
         Directory.CreateDirectory(uploadsDirectory);
 
-        // 儲存文件（這裡的檔案名稱為 uniqueFileName，不包含路徑資訊）
         string filePath = Path.Combine(uploadsDirectory, uniqueFileName);
         using (var stream = new FileStream(filePath, FileMode.Create))
         {
             await file.CopyToAsync(stream);
         }
 
-        // 創建 Assignment 實體並儲存至資料庫
         var assignment = new Assignment
         {
             EnrollmentId = enrollmentId,
-            FilePath = filePath,  // 儲存完整的檔案路徑
+            FilePath = filePath,
             UploadedAt = DateTime.Now
         };
 
@@ -115,27 +125,33 @@ public class AssignmentController : Controller
 
 
     // 下載作業檔案
-    public Task<IActionResult> DownloadFile(string studentEmail, string courseName, string fileName)
+    public async Task<IActionResult> DownloadFile(string studentEmail, string fileName)
     {
-        // 去除路徑，僅保留檔案名稱
-        string fileNameWithoutPath = Path.GetFileName(fileName);
+        // 根據學生 Email 和檔案名稱來查找作業
+        var assignment = await _context.Assignments
+            .Include(a => a.Enrollment) // 加載 Enrollment 物件
+            .ThenInclude(e => e.Course) // 加載對應的 Course 物件
+            .FirstOrDefaultAsync(a => a.FilePath.EndsWith(fileName) && a.Enrollment.Student.Email == studentEmail);
 
-        // 生成檔案路徑，根據學生的 email 和課程名稱來構建路徑
-        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", studentEmail, courseName, fileNameWithoutPath);
-
-        // 檢查檔案是否存在
-        if (!System.IO.File.Exists(filePath))
+        if (assignment == null)
         {
-            return Task.FromResult<IActionResult>(NotFound()); // 如果檔案不存在，返回 404
+            return NotFound();  // 若找不到對應作業，返回 404
         }
 
-        // 傳回檔案下載
-        var fileBytes = System.IO.File.ReadAllBytes(filePath);
-        var fileExtension = Path.GetExtension(fileNameWithoutPath);
-        var contentType = GetContentType(fileExtension); // 根據檔案類型獲取 MIME 類型
-        return Task.FromResult<IActionResult>(File(fileBytes, contentType, fileNameWithoutPath));
-    }
+        // 直接使用 Assignment 中的 FilePath 來查找檔案
+        string filePath = assignment.FilePath;
 
+        if (!System.IO.File.Exists(filePath))
+        {
+            return NotFound();  // 檔案不存在，返回 404
+        }
+
+        var fileBytes = await System.IO.File.ReadAllBytesAsync(filePath);
+        fileName = Path.GetFileName(assignment.FilePath);
+        var fileExtension = Path.GetExtension(fileName);
+        var contentType = GetContentType(fileExtension);
+        return File(fileBytes, contentType, fileName);
+    }
 
 
     // 用於根據檔案擴展名獲取 MIME 類型的輔助方法
@@ -148,8 +164,14 @@ public class AssignmentController : Controller
             case ".jpg": return "image/jpeg";
             case ".png": return "image/png";
             case ".txt": return "text/plain";
-            // 你可以根據需要擴展更多檔案類型
             default: return "application/octet-stream";
         }
+    }
+
+    // 生成檔案路徑的輔助方法
+    private string GenerateFilePath(string studentEmail, string courseName, string fileName)
+    {
+        string fileNameWithoutPath = Path.GetFileName(fileName);
+        return Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", studentEmail, courseName, fileNameWithoutPath);
     }
 }
