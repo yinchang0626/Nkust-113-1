@@ -38,8 +38,9 @@ var app = builder.Build();
 
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
 {
-    await Seed.SeedUsersAndRolesAsync(app);
-    //Seed.SeedData(app);         //把資料載入
+    //
+    Seed.SeedData(app);         //把資料載入
+    //await Seed.SeedUsersAndRolesAsync(app);
 }
 /* 
  * Add-Migration InitialCreate用於生成資料庫的遷移檔案

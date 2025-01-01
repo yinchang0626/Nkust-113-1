@@ -25,7 +25,7 @@
         <div class="bg-light navbar-light" data-sticky="top">
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" asp-controller="Home" asp-action="Index" id="logo-text">RunGroop</a>
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index" id="logo-text">WebApplication1</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="icon-menu h4"></i>
                     </button>
@@ -48,6 +48,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                             </li>
                         </ul>
                         @if (SignInManager.IsSignedIn(User))
@@ -112,102 +115,40 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="bg-gray text-light footer-long">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-3">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" id="logo-text">RunGroop</a>
-                    <p class="text-muted">
-                        &copy; 2022 RunGroop
-                        <br />
-                        <br />
-                    </p>
+                <div class="col-12 col-md">
+                    <small class="d-block mb-3 text-muted">&copy; 2025 Company Name</small>
                 </div>
-                <!--end of col-->
-                <div class="col-12 col-md-9">
-                    <span class="h5">The world's first online platform for runners</span>
-                    <div class="row no-gutters">
-                        <div class="col-6 col-lg-3">
-                            <h6>Navigate</h6>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a asp-area="" asp-controller="Home"
-                                       asp-action="Index">Home</a>
-                                </li>
-                                <li>
-                                    <a asp-area="" asp-controller="Users"
-                                       asp-action="Index">Find Runners Near You</a>
-                                </li>
-                                <li>
-                                    <a asp-area="" asp-controller="Club"
-                                       asp-action="Index">Find Running Clubs Near You</a>
-                                </li>
-                                <li>
-                                    <a asp-area="" asp-controller="Race"
-                                       asp-action="Index">Find Running Races Near You</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--end of col-->
-                        <div class="col-6 col-lg-3">
-                            <h6>Club Directory</h6>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a asp-area="" asp-controller="Club"
-                                       asp-action="RunningClubsByStateDirectory">Find Running Clubs By State</a>
-                                </li>
-                                <li>
-                                    <a asp-area="" asp-controller="Club"
-                                       asp-action="RunningClubsByStateForCityDirectory">Find Running Clubs By City</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--end of col-->
-                        <div class="col-6 col-lg-3">
-                            <h6>Race Directory</h6>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#">Find Running Races By City</a>
-                                </li>
-                                <li>
-                                    <a href="#">Find Running Races By State</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--end of col-->
-                        @* <div class="col-6 col-lg-3"> *@
-                        @*     <h6>Social</h6> *@
-                        @*     <ul class="list-unstyled"> *@
-                        @*         <li> *@
-                        @*             <a href="https://www.youtube.com/channel/UCU_Pr6r85LeSe62S65BLV2g">Youtube</a> *@
-                        @*         </li> *@
-                        @*         <li> *@
-                        @*             <a href="https://www.facebook.com/RunGroop-101353239237822">Facebook</a> *@
-                        @*         </li> *@
-                        @*         <li> *@
-                        @*             <a href="https://twitter.com/rungroop">Twitter</a> *@
-                        @*         </li> *@
-                        @*         <li> *@
-                        @*             <a href="/blog">Blog</a> *@
-                        @*         </li> *@
-                        @*     </ul> *@
-                        @* </div> *@
-                        <!--end of col-->
-                    </div>
-                    <!--end of row-->
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Developer stuff</a></li>
+                    </ul>
                 </div>
-                <!--end of col-->
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
             </div>
-            <!--end of row-->
         </div>
-        <!--end of container-->
     </footer>
-    </div>
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/bootstrap.js"></script>
-    <script src="~/js/theme.js"></script>
-    <script src="~/js/custom.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

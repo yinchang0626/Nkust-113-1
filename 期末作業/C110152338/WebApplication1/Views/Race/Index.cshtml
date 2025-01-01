@@ -74,8 +74,7 @@
                             <div>
                                 <small>@race.RacesCategory</small>
                             </div>
-                            @* @if (isAuthenticated && User.IsInRole("admin")) *@
-                            @if(true)
+                            @if (isAuthenticated && User.IsInRole("admin"))
                             {
                                 <div>
                                     <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Race" asp-action="Edit" asp-route-id="@race.Id">

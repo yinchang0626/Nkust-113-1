@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using WebApplication1.Data;
 using WebApplication1.Data.Enum;
 using WebApplication1.Models;
 
@@ -126,7 +125,7 @@ namespace WebApplication1.Data
 
                 //Users
                 var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-                string adminUserEmail = "teddysmithdeveloper@gmail.com";
+                string adminUserEmail = "admin@gmail.com";
 
                 var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
                 if (adminUser == null)
