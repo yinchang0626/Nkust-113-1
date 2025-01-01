@@ -11,8 +11,8 @@ using final_project.Data;
 namespace final_project.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241231155755_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250101053512_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,7 +45,8 @@ namespace final_project.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.HasIndex("StudentId");
+                    b.HasIndex("StudentId", "CourseId")
+                        .IsUnique();
 
                     b.ToTable("Enrollments");
                 });

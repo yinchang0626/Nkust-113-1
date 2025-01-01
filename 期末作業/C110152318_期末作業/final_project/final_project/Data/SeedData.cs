@@ -1,8 +1,7 @@
 ﻿using final_project.Data;
 using final_project.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
-namespace final_project;
 
 public static class SeedData
 {
@@ -16,11 +15,13 @@ public static class SeedData
                 return;
             }
 
+            var passwordHasher = new PasswordHasher<User>();
+
             var students = new[]
             {
-                new User { Name = "Alice", Email = "alice@example.com", Password = "Password123" },
-                new User { Name = "Bob", Email = "bob@example.com", Password = "Password123" },
-                new User { Name = "Charlie", Email = "charlie@example.com", Password = "Password123" }
+                new User { Name = "Alice", Email = "alice@example.com", Password = passwordHasher.HashPassword(null, "Password123") },
+                new User { Name = "Bob", Email = "bob@example.com", Password = passwordHasher.HashPassword(null, "Password123") },
+                new User { Name = "Charlie", Email = "charlie@example.com", Password = passwordHasher.HashPassword(null, "Password123") }
             };
             await context.Users.AddRangeAsync(students);
 

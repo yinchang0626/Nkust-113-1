@@ -32,6 +32,10 @@ namespace final_project.Data
                 .WithOne(e => e.Course) // 每個註冊屬於一門課
                 .HasForeignKey(e => e.CourseId) // 外鍵是 Enrollment 的 CourseId
                 .OnDelete(DeleteBehavior.Cascade); // 刪除課程時刪除相關註冊
+                                                   // 配置 Enrollment 的複合索引
+            modelBuilder.Entity<Enrollment>()
+                .HasIndex(e => new { e.StudentId, e.CourseId })
+                .IsUnique();
         }
 
     }

@@ -63,6 +63,7 @@
                 .login-footer a:hover {
                     text-decoration: underline;
                 }
+
     </style>
 </head>
 <body>
@@ -75,20 +76,29 @@
                         <h4>歡迎回來</h4>
                     </div>
                     <div class="card-body login-card-body">
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <p>@error.ErrorMessage</p>
+                                }
+                            </div>
+                        }
                         <form method="post" action="@Url.Action("Login", "Account")">
                             <div class="form-group">
-                                <label for="Username" style="font-size: 18px;">帳號</label>
-                                <input type="text" class="form-control" id="Username" name="Username" placeholder="請輸入帳號" required>
+                                <label for="email" style="font-size: 18px;">帳號</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="請輸入帳號" required>
                             </div>
                             <div class="form-group">
-                                <label for="Password" style="font-size: 18px;">密碼</label>
-                                <input type="password" class="form-control" id="Password" name="Password" placeholder="請輸入密碼" required>
+                                <label for="password" style="font-size: 18px;">密碼</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="請輸入密碼" required>
                             </div>
                             <button type="submit" class="btn btn-primary">登入</button>
                         </form>
                         <div class="login-footer">
-                            <p>還沒有帳號？ <a href="#">註冊</a></p>
-                            <p><a href="#">忘記密碼</a></p>
+                            <p>還沒有帳號？ <a href="@Url.Action("Register", "Account")">註冊</a></p>
+                            <p><a href="@Url.Action("ForgotPassword", "Account")">忘記密碼</a></p>
                         </div>
                     </div>
                 </div>

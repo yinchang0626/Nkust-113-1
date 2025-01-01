@@ -1,5 +1,6 @@
 ﻿using final_project.Models;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Enrollment
 {
@@ -15,4 +16,7 @@ public class Enrollment
     public Course? Course { get; set; }
 
     public double Progress { get; set; } // 學習進度
+
+    // 在模型中明確標註索引的組成（僅作註解，實際索引配置在 DbContext 中）
+    // [Index(nameof(StudentId), nameof(CourseId), IsUnique = true)]
 }

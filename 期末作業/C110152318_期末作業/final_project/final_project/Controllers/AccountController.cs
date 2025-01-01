@@ -1,21 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using final_project.Models;
-using System.Linq;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using final_project.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace final_project.Controllers
 {
     public class AccountController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly PasswordHasher<User> _passwordHasher;
 
         public AccountController(ApplicationDbContext context)
         {
             _context = context;
+            _passwordHasher = new PasswordHasher<User>();
         }
 
         // 顯示登入頁面
@@ -30,27 +32,37 @@ namespace final_project.Controllers
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
 
-            if (user == null || user.Password != password) // 直接比較密碼
+            if (user == null)
             {
-                // 如果登入失敗，將錯誤訊息加入 ModelState
                 ModelState.AddModelError("", "無效的帳號或密碼");
                 return View();
             }
 
-            //var claims = new List<Claim>
-            //{
-            //    new Claim(ClaimTypes.Name, user.Name),
-            //    new Claim(ClaimTypes.Email, user.Email),
-            //    new Claim("UserId", user.Id.ToString())
-            //};
+            var result = _passwordHasher.VerifyHashedPassword(user, user.Password, password);
 
-            //var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            //var authProperties = new AuthenticationProperties
-            //{
-            //    IsPersistent = true
-            //};
+            if (result == PasswordVerificationResult.Failed)
+            {
+                ModelState.AddModelError("", "無效的帳號或密碼");
+                return View();
+            }
 
-            //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+            // 清除先前的 ModelState 錯誤
+            ModelState.Clear();
+
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim("UserId", user.Id.ToString())
+            };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = true
+            };
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
             return RedirectToAction("StudentProgress", "Enrollment", new { studentId = user.Id });
         }
@@ -62,11 +74,16 @@ namespace final_project.Controllers
             return RedirectToAction("Login", "Account");
         }
 
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        // 註冊處理邏輯
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(string email, string password, string passwordConfirmation)
         {
-            // 檢查必要的參數是否為 null 或空值
             if (string.IsNullOrEmpty(email))
             {
                 ModelState.AddModelError("", "電子郵件地址是必填項");
@@ -85,32 +102,34 @@ namespace final_project.Controllers
                 return View();
             }
 
-            // 檢查密碼和確認密碼是否匹配
             if (password != passwordConfirmation)
             {
                 ModelState.AddModelError("", "密碼不匹配");
                 return View();
             }
 
-            // 檢查該電子郵件是否已經註冊
             if (await _context.Users.AnyAsync(u => u.Email == email))
             {
                 ModelState.AddModelError("", "該電子郵件已被註冊");
                 return View();
             }
 
-            // 創建新用戶
             var user = new User
             {
                 Email = email,
-                Password = password, // 不加密密碼
-                Name = email.Split('@')[0] // 默認使用電子郵件的前綴作為用戶名
+                Password = _passwordHasher.HashPassword(null, password), // 密碼哈希處理
+                Name = email.Split('@')[0] // 使用電子郵件前綴作為用戶名
             };
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult ForgotPassword()
+        {
+            return View();
         }
     }
 }

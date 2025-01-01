@@ -5,7 +5,7 @@
 namespace final_project.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -73,9 +73,10 @@ namespace final_project.Migrations
                 column: "CourseId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Enrollments_StudentId",
+                name: "IX_Enrollments_StudentId_CourseId",
                 table: "Enrollments",
-                column: "StudentId");
+                columns: new[] { "StudentId", "CourseId" },
+                unique: true);
         }
 
         /// <inheritdoc />
