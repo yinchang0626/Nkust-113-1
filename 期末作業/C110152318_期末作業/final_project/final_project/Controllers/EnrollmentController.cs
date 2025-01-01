@@ -30,6 +30,7 @@ namespace final_project.Controllers
             var enrollments = await _context.Enrollments
                 .Where(e => e.StudentId == studentId)
                 .Include(e => e.Course)
+                .Include(e => e.Assignments)  // 包括作業
                 .ToListAsync();
 
             if (!enrollments.Any())

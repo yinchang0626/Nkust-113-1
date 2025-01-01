@@ -11,9 +11,10 @@ namespace final_project.Data
         }
 
         // 添加 DbSet 屬性來表示資料庫中的表
-        public DbSet<User> Users { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<Assignment> Assignments { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,9 +34,10 @@ namespace final_project.Data
                 .HasForeignKey(e => e.CourseId) // 外鍵是 Enrollment 的 CourseId
                 .OnDelete(DeleteBehavior.Cascade); // 刪除課程時刪除相關註冊
                                                    // 配置 Enrollment 的複合索引
-            modelBuilder.Entity<Enrollment>()
-                .HasIndex(e => new { e.StudentId, e.CourseId })
-                .IsUnique();
+            modelBuilder.Entity<Assignment>()
+                .HasOne(a => a.Enrollment)  // Assignment 會有一個 Enrollment
+                .WithMany(e => e.Assignments)  // 每個 Enrollment 會有多個 Assignment
+                .HasForeignKey(a => a.EnrollmentId);  // 指定外鍵
         }
 
     }

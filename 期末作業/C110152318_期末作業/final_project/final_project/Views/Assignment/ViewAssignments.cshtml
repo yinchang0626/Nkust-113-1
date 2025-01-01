@@ -1,0 +1,15 @@
+﻿public IActionResult ViewAssignments(int enrollmentId)
+{
+    var enrollment = _context.Enrollments
+        .Include(e => e.Assignments)
+        .Include(e => e.Course)
+        .FirstOrDefault(e => e.Id == enrollmentId);
+
+    if (enrollment == null)
+    {
+        TempData["ErrorMessage"] = "找不到該課程的作業資料。";
+        return RedirectToAction("Index", "Home");
+    }
+
+    return View(enrollment);
+}

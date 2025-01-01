@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "上傳作業";
+}
+
+<h2 class="page-title">@ViewBag.CourseName 作業上傳</h2>
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data" class="upload-form" action="@Url.Action("Upload", "Assignment")">
+        <input type="hidden" name="enrollmentId" value="@ViewBag.EnrollmentId" />
+
+        <div class="form-group">
+            <label for="file" class="form-label">選擇作業檔案：</label>
+            <input type="file" name="file" id="file" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">上傳作業</button>
+    </form>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page-title {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 40px;
+        color: #343a40;
+        font-weight: bold;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .upload-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-size: 16px;
+        color: #495057;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .form-control {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    .alert {
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border-color: #f5c6cb;
+    }
+</style>

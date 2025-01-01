@@ -37,6 +37,12 @@
         border-color: #f5c6cb;
     }
 
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+    }
+
     table {
         width: 100%;
         border-collapse: collapse;
@@ -53,6 +59,19 @@
         }
 </style>
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-error">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
 @if (!Model.Any())
 {
     <p>此學生尚未註冊任何課程。</p>
@@ -60,11 +79,13 @@
 else
 {
     <a href="@Url.Action("AvailableCourses", "Enrollment")" class="btn">加入課程</a>
-    <table>
+    <input type="text" id="searchCourse" placeholder="搜尋課程" onkeyup="searchTable()">
+    <table id="courseTable">
         <thead>
             <tr>
                 <th>課程名稱</th>
                 <th>進度 (%)</th>
+                <th>作業檔案</th>
                 <th>操作</th>
             </tr>
         </thead>
@@ -75,7 +96,33 @@ else
                     <td>@enrollment.Course.Name</td>
                     <td>@(enrollment.Progress * 100)</td>
                     <td>
-                        <form method="post" action="@Url.Action("DeleteEnrollment", "Enrollment")" style="display:inline;">
+                        @if (enrollment.Assignments != null && enrollment.Assignments.Any())
+                        {
+                            @foreach (var assignment in enrollment.Assignments)
+                            {
+                                <p>
+                                    作業檔案:
+                                    <a href="@Url.Action("DownloadFile", "Assignment", new { studentId = enrollment.StudentId, courseId = enrollment.CourseId, fileName = assignment.FilePath })" target="_blank">
+                                        下載
+                                    </a>
+                                </p>
+
+                                <p>上傳時間: @assignment.UploadedAt.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                                <br />
+                            }
+                        }
+                        else
+                        {
+                            <span>尚未上傳作業</span>
+                        }
+                    </td>
+                    <td>
+                        <!-- 上傳作業的按鈕 -->
+                        <a href="@Url.Action("Upload", "Assignment", new { enrollmentId = enrollment.Id })" class="btn" style="background-color: #28a745;">
+                            上傳作業
+                        </a>
+                        <!-- 刪除課程的表單 -->
+                        <form method="post" action="@Url.Action("DeleteEnrollment", "Enrollment")" style="display:inline;" onsubmit="return confirm('確定要刪除這門課程嗎？');">
                             <input type="hidden" name="enrollmentId" value="@enrollment.Id" />
                             <button type="submit" class="btn" style="background-color: #dc3545;">刪除</button>
                         </form>
@@ -85,3 +132,25 @@ else
         </tbody>
     </table>
 }
+
+<script>
+    function searchTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchCourse");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("courseTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
