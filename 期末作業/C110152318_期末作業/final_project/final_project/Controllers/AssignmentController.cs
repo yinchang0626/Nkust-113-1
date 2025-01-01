@@ -211,6 +211,4 @@ public class AssignmentController : Controller
         // 返回至作業詳細頁面
         return RedirectToAction("ViewAssignments", new { enrollmentId });
     }
-
-
 }

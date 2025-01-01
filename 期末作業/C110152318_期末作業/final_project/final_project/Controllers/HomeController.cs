@@ -15,8 +15,13 @@ namespace final_project.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated) // 檢查用戶是否登入
+            {
+                return RedirectToAction("StudentProgress", "Enrollment"); // 已登入，跳轉到我的課程進度
+            }
+            return View(); // 如果未登入，顯示歡迎頁面
         }
+
 
         public IActionResult Privacy()
         {

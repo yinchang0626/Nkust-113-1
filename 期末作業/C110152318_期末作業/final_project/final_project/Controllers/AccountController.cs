@@ -71,8 +71,11 @@ namespace final_project.Controllers
         // 登出邏輯
         public async Task<IActionResult> Logout()
         {
+            // 清除登入狀態
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Login", "Account");
+
+            // 重定向回首頁或登入頁面
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Register()

@@ -15,6 +15,8 @@
 
         <button type="submit" class="btn btn-primary btn-block">上傳作業</button>
     </form>
+
+    <a href="@Url.Action("StudentProgress", "Enrollment")" class="btn btn-secondary btn-block">返回課程進度</a>
 </div>
 
 @if (TempData["SuccessMessage"] != null)
@@ -102,6 +104,22 @@
 
         .btn-primary:hover {
             background-color: #0056b3;
+        }
+
+    .btn-secondary {
+        background-color: #28a745; /* 綠色 */
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            background-color: #218838; /* 更深的綠色 */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
     .btn-block {

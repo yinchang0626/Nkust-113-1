@@ -1,9 +1,9 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "歡迎頁面";
 }
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +11,153 @@
     <link rel="stylesheet" href="~/assets/css/style.css">
 </head>
 <body>
-    <script>
-        window.location.href = window.location.origin + "/Account/Login";
-    </script>a
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">歡迎來到我們的網站</h1>
+            <p class="hero-description">探索更多功能，立即登入以開始您的學習旅程。</p>
+            <a href="@Url.Action("Login", "Account")" class="btn btn-primary">立即登入</a>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <div class="container">
+            <h2 class="features-title">我們的特色</h2>
+            <div class="features-cards">
+                <div class="card">
+                    <h3>多樣化課程</h3>
+                    <p>提供多種不同領域的課程，滿足各種學習需求。</p>
+                </div>
+                <div class="card">
+                    <h3>互動式學習</h3>
+                    <p>我們的課程採用互動式學習，讓學習變得更有趣。</p>
+                </div>
+                <div class="card">
+                    <h3>專業師資</h3>
+                    <p>我們的老師都來自各大學術機構，提供高品質的教學。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 你的網站名稱。所有權利保留。</p>
+        </div>
+    </footer>
+
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Hero區塊 */
+        .hero-section {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.85;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #FF6F61; /* 減少對比度，選擇柔和的橙色 */
+        }
+
+        .btn:hover {
+            background-color: #FF3B30; /* 懸停效果顏色 */
+        }
+
+        /* 特色區塊 */
+        .features-section {
+            background-color: #ffffff;
+            padding: 80px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-title {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .features-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #f7f7f7;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card h3 {
+                font-size: 22px;
+                color: #333;
+                margin-bottom: 15px;
+            }
+
+            .card p {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.6;
+            }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        }
+    </style>
 </body>
 </html>
