@@ -1,7 +1,47 @@
 # **ASP.NET MVC Development Progress**
 Authoer: kerong
----
 
+## 作業繳交功能說明
+### 頁面顯示
+![image](https://hackmd.io/_uploads/rkHY4u7LJl.png)
+
+### 登入帳號
+![image](https://hackmd.io/_uploads/rJhq4O7I1x.png)
+
+### 人員(可新增、編輯、刪除、分類)
+![image](https://hackmd.io/_uploads/BJoxrOQUJl.png)
+
+### 創建人員
+![image](https://hackmd.io/_uploads/rkj7Hd781g.png)
+![image](https://hackmd.io/_uploads/rJNVBd78ye.png)
+
+### SQL(資料庫正規化)
+![image](https://hackmd.io/_uploads/ryjXId7UJe.png)
+
+
+
+
+## Common Commands for Database Migration and Seeding
+
+### 1. NuGet Package Manager Console Commands
+
+These commands are typically used in Visual Studio's **Package Manager Console** to manage database migrations.
+
+
+#### Migration
+- **Command**: 
+  ```bash
+  Add-Migration InitialCreate
+  Add-Migration Identity
+  Update-Database
+  Remove-Migration
+  Add-Migration NullAddressFix
+  ```
+- **Powershell**
+    ```bash
+    dotnet run seeddata
+    dotnet database drop
+    ```
 ### **2024/12/27: Installing Entity Framework and DB Context**
 - **Objective**: Integrating Entity Framework to manage database interactions and setting up the DB Context.
 - **Image**: ![image](https://hackmd.io/_uploads/SJrRpNTBJg.png)
@@ -74,3 +114,25 @@ Authoer: kerong
 - **IPinfo.cs**: Helper for extracting IP-related information.
 - **Location.cs**: Model for handling location details.
 - **StateConverter.cs**: Helper for converting between state-related data formats.
+
+### **2024/12/30: Club Editing and Deletion**
+- **Objective**: Extend the club management functionality by enabling edit and delete operations for clubs.
+- **Images**: 
+    - ![Edit Functionality](https://hackmd.io/_uploads/SysgyTkLJl.png)
+
+#### **Edit Functionality**
+- Implemented the "Edit" button to allow users to update club details.
+    - **Views/Club/Edit.cshtml**: View for editing existing clubs.
+
+#### **Delete Functionality**
+- Added the "Delete" button for removing clubs from the database.
+    - **Views/Club/Delete.cshtml**: View for confirming club deletion.
+  
+#### **Controller Updates**
+- Enhanced the **ClubController.cs** to include actions for editing and deleting clubs.
+    - **EditClub**: Action to handle edit operations.
+    - **DeleteClub**: Action to manage deletion operations.
+
+#### **Validation and Security**
+- Added data validation for club creation and editing to ensure input accuracy.
+- Ensured secure handling of deletion to prevent accidental data loss.
