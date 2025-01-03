@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Independent Study";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Independent Study (Supervisor: Shao-I Chu)</h2>
+<p>Application of Reinforcement Learning Based on Image Processing in the Side-Scrolling Action Game 《Hollow Knight》</p>
+<p>Related Video Introduction:</p>
+<div style="text-align: center;">
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/EeooyhH2kHc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<h3>Project Image Gallery</h3>
+<div class="image-gallery">
+    <div class="image-item">
+        <img src="https://hackmd.io/_uploads/By5-nPaBJx.png" alt="Image 1" class="project-image" />
+    </div>
+    <div class="image-item">
+        <img src="https://hackmd.io/_uploads/ryvYsPpHkg.png" alt="Image 2" class="project-image" />
+    </div>
+    <div class="image-item">
+        <img src="https://hackmd.io/_uploads/Sku1nP6SJg.png" alt="Image 3" class="project-image" />
+    </div>
+</div>
+
+<style>
+    /* Title styles */
+    h1, h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    /* Video container styles */
+    .video-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 1200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .video-container iframe {
+            width: 100%; /* Make the iframe responsive */
+            height: auto; /* Adjust height automatically */
+        }
+
+    /* Image gallery styles */
+    .image-gallery {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .image-item {
+        margin-bottom: 20px; /* Space between images */
+    }
+
+    .project-image {
+        width: 90%; /* Use 90% of the parent container */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 1200px; /* Limit the maximum width */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .project-image:hover {
+            transform: scale(1.1); /* Enlarge slightly on hover */
+        }
+
+    /* Flexbox layout for automatic resizing */
+    .image-gallery,
+    .video-container {
+        padding: 0 10%; /* Add padding for responsiveness without media queries */
+    }
+</style>

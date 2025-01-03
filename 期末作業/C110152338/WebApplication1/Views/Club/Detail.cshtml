@@ -1,0 +1,160 @@
+﻿@model Club
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="main-container">
+    <nav aria-label="breadcrumb" role="navigation" class="bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="pages-app.html">Find</a>
+                        </li>
+
+                        <li class="breadcrumb-item active" aria-current="page">Runnings Clubs in @Model.Address.City, @Model.Address.State</li>
+                    </ol>
+                </div>
+                <!--end of col-->
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </nav>
+    <section class="bg-white space-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mb-4 mb-sm-0">
+                    <img alt="Image" src="@Model.Image" class="rounded img-fluid" />
+                </div>
+                <!--end of col-->
+                <div class="col-lg-4 d-flex flex-column justify-content-between mr-auto ml-auto">
+                    <div>
+                        <h1 class="mb-2">@Model.Title</h1>
+                        <h2 class="lead mb-3">@Model.Address.City, @Model.Address.State</h2>
+                        <div>
+                            <span class="badge badge-secondary mr-3">@Model.ClubCategory</span>
+                        </div>
+                        <div>
+                            <ul class="list-inline text-small d-inline-block mb-3">
+                                <li class="list-inline-item"><i class="icon-thumbs-up"></i> 214</li>
+                                <li class="list-inline-item"><i class="icon-message"></i> 6</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="btn-group mb-2">
+                            <button type="button" class="btn btn-success btn-lg">Join Club</button>
+                            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split dropdown-toggle-no-arrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-dots-three-horizontal"></i>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-sm">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of col-->
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <!--end of section-->
+    <section class="space-sm">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-8 col-lg-7">
+                    <h5 class="mb-4">Overview</h5>
+                    <article>
+                        @Model.Description
+                    </article>
+                    <hr>
+                    <h5 class="mb-4">Discussion</h5>
+                    <div class="card">
+                        <div class="card-header bg-secondary d-flex justify-content-between">
+                            <button class="btn btn-secondary" type="button" data-target="#comment-reply" data-toggle="collapse" aria-expanded="false" aria-controls="comment-reply">Post a reply</button>
+                            <form class="d-flex align-items-center">
+                                <span class="mr-2 text-muted text-small text-nowrap">Sort by:</span>
+                                <select class="custom-select">
+                                    <option value="alpha">Alphabetical</option>
+                                    <option value="old-new" selected>Newest</option>
+                                    <option value="new-old">Popular</option>
+                                    <option value="recent">Recently Updated</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="collapse" id="comment-reply">
+                            <form class="card-body">
+                                <div class="form-group">
+                                    <textarea class="form-control from-control-lg" id="comment-reply-text" name="comment-reply" rows="4" placeholder="Type your reply here"></textarea>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="notify-reply" id="check-notify">
+                                        <label class="custom-control-label text-small" for="check-notify">Notify me when someone replies</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button type="submit" class="btn btn-success mr-3">Submit reply</button>
+                                    <a href="#comment-reply" class="text-small text-muted" data-toggle="collapse" aria-expanded="true" aria-controls="comment-reply">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                        <ul class="list-group list-group-flush list-group-comments">
+
+
+                        </ul>
+                    </div>
+
+                </div>
+                <!--end of col-->
+                <div class="col-12 col-md-4">
+                    <!-- end card -->
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between">
+                                    <div><i class="icon-text-document mr-1"></i> Created</div>
+                                    <span>17/11/2017</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between">
+                                    <div><i class="icon-edit mr-1"></i> Last updated</div>
+                                    <span>23/12/2017</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between">
+                                    <div><i class="icon-thumbs-up mr-1"></i> Owner</div>
+                                    <span>214</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between">
+                                    <div><i class="icon-share mr-1"></i> Shares</div>
+                                    <span>52</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end card -->
+                </div>
+                <!--end of col-->
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
