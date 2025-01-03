@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊頁面</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4>註冊帳號</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="@Url.Action("Register", "Account")">
+                            <div class="form-group">
+                                <label for="Email">電子郵件</label>
+                                <input type="email" class="form-control" id="Email" name="email" placeholder="請輸入電子郵件" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">密碼</label>
+                                <input type="password" class="form-control" id="Password" name="password" placeholder="請輸入密碼" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="PasswordConfirmation">確認密碼</label>
+                                <input type="password" class="form-control" id="PasswordConfirmation" name="passwordConfirmation" placeholder="請再次輸入密碼" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">註冊</button>
+                        </form>
+                        <div class="mt-3">
+                            <p>已經有帳號？ <a href="@Url.Action("Login", "Account")">登入</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

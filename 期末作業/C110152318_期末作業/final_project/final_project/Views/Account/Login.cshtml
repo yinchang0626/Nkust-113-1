@@ -1,0 +1,114 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+
+        .login-container {
+            margin-top: 5px;
+        }
+
+        .login-card {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .login-card-header {
+            background-color: #007bff;
+            color: white;
+            padding: 40px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .login-card-body {
+            padding: 50px;
+        }
+
+        .form-control {
+            border-radius: 25px;
+            box-shadow: none;
+            font-size: 18px;
+            padding: 20px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 15px;
+            border-radius: 25px;
+            font-size: 18px;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+            .login-footer a {
+                text-decoration: none;
+                color: #007bff;
+            }
+
+                .login-footer a:hover {
+                    text-decoration: underline;
+                }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center login-container">
+            <div class="col-md-5">
+                <div class="card login-card">
+                    <div class="card-header login-card-header">
+                        <h4>歡迎回來</h4>
+                    </div>
+                    <div class="card-body login-card-body">
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <p>@error.ErrorMessage</p>
+                                }
+                            </div>
+                        }
+                        <form method="post" action="@Url.Action("Login", "Account")">
+                            <div class="form-group">
+                                <label for="email" style="font-size: 18px;">帳號</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="請輸入帳號" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" style="font-size: 18px;">密碼</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="請輸入密碼" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">登入</button>
+                        </form>
+                        <div class="login-footer">
+                            <p>還沒有帳號？ <a href="@Url.Action("Register", "Account")">註冊</a></p>
+                            <p><a href="@Url.Action("ForgotPassword", "Account")">忘記密碼</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
