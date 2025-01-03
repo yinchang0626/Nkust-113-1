@@ -3,7 +3,8 @@ Authoer: kerong
 
 ## 作業繳交
 
-實作影片 https://www.youtube.com/embed/jNJAi1xFz4o
+實作影片
+https://www.youtube.com/watch?v=jNJAi1xFz4o
 
 <!--
 <div style="text-align: center;">
