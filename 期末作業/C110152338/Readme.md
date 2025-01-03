@@ -5,9 +5,11 @@ Authoer: kerong
 
 實作影片 https://www.youtube.com/embed/jNJAi1xFz4o
 
+<!--
 <div style="text-align: center;">
     <iframe width="800" height="450" src="https://www.youtube.com/embed/jNJAi1xFz4o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+-->
 
 
 1. 選擇資料集(台灣景點介紹)
