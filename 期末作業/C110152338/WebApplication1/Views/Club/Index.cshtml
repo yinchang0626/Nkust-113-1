@@ -15,12 +15,11 @@
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
 
-
 <section class="space-sm flush-with-above">
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <p>Club Categories</p>
+                <p>Attraction City</p>
                 <div class="mb-3">
                     <a type="button" class="btn btn-secondary mb-1" asp-action="Index" asp-route-page="1" asp-route-category="-1">All</a>
                     @foreach (var category in Html.GetEnumSelectList<ClubCategory>())
@@ -37,11 +36,11 @@
                 @if (isValidPage)
                 {
                     <a type="button" class="btn btn-sm btn-outline-primary @prevDisabled"
-                   asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-category="@Model.Category">
+                       asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-category="@Model.Category">
                         Prev
                     </a>
                     <a type="button" class="btn btn-sm btn-outline-primary @nextDisabled"
-                   asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-category="@Model.Category">
+                       asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-category="@Model.Category">
                         Next
                     </a>
                     <span class="text-muted text-small">Results @resultStart - @resultEnd of @Model.TotalClubs</span>
@@ -54,24 +53,24 @@
                 <li class="col-12 col-md-6 col-lg-4">
                     <div class="card">
                         <a type="button" asp-controller="Club" asp-action="DetailClub" asp-route-runningClub="@club.Title.GenerateSlug()" asp-route-id="@club.Id">
-                            @if(@club.Image != null)
+                            @if (@club.Image != null)
                             {
-                                <img class="card-img-top" src="@club.Image" alt="Card image cap">   
+                                <img class="card-img-top" src="@club.Image" alt="Card image cap">
                             }
                             else
                             {
-                                <img class="card-img-top" src="/img/rungroopclub.png" alt="Card image cap">   
+                                <img class="card-img-top" src="/img/rungroopclub.png" alt="Card image cap">
                             }
-                            
                         </a>
                         <div class="card-body">
                             <h4 class="card-title">@club.Title</h4>
-                            <p class="card-text">@club.Description</p>
-                            <p class="card-text">@club.Address.City, @club.Address.State</p>
+                            <p class="card-text text-truncate" style="max-height: 3em; overflow: hidden;">
+                                @club.Description.Substring(0, Math.Min(club.Description.Length, 100))@((club.Description.Length > 100) ? "..." : "")
+                            </p>
                         </div>
                         <div class="card-footer card-footer-borderless d-flex justify-content-between">
                             <div>
-                                <small>@club.ClubCategory</small>
+                                <small style="font-size: 1.25em;">@club.ClubCategory</small>
                             </div>
                             @if (isAuthenticated && User.IsInRole("admin"))
                             {
@@ -94,11 +93,11 @@
                 @if (isValidPage)
                 {
                     <a type="button" class="btn btn-sm btn-outline-primary @prevDisabled"
-                   asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-category="@Model.Category">
+                       asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-category="@Model.Category">
                         Prev
                     </a>
                     <a type="button" class="btn btn-sm btn-outline-primary @nextDisabled"
-                   asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-category="@Model.Category">
+                       asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-category="@Model.Category">
                         Next
                     </a>
                     <span class="text-muted text-small">Results @resultStart - @resultEnd of @Model.TotalClubs</span>

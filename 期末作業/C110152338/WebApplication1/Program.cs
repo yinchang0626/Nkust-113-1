@@ -39,7 +39,7 @@ var app = builder.Build();
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
 {
     //
-    Seed.SeedData(app);         //把資料載入
+    //Seed.SeedData(app);         //把資料載入
     //await Seed.SeedUsersAndRolesAsync(app);
 }
 /* 

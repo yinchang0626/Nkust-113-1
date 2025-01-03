@@ -1,24 +1,29 @@
 # **ASP.NET MVC Development Progress**
 Authoer: kerong
 
-## 作業繳交功能說明
-### 頁面顯示
-![image](https://hackmd.io/_uploads/rkHY4u7LJl.png)
+## 作業繳交
 
-### 登入帳號
-![image](https://hackmd.io/_uploads/rJhq4O7I1x.png)
+實作影片 https://www.youtube.com/embed/jNJAi1xFz4o
 
-### 人員(可新增、編輯、刪除、分類)
-![image](https://hackmd.io/_uploads/BJoxrOQUJl.png)
-
-### 創建人員
-![image](https://hackmd.io/_uploads/rkj7Hd781g.png)
-![image](https://hackmd.io/_uploads/rJNVBd78ye.png)
-
-### SQL(資料庫正規化)
-![image](https://hackmd.io/_uploads/ryjXId7UJe.png)
+<div style="text-align: center;">
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/jNJAi1xFz4o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
+1. 選擇資料集(台灣景點介紹)
+![image](https://hackmd.io/_uploads/HkALKwBIkg.png)
+
+2. 資料庫操作(SQL server)
+![image](https://hackmd.io/_uploads/SyZnKvSIJg.png)
+
+3. 網頁系統設計
+![image](https://hackmd.io/_uploads/r1Sw5wSUJl.png)
+![image](https://hackmd.io/_uploads/HJlcucDr8Je.png)
+![image](https://hackmd.io/_uploads/rJT5qvBUkl.png)
+
+
+4. 整合與強化
+![image](https://hackmd.io/_uploads/HJ0HqvHIyg.png)
 
 
 ## Common Commands for Database Migration and Seeding

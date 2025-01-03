@@ -6,7 +6,7 @@ using WebApplication1.Models;
 using WebApplication1.ViewModels;
 using WebApplication1;
 
-namespace RunGroopWebApp.Controllers
+namespace WebApplication1.Controllers
 {
     public class ClubController : Controller
     {
@@ -96,7 +96,7 @@ namespace RunGroopWebApp.Controllers
         }
 
         [HttpGet]
-        [Route("club/{runningClub}/{id}")]
+        //[Route("club/{runningClub}/{id}")]
         public async Task<IActionResult> DetailClub(int id, string runningClub)
         {
             var club = await _clubRepository.GetByIdAsync(id);
@@ -154,7 +154,7 @@ namespace RunGroopWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateClubViewModel clubVM)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 var result = await _photoService.AddPhotoAsync(clubVM.Image);
 
@@ -168,10 +168,11 @@ namespace RunGroopWebApp.Controllers
                     Address = new Address
                     {
                         Street = clubVM.Address.Street,
-                        City = clubVM.Address.City,
-                        State = clubVM.Address.State,
+                        City = "", // 預設值
+                        State = clubVM.Address.State ?? "", // 若 State 為空，給一個預設值
                     }
                 };
+
                 _clubRepository.Add(club);
                 return RedirectToAction("Index");
             }
@@ -203,7 +204,7 @@ namespace RunGroopWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, EditClubViewModel clubVM)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 ModelState.AddModelError("", "Failed to edit club");
                 return View("Edit", clubVM);
@@ -234,10 +235,17 @@ namespace RunGroopWebApp.Controllers
                 Id = id,
                 Title = clubVM.Title,
                 Description = clubVM.Description,
-                Image = photoResult.Url.ToString(),
+                Image = photoResult.Error == null ? photoResult.Url.ToString() : userClub.Image, // 若圖片有更換則使用新圖片，否則保留原本圖片
                 AddressId = clubVM.AddressId,
-                Address = clubVM.Address,
+                ClubCategory = clubVM.ClubCategory,
+                Address = new Address
+                {
+                    Street = clubVM.Address.Street,
+                    City = "", // 預設值
+                    State = clubVM.Address.State ?? "", // 若 State 為空，給一個預設值
+                }
             };
+
 
             _clubRepository.Update(club);
 
@@ -245,6 +253,7 @@ namespace RunGroopWebApp.Controllers
         }
 
         [HttpGet]
+        [Route("club/delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var clubDetails = await _clubRepository.GetByIdAsync(id);

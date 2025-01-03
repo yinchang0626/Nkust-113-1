@@ -50,7 +50,7 @@ namespace RunGroopWebApp.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, loginViewModel.Password, false, false);
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("Index", "Race");
+                        return RedirectToAction("Index", "Club");
                     }
                 }
                 //Password is incorrect
@@ -95,14 +95,14 @@ namespace RunGroopWebApp.Controllers
             if (newUserResponse.Succeeded)
                 await _userManager.AddToRoleAsync(newUser, UserRoles.User);
 
-            return RedirectToAction("Index", "Race");
+            return RedirectToAction("Index", "Club");
         }
 
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Race");
+            return RedirectToAction("Index", "Club");
         }
 
         [HttpGet]

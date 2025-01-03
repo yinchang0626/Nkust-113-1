@@ -19,8 +19,8 @@
           <div class="row flex-md-row card card-md">
             <div class="card-body bg-secondary">
               <div class="text-center mb-5">
-                <h1 class="h2 mb-2">Create your own running club</h1>
-                <span>Bring together runners in your community</span>
+                <h1 class="h2 mb-2">Create Attraction</h1>
+                <span>Build about attraction detail.</span>
               </div>
               <div class="row justify-content-center">
                 <div class="col-6 col-lg-5">
@@ -46,19 +46,19 @@
                     </div> 
                     <div class="form-row form-group">
                       <div class="col">                        
-                        <input asp-for="Address.Street" class="form-control form-control-lg" placeholder="Street" />
+                        <input asp-for="Address.Street" class="form-control form-control-lg" placeholder="Town" />
                         <span asp-validation-for="Address.Street" class="text-danger"></span>
                       </div>
                     </div>
                     <div class="form-row form-group">
-                      <div class="col">                        
-                        <input asp-for="Address.City" class="form-control form-control-lg" placeholder="City" />
-                        <span asp-validation-for="Address.City" class="text-danger"></span>
-                      </div>
-                      <div class="col">                        
-                        <input asp-for="Address.State" class="form-control form-control-lg" placeholder="State" />
-                        <span asp-validation-for="Address.State" class="text-danger"></span>
-                      </div>
+                      @* <div class="col">                         *@
+                      @*   <input asp-for="Address.City" class="form-control form-control-lg" placeholder="City" /> *@
+                      @*   <span asp-validation-for="Address.City" class="text-danger"></span> *@
+                      @* </div> *@
+                      @* <div class="col">                         *@
+                      @*   <input asp-for="Address.State" class="form-control form-control-lg" placeholder="State" /> *@
+                      @*   <span asp-validation-for="Address.State" class="text-danger"></span> *@
+                      @* </div> *@
                     </div>
                     <div class="form-row form-group">
                       <div class="col">                        
@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-row form-group">
                       <div class="col">
-                        <button class="btn btn-block btn-success btn-lg" type="submit">Create Account</button>
+                        <button class="btn btn-block btn-success btn-lg" type="submit">Create Attraction</button>
                       </div>
                     </div>
                   </form>

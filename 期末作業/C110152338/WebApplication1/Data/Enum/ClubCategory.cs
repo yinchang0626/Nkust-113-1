@@ -2,10 +2,10 @@
 {
     public enum ClubCategory
     {
-        RoadRunner,
-        Womens,
-        City,
-        Trail,
-        Endurance
+       Taipei,
+       Taichung,
+       Tainan,
+       Kaoshiung,
+       Pingtung
     }
 }

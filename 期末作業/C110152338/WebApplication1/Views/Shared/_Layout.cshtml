@@ -34,18 +34,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
-                            @if (SignInManager.IsSignedIn(User))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="user" asp-action="Index">Find Runners</a>
-                                </li>
-                            }
-                            @* <li class="nav-item"> *@
-                            @*     <a class="nav-link" asp-area="" asp-controller="Club" asp-action="Index">Find Clubs</a> *@
-                            @* </li> *@
+                            @* @if (SignInManager.IsSignedIn(User)) *@
+                            @* { *@
+                            @*     <li class="nav-item"> *@
+                            @*         <a class="nav-link" asp-area="" asp-controller="user" asp-action="Index">Find Runners</a> *@
+                            @*     </li> *@
+                            @* } *@
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Race" asp-action="Index">Find Races</a>
+                                <a class="nav-link" asp-area="" asp-controller="Club" asp-action="Index">Find Attractions</a>
                             </li>
+                            @* <li class="nav-item"> *@
+                            @*     <a class="nav-link" asp-area="" asp-controller="Race" asp-action="Index">Find Races</a> *@
+                            @* </li> *@
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                             </li>
@@ -73,12 +73,12 @@
                                             <span class="h6 mb-0">Edit Profile</span>
                                         </a>
 
-                                        @* <a class="dropdown-item" asp-area="" asp-controller="Club" asp-action="Create"> *@
-                                        @*     <span class="h6 mb-0">Create Club</span> *@
-                                        @* </a> *@
-                                        <a class="dropdown-item" asp-area="" asp-controller="Race" asp-action="Create">
-                                            <span class="h6 mb-0">Create Race</span>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Club" asp-action="Create">
+                                            <span class="h6 mb-0">Create Attractions</span>
                                         </a>
+                                        @* <a class="dropdown-item" asp-area="" asp-controller="Race" asp-action="Create"> *@
+                                        @*     <span class="h6 mb-0">Create Race</span> *@
+                                        @* </a> *@
                                         @* <a class="dropdown-item" asp-area="" asp-controller="Dashboard" asp-action="Index"> *@
                                         @*     <span class="h6 mb-0">Dashboard</span> *@
                                         @* </a> *@
