@@ -1,0 +1,134 @@
+using System;
+using System.Globalization;
+using System.IO;
+using CsvHelper;
+using System.Linq;
+using LiveCharts;
+using LiveCharts.WinForms;
+using System.Windows.Forms;
+using System.Windows.Forms.Integration;
+using LiveCharts.Wpf;
+
+public class ElectionData
+{
+    public int 民國年 { get; set; }
+    public int 人 { get; set; }
+    public int 男生 { get; set; }
+    public double 男生比例 { get; set; }
+    public int 女生 { get; set; }
+    public double 女生比例 { get; set; }
+}
+
+class Program
+{
+    [STAThread]
+    static void Main()
+    {
+        // 檔案路徑
+        var path = @"C:\Users\User\Desktop\image processing\OOP\bendun\ConsoleApp1\File_78654.csv";
+
+        // 檢查檔案是否存在
+        if (!File.Exists(path))
+        {
+            Console.WriteLine("指定的檔案不存在。");
+            return;
+        }
+
+        try
+        {
+            using (var reader = new StreamReader(path))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                // 讀取數據
+                var relist = csv.GetRecords<ElectionData>().ToList();
+
+                // 計算總男性、總女性和總候選人數
+                var Men = relist.Sum(r => r.男生);
+                var Women = relist.Sum(r => r.女生);
+                var ALL = Men + Women;
+
+                Console.WriteLine($"總男性候選人數: {Men}");
+                Console.WriteLine($"總女性候選人數: {Women}");
+                Console.WriteLine($"總候選人數: {ALL}");
+
+                // 計算男性和女性比例
+                double menpp = 0;
+                double womenpp = 0;
+                if (ALL > 0)
+                {
+                    menpp = (double)Men / ALL * 100; // 男性比例
+                    womenpp = (double)Women / ALL * 100; // 女性比例
+
+                    Console.WriteLine($"男性比例: {menpp:F2}%");
+                    Console.WriteLine($"女性比例: {womenpp:F2}%");
+                }
+
+                // 繪製長條圖
+                Draw(menpp, womenpp);
+            }
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("找不到檔案");
+        }
+        finally
+        {
+            Console.ReadLine(); // 等待用戶按下回車
+        }
+    }
+
+    // 繪製長條圖
+    private static void Draw(double malePercentage, double femalePercentage)
+    {
+        // 使用 LiveCharts 繪製長條圖
+        var columnChart = new LiveCharts.Wpf.CartesianChart
+        {
+            Series = new SeriesCollection
+        {
+            new ColumnSeries
+            {
+                Title = "男性",
+                Values = new ChartValues<double> { malePercentage },
+                DataLabels = true,
+                LabelPoint = chartPoint => $"{chartPoint.Y:F2}%" // 小數點第二位
+            },
+            new ColumnSeries
+            {
+                Title = "女性",
+                Values = new ChartValues<double> { femalePercentage },
+                DataLabels = true,
+                LabelPoint = chartPoint => $"{chartPoint.Y:F2}%" // 小數點第二位
+            }
+        },
+            AxisX = new LiveCharts.Wpf.AxesCollection
+        {
+            new LiveCharts.Wpf.Axis
+            {
+                Title = "性別",
+                Labels = new[] { "男性", "女性" }
+            }
+        },
+            AxisY = new LiveCharts.Wpf.AxesCollection
+        {
+            new LiveCharts.Wpf.Axis
+            {
+                Title = "比例 (%)",
+                LabelFormatter = value => $"{value:F2}%" // 格式化 Y 軸顯示百分比
+            }
+        }
+        };
+
+        // 顯示圖表
+        using (var form = new Form())
+        using (var elementHost = new ElementHost
+        {
+            Dock = DockStyle.Fill,
+            Child = columnChart
+        })
+        {
+            form.Controls.Add(elementHost);
+            Application.Run(form);
+        }
+    }
+
+}
