@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using mvc.Data;
 using mvc.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
 
 namespace mvc.Controllers
 {
@@ -45,7 +47,6 @@ namespace mvc.Controllers
         }
 
         // GET: Crime_data/Create
-        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -57,18 +58,22 @@ namespace mvc.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Type,Year,Date,Country,Region")] Crime_data crime_data)
+        public async Task<IActionResult> Create([Bind("Id,Type,Date,Country,Region")] Crime_data crime_data)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (ModelState.IsValid)
             {
+                crime_data.OwnerID = userId;
+                crime_data.Year = crime_data.Date.Year - 1911;
                 _context.Add(crime_data);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(crime_data);
         }
-        [Authorize]
+
         // GET: Crime_data/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,6 +86,12 @@ namespace mvc.Controllers
             {
                 return NotFound();
             }
+
+            if (!User.IsInRole("Admin") && crime_data.OwnerID != User.FindFirstValue(ClaimTypes.NameIdentifier))
+            {
+                return Forbid();
+            }
+
             return View(crime_data);
         }
 
@@ -90,11 +101,16 @@ namespace mvc.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Type,Year,Date,Country,Region")] Crime_data crime_data)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Type,Year,Date,Country,Region,OwnerID")] Crime_data crime_data)
         {
             if (id != crime_data.Id)
             {
                 return NotFound();
+            }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (!User.IsInRole("Admin") && crime_data.OwnerID != userId)
+            {
+                return Forbid();
             }
 
             if (ModelState.IsValid)
@@ -121,6 +137,7 @@ namespace mvc.Controllers
         }
 
         // GET: Crime_data/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,6 +152,11 @@ namespace mvc.Controllers
                 return NotFound();
             }
 
+            if (!User.IsInRole("Admin") && crime_data.OwnerID != User.FindFirstValue(ClaimTypes.NameIdentifier))
+            {
+                return Forbid();
+            }
+
             return View(crime_data);
         }
 
@@ -145,14 +167,26 @@ namespace mvc.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var crime_data = await _context.Crime_data.FindAsync(id);
-            if (crime_data != null)
+            if (crime_data == null)
             {
-                _context.Crime_data.Remove(crime_data);
+                return NotFound();
             }
 
+            if (!User.IsInRole("Admin") && crime_data.OwnerID != User.FindFirstValue(ClaimTypes.NameIdentifier))
+            {
+                return Forbid();
+            }
+
+            _context.Crime_data.Remove(crime_data);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        private bool Crime_dataExists(int id)
+        {
+            return _context.Crime_data.Any(e => e.Id == id);
+        }
+
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> UploadCsv(IFormFile csvFile)
@@ -184,7 +218,7 @@ namespace mvc.Controllers
                         if (values[2].Length >= 4 && monthint <= 12 && dayint <= 31 && monthint > 0 && dayint > 0)
                         {
                             var nyear = int.Parse(values[1]) + 1911;
-                            var syear = nyear.ToString(); 
+                            var syear = nyear.ToString();
                             var sdate = syear + "-" + values[2].Substring(0, 2) + "-" + values[2].Substring(2, 2);
                             var crime_data = new Crime_data
                             {
@@ -192,7 +226,8 @@ namespace mvc.Controllers
                                 Year = int.Parse(values[1]),
                                 Date = DateTime.Parse(sdate),
                                 Country = values[3],
-                                Region = values[4]
+                                Region = values[4],
+                                OwnerID = User.FindFirstValue(ClaimTypes.NameIdentifier)
                             };
                             // Add code to save crime_data to the database
                             _context.Add(crime_data);
@@ -208,10 +243,6 @@ namespace mvc.Controllers
             }
 
             return RedirectToAction("Index");
-        }
-        private bool Crime_dataExists(int id)
-        {
-            return _context.Crime_data.Any(e => e.Id == id);
         }
     }
 }
