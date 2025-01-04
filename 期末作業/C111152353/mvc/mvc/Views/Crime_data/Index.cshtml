@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<mvc.Models.Crime_data>
+@using Microsoft.AspNetCore.Identity
 
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @{
     ViewData["Title"] = "Crime Data";
 }
@@ -7,14 +10,19 @@
 <h1>犯罪資料</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
-    <form asp-controller="Crime_data" asp-action="UploadCsv" method="post" enctype="multipart/form-data">
-    <div class="form-group">
+    
+    @if (SignInManager.IsSignedIn(User))
+    {
+        
+        <form asp-controller="Crime_data" asp-action="UploadCsv" method="post" enctype="multipart/form-data">
+        <div class="form-group">
         <label for="csvFile">Upload CSV File</label>
         <input type="file" name="csvFile" id="csvFile" class="form-control" />
-    </div>
-    <button type="submit" class="btn btn-primary">Upload</button>
-</form>
+        <button type="submit" class="btn btn-primary">Mass Upload</button>
+        <a asp-action="Create">Create Single</a>
+        </div>
+        </form>
+    }
 </p>
 <table class="table">
     <thead>
@@ -22,6 +30,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Type)
             </th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerID)
+                </th>
+            }
             <th>
                 @Html.DisplayNameFor(model => model.Year)
             </th>
@@ -43,6 +57,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayFor(model => item.OwnerID)
+                </th>
+            }
             <td>
                 @Html.DisplayFor(modelItem => item.Year)
             </td>
@@ -55,11 +75,20 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Region)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            }
+            else
+            {
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            }
         </tr>
 }
     </tbody>

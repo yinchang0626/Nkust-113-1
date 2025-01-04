@@ -11,6 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
@@ -39,5 +40,41 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+// seeding roles
+using(var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var roles = new[] { "Admin","User"};
+    foreach (var role in roles)
+    {
+        if (!roleManager.RoleExistsAsync(role).Result)
+        {
+            roleManager.CreateAsync(new IdentityRole(role)).Wait();
+        }
+    }
+}
+
+using(var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+    if(userManager.FindByEmailAsync("admin@admin.com").Result == null)
+    {
+        var user = new IdentityUser
+        {
+            UserName = "admin@admin.com",
+            Email = "admin@admin.com",
+            EmailConfirmed = true
+        };
+
+        var result = userManager.CreateAsync(user, "Admin@123").Result;
+
+        if(result.Succeeded)
+        {
+            userManager.AddToRoleAsync(user, "Admin").Wait();
+        }
+    }
+}
 
 app.Run();

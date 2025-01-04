@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using mvc.Data;
 using mvc.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace mvc.Controllers
 {
@@ -44,6 +45,7 @@ namespace mvc.Controllers
         }
 
         // GET: Crime_data/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -53,6 +55,7 @@ namespace mvc.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Type,Year,Date,Country,Region")] Crime_data crime_data)
         {
@@ -64,7 +67,7 @@ namespace mvc.Controllers
             }
             return View(crime_data);
         }
-
+        [Authorize]
         // GET: Crime_data/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -85,6 +88,7 @@ namespace mvc.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Type,Year,Date,Country,Region")] Crime_data crime_data)
         {
@@ -136,6 +140,7 @@ namespace mvc.Controllers
 
         // POST: Crime_data/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -149,6 +154,7 @@ namespace mvc.Controllers
             return RedirectToAction(nameof(Index));
         }
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> UploadCsv(IFormFile csvFile)
         {
             if (csvFile != null && csvFile.Length > 0)

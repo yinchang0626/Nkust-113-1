@@ -7,6 +7,7 @@ namespace mvc.Models
     {
         [Key]
         public int Id { get; set; }
+        [Display(Name = "Create by")]
         public string? OwnerID { get; set; }
         [Display(Name = "案類")]
         public String Type { get; set; }
