@@ -1,4 +1,4 @@
-﻿@model IEnumerable<mvc.Models.Crime_data>
+﻿@model PaginatedList<mvc.Models.Crime_data>
 @using Microsoft.AspNetCore.Identity
 
 @inject SignInManager<IdentityUser> SignInManager
@@ -9,87 +9,240 @@
 
 <h1>犯罪資料</h1>
 
-<p>
-    
-    @if (SignInManager.IsSignedIn(User))
-    {
-        
-        <form asp-controller="Crime_data" asp-action="UploadCsv" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-        <label for="csvFile">Upload CSV File</label>
-        <input type="file" name="csvFile" id="csvFile" class="form-control" />
-        <button type="submit" class="btn btn-primary">Mass Upload</button>
-        <a asp-action="Create">Create Single</a>
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Upload CSV File</h5>
         </div>
-        </form>
-    }
-</p>
+        <div class="card-body">
+            <form asp-controller="Crime_data" asp-action="UploadCsv" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="csvFile" class="form-label">Choose CSV file</label>
+                    <input type="file" name="csvFile" id="csvFile" class="form-control" accept=".csv" required />
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">
+                        <i data-lucide="upload"></i>
+                        Upload CSV
+                    </button>
+                    <a asp-action="Create" class="btn btn-secondary">
+                        <i data-lucide="plus"></i>
+                        Create Single Entry
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Type)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["TypeSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                    @Html.DisplayNameFor(model => model[0].Type)
+                    @if (ViewData["CurrentSort"]?.ToString() == "type_desc")
+                    {
+                        <i data-lucide="arrow-down"></i>
+                    }
+                    else if (ViewData["CurrentSort"]?.ToString() == "")
+                    {
+                        <i data-lucide="arrow-up"></i>
+                    }
+                </a>
             </th>
             @if (User.IsInRole("Admin"))
             {
                 <th>
-                    @Html.DisplayNameFor(model => model.OwnerID)
+                    @Html.DisplayNameFor(model => model[0].OwnerID)
                 </th>
             }
             <th>
-                @Html.DisplayNameFor(model => model.Year)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["YearSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                    @Html.DisplayNameFor(model => model[0].Year)
+                    @if (ViewData["CurrentSort"]?.ToString() == "year_desc")
+                    {
+                        <i data-lucide="arrow-down"></i>
+                    }
+                    else if (ViewData["CurrentSort"]?.ToString() == "Year")
+                    {
+                        <i data-lucide="arrow-up"></i>
+                    }
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Date)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                    @Html.DisplayNameFor(model => model[0].Date)
+                    @if (ViewData["CurrentSort"]?.ToString() == "date_desc")
+                    {
+                        <i data-lucide="arrow-down"></i>
+                    }
+                    else if (ViewData["CurrentSort"]?.ToString() == "Date")
+                    {
+                        <i data-lucide="arrow-up"></i>
+                    }
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Country)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["CountrySortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                    @Html.DisplayNameFor(model => model[0].Country)
+                    @if (ViewData["CurrentSort"]?.ToString() == "country_desc")
+                    {
+                        <i data-lucide="arrow-down"></i>
+                    }
+                    else if (ViewData["CurrentSort"]?.ToString() == "Country")
+                    {
+                        <i data-lucide="arrow-up"></i>
+                    }
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Region)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["RegionSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                    @Html.DisplayNameFor(model => model[0].Region)
+                    @if (ViewData["CurrentSort"]?.ToString() == "region_desc")
+                    {
+                        <i data-lucide="arrow-down"></i>
+                    }
+                    else if (ViewData["CurrentSort"]?.ToString() == "Region")
+                    {
+                        <i data-lucide="arrow-up"></i>
+                    }
+                </a>
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            @if (User.IsInRole("Admin"))
-            {
-                <th>
-                    @Html.DisplayFor(model => item.OwnerID)
-                </th>
-            }
-            <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Region)
-            </td>
-            @if (User.IsInRole("Admin"))
-            {
+        @foreach (var item in Model)
+        {
+            <tr>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    @Html.DisplayFor(modelItem => item.Type)
                 </td>
-            }
-            else
-            {
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OwnerID)
+                    </td>
+                }
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    @Html.DisplayFor(modelItem => item.Year)
                 </td>
-            }
-        </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Region)
+                </td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </td>
+                }
+            </tr>
+        }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    var pageRange = PaginatedList<Crime_data>.CreatePageRange(Model.PageIndex, Model.TotalPages);
+}
+
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li class="page-item @prevDisabled">
+            <a asp-action="Index"
+               asp-route-sortOrder="@ViewData["CurrentSort"]"
+               asp-route-pageNumber="@(Model.PageIndex - 1)"
+               asp-route-currentFilter="@ViewData["CurrentFilter"]"
+               class="page-link">
+                Previous
+            </a>
+        </li>
+        @if (pageRange[0] > 1)
+        {
+            <li class="page-item">
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewData["CurrentSort"]"
+                   asp-route-pageNumber="1"
+                   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                   class="page-link">
+                    1
+                </a>
+            </li>
+            @if (pageRange[0] > 2)
+            {
+                <li class="page-item disabled"><span class="page-link">...</span></li>
+            }
+        }
+        @foreach (var i in pageRange)
+        {
+            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewData["CurrentSort"]"
+                   asp-route-pageNumber="@i"
+                   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                   class="page-link">
+                    @i
+                </a>
+            </li>
+        }
+        @if (pageRange[^1] < Model.TotalPages)
+        {
+            @if (pageRange[^1] < Model.TotalPages - 1)
+            {
+                <li class="page-item disabled"><span class="page-link">...</span></li>
+            }
+            <li class="page-item">
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewData["CurrentSort"]"
+                   asp-route-pageNumber="@Model.TotalPages"
+                   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                   class="page-link">
+                    @Model.TotalPages
+                </a>
+            </li>
+        }
+        <li class="page-item @nextDisabled">
+            <a asp-action="Index"
+               asp-route-sortOrder="@ViewData["CurrentSort"]"
+               asp-route-pageNumber="@(Model.PageIndex + 1)"
+               asp-route-currentFilter="@ViewData["CurrentFilter"]"
+               class="page-link">
+                Next
+            </a>
+        </li>
+    </ul>
+</nav>
+
+@section Scripts {
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+}

@@ -10,22 +10,88 @@ using mvc.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 
 namespace mvc.Controllers
 {
     public class Crime_dataController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public Crime_dataController(ApplicationDbContext context)
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly int _pageSize = 10; // Number of items per page
+        
+        public Crime_dataController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Crime_data
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
-            return View(await _context.Crime_data.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["TypeSortParm"] = String.IsNullOrEmpty(sortOrder) ? "type_desc" : "";
+            ViewData["YearSortParm"] = sortOrder == "Year" ? "year_desc" : "Year";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["CountrySortParm"] = sortOrder == "Country" ? "country_desc" : "Country";
+            ViewData["RegionSortParm"] = sortOrder == "Region" ? "region_desc" : "Region";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["CurrentFilter"] = searchString;
+
+            var crimes = from c in _context.Crime_data
+                         select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                crimes = crimes.Where(s => s.Type.Contains(searchString)
+                                       || s.Country.Contains(searchString)
+                                       || s.Region.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "type_desc":
+                    crimes = crimes.OrderByDescending(s => s.Type);
+                    break;
+                case "Year":
+                    crimes = crimes.OrderBy(s => s.Year);
+                    break;
+                case "year_desc":
+                    crimes = crimes.OrderByDescending(s => s.Year);
+                    break;
+                case "Date":
+                    crimes = crimes.OrderBy(s => s.Date);
+                    break;
+                case "date_desc":
+                    crimes = crimes.OrderByDescending(s => s.Date);
+                    break;
+                case "Country":
+                    crimes = crimes.OrderBy(s => s.Country);
+                    break;
+                case "country_desc":
+                    crimes = crimes.OrderByDescending(s => s.Country);
+                    break;
+                case "Region":
+                    crimes = crimes.OrderBy(s => s.Region);
+                    break;
+                case "region_desc":
+                    crimes = crimes.OrderByDescending(s => s.Region);
+                    break;
+                default:
+                    crimes = crimes.OrderBy(s => s.Type);
+                    break;
+            }
+
+            return View(await PaginatedList<Crime_data>.CreateAsync(crimes.AsNoTracking(), pageNumber ?? 1, _pageSize));
         }
 
         // GET: Crime_data/Details/5
