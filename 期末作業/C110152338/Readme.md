@@ -5,7 +5,7 @@ Authoer: kerong
 
 實作影片
 https://www.youtube.com/watch?v=jNJAi1xFz4o
-
+[![Software Engineering](https://github.com/kerong2002/nkust_soft/blob/main/%E6%9C%9F%E6%9C%AB%E4%BD%9C%E6%A5%AD/C110152338/final_project.png)](https://www.youtube.com/watch?v=jNJAi1xFz4o)
 <!--
 <div style="text-align: center;">
     <iframe width="800" height="450" src="https://www.youtube.com/embed/jNJAi1xFz4o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
