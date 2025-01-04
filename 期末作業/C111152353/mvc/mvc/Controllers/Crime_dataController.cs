@@ -279,6 +279,11 @@ namespace mvc.Controllers
                         }
                         // Save values to the database
                         // data required to be in the format of "yyyy-MM-dd"
+                        if(values[2].Length < 4)
+                        {
+                            // Handle invalid date format
+                            continue;
+                        }
                         var monthint = int.Parse(values[2].Substring(0, 2));
                         var dayint = int.Parse(values[2].Substring(2, 2));
                         if (values[2].Length >= 4 && monthint <= 12 && dayint <= 31 && monthint > 0 && dayint > 0)
