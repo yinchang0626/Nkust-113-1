@@ -3,15 +3,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Crime Statistics Dashboard</h1>
-    <p>Welcome to the Crime Data Analysis platform.</p>
+    <h1 class="display-4">犯罪統計儀表板</h1>
+    <p>歡迎來到犯罪數據分析平台。</p>
 </div>
 
 <div class="row mt-4">
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Yearly Crime Trends</h5>
+                <h5 class="card-title">年度犯罪趨勢</h5>
                 <canvas id="yearlyChart"></canvas>
             </div>
         </div>
@@ -19,7 +19,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Top 5 Crime Types</h5>
+                <h5 class="card-title">前五名犯罪類型</h5>
                 <canvas id="crimeTypeChart"></canvas>
             </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Top 5 Most Crime-Affected Countries</h5>
+                <h5 class="card-title">前五個犯罪最嚴重的縣市</h5>
                 <canvas id="countryChart"></canvas>
             </div>
         </div>
@@ -38,7 +38,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Top 5 Most Crime-Affected Regions</h5>
+                <h5 class="card-title">前五個犯罪最嚴重的地區</h5>
                 <canvas id="regionChart"></canvas>
             </div>
         </div>
@@ -49,7 +49,7 @@
     <div class="col-md-12">
         <div class="card bg-light">
             <div class="card-body text-center">
-                <h5 class="card-title">Total Recorded Crimes</h5>
+                <h5 class="card-title">總犯罪數量</h5>
                 <p class="display-1 font-weight-bold">@ViewBag.TotalCrimes</p>
             </div>
         </div>
@@ -67,7 +67,7 @@
             data: {
                 labels: yearlyData.map(d => d.year),
                 datasets: [{
-                    label: 'Number of Crimes',
+                    label: '犯罪數量',
                     data: yearlyData.map(d => d.count),
                     borderColor: 'rgb(75, 192, 192)',
                     tension: 0.1
@@ -91,7 +91,7 @@
             data: {
                 labels: crimeTypeData.map(d => d.type),
                 datasets: [{
-                    label: 'Number of Crimes',
+                    label: '犯罪數量',
                     data: crimeTypeData.map(d => d.count),
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
@@ -146,7 +146,7 @@
                     },
                     title: {
                         display: true,
-                        text: 'Top 5 Most Crime-Affected Countries'
+                        text: '前五個犯罪最嚴重的縣市'
                     }
                 }
             }
@@ -178,7 +178,7 @@
                     },
                     title: {
                         display: true,
-                        text: 'Top 5 Most Crime-Affected Regions'
+                        text: '前五個犯罪最嚴重的地區'
                     }
                 }
             }
