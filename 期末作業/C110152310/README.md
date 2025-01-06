@@ -22,5 +22,3 @@
 ![image](https://hackmd.io/_uploads/B1KSHd881g.png)
 ##### 刪除完成
 ![image](https://hackmd.io/_uploads/SyHLHOULke.png)
-
-
