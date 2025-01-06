@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">犯罪統計儀表板</h1>
+    <p>歡迎來到犯罪數據分析平台。</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">年度犯罪趨勢</h5>
+                <canvas id="yearlyChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">前五名犯罪類型</h5>
+                <canvas id="crimeTypeChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">前五個犯罪最嚴重的縣市</h5>
+                <canvas id="countryChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">前五個犯罪最嚴重的地區</h5>
+                <canvas id="regionChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card bg-light">
+            <div class="card-body text-center">
+                <h5 class="card-title">總犯罪數量</h5>
+                <p class="display-1 font-weight-bold">@ViewBag.TotalCrimes</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Yearly Crime Trends Chart
+        var yearlyCtx = document.getElementById('yearlyChart').getContext('2d');
+        var yearlyData = @Html.Raw(Json.Serialize(ViewBag.YearlyData));
+        var yearlyChart = new Chart(yearlyCtx, {
+            type: 'line',
+            data: {
+                labels: yearlyData.map(d => d.year),
+                datasets: [{
+                    label: '犯罪數量',
+                    data: yearlyData.map(d => d.count),
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Crime Types Chart
+        var crimeTypeCtx = document.getElementById('crimeTypeChart').getContext('2d');
+        var crimeTypeData = @Html.Raw(Json.Serialize(ViewBag.CrimeTypeData));
+        var crimeTypeChart = new Chart(crimeTypeCtx, {
+            type: 'bar',
+            data: {
+                labels: crimeTypeData.map(d => d.type),
+                datasets: [{
+                    label: '犯罪數量',
+                    data: crimeTypeData.map(d => d.count),
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Top 5 Countries Chart
+        var countryCtx = document.getElementById('countryChart').getContext('2d');
+        var countryData = @Html.Raw(Json.Serialize(ViewBag.CountryData));
+        var countryChart = new Chart(countryCtx, {
+            type: 'pie',
+            data: {
+                labels: countryData.map(d => d.country),
+                datasets: [{
+                    data: countryData.map(d => d.count),
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: '前五個犯罪最嚴重的縣市'
+                    }
+                }
+            }
+        });
+
+        // Top 5 Regions Chart
+        var regionCtx = document.getElementById('regionChart').getContext('2d');
+        var regionData = @Html.Raw(Json.Serialize(ViewBag.RegionData));
+        var regionChart = new Chart(regionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: regionData.map(d => d.region),
+                datasets: [{
+                    data: regionData.map(d => d.count),
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: '前五個犯罪最嚴重的地區'
+                    }
+                }
+            }
+        });
+    </script>
+}
