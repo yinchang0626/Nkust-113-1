@@ -1,6 +1,16 @@
 
 # README
 
+
+!!!!!
+
+C111152310\my_interactive_website\node_modules.zip
+檔案太多所以壓縮上傳，開程式前先解壓縮 
+
+!!!!!
+
+
+
 ## 專案名稱
 空氣品質指標資料分析系統
 
