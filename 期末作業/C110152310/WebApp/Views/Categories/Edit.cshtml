@@ -1,0 +1,17 @@
+﻿
+@model Category
+@{
+   ViewBag.Title = "Edit";
+   ViewBag.SubmitButtonText = "Save";
+   ViewBag.Action = "edit";
+
+}
+
+@section mainTitle {
+   <h3>Edit Category</h3>
+   }
+
+
+<h3>Category: @Model.Name</h3>
+
+<partial name="_Category" model="Model" />

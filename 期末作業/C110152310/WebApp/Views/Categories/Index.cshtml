@@ -1,0 +1,71 @@
+﻿@model List<Category>;
+
+
+@{
+   ViewBag.Title = "Categories";
+}
+
+@section mainTitle {
+   <h3>Categories</h3>
+
+}
+
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th colspan="2" class="text-center">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @{
+                    int i = 1;
+                    @foreach (var category in Model)
+                    {
+                        <tr>
+                            <td> @(i++) </td>
+                            <td>@category.Name</td>
+                            <td>@category.Description</td>
+                            <td class="text-center">
+                                <a asp-controller="categories" asp-action="edit" asp-route-id="@category.CategoryId"
+                                   class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a class="btn btn-danger btn-sm" asp-controller="categories" asp-action="delete"
+                                   asp-route-id="@category.CategoryId" onclick="return confirmDelete()">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-controller="categories" asp-action="add" class="btn btn-success btn-lg">
+            <i class="fas fa-plus-circle"></i> Add New Category
+        </a>
+    </div>
+
+    @section scripts {
+        <script>
+            const confirmDelete = () => {
+                return confirm("Are you sure you want to delete this category?");
+            }
+        </script>
+    }
+}
+{
+    <p class="text-center text-muted">No categories found. Please add some categories.</p>
+}
