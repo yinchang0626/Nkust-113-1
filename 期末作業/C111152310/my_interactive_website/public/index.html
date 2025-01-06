@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>空氣品質篩選查詢範例</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- 新增：Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>空氣品質查詢</h1>
+  <!-- 篩選條件 -->
+  <div>
+    <label for="countySelect">縣市: </label>
+    <select id="countySelect">
+      <option value="">(不篩選)</option>
+      <option value="臺北市">臺北市</option>
+      <option value="新北市">新北市</option>
+      <option value="桃園市">桃園市</option>
+      <option value="新竹縣">新竹縣</option>
+      <option value="苗栗縣">苗栗縣</option>
+      <option value="臺中市">臺中市</option>
+      <option value="彰化縣">彰化縣</option>
+      <option value="雲林縣">雲林縣</option>
+      <option value="嘉義縣">嘉義縣</option>
+      <option value="臺南市">臺南市</option>
+      <option value="高雄市">高雄市</option>
+      <option value="屏東縣">屏東縣</option>
+      <option value="臺東縣">臺東縣</option>
+      <option value="花蓮縣">花蓮縣</option>
+      <option value="宜蘭縣">宜蘭縣</option>
+    </select>
+    <button id="searchBtn">查詢</button>
+  </div>
+
+  <!-- 顯示查詢結果 -->
+  <table id="resultTable" border="1">
+    <thead>
+      <tr>
+        <th>測站</th>
+        <th>縣市</th>
+        <th>AQI</th>
+        <th>狀態</th>
+        <th>主要污染物</th>
+        <th>PM2.5</th>
+        <th>發布時間</th>
+      </tr>
+    </thead>
+    <tbody id="resultBody">
+      <!-- 動態插入資料 -->
+    </tbody>
+  </table>
+
+  <!-- 新增：顯示圖表的 Canvas -->
+  <div style="width: 600px; margin-top: 30px;">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <!-- 引入 main.js -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "name": "my_interactive_website",
+    "version": "1.0.0",
+    "main": "server.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "nodemon": "^3.1.9"
+    },
+    "dependencies": {
+        "chart.js": "^4.4.7",
+        "express": "^4.21.2",
+        "mysql2": "^3.12.0"
+    }
+}
