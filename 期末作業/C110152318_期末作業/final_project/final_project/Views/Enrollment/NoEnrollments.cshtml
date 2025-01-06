@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沒有報名</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .add-course-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .add-course-btn:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <h1>沒有報名任何課程</h1>
+    <p>該學生目前沒有任何課程報名資料。</p>
+
+    <a href="@Url.Action("AvailableCourses", "Enrollment")" class="add-course-btn">加入課程</a>
+</body>
+</html>
