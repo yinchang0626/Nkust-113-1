@@ -1,0 +1,6 @@
+mysql -h air-quality-sql.cb6066o8cpi6.ap-northeast-3.rds.amazonaws.com -P 3306 -u admin -p
+qwe2123806
+
+USE air_quality_data;
+
+SELECT * FROM air_quality;
