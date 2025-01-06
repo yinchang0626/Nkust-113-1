@@ -1,0 +1,47 @@
+﻿@using WebApplication1.ViewModels
+@model List<UserViewModel>
+
+<section class="flush-with-above">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover align-items-center table-borderless">
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr class="bg-white">
+                                <th scope="row">
+                                    <div class="media align-items-center">
+                                        <img alt="Image profile avatar" src="@user.ProfileImageUrl" class="avatar">
+                                        <div class="media-body">
+                                            <span class="h6 mb-0">@user.UserName</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <td>
+                                    <a class="btn btn-outline-primary" asp-controller="User" asp-action="Detail" asp-route-id="@user.Id">
+                                        View Profile
+                                    </a>
+                                </td>
+
+                                @{
+                                    var mileage = user.Mileage == null ? "?" : user.Mileage.ToString();
+                                    var pace = user.Pace == null ? "?" : user.Mileage.ToString();
+                                }
+                                <td>@mileage mile at @pace mph</td>
+                                <td><i class="icon-location"></i> @user.Location</td>
+                            </tr>
+                            <tr class="table-divider">
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!--end of col-->
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>

@@ -1,0 +1,157 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/css/theme.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/entypo.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/socicon.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/8aa18c8793.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="bg-light navbar-light" data-sticky="top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index" id="logo-text">WebApplication1</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="icon-menu h4"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            @* @if (SignInManager.IsSignedIn(User)) *@
+                            @* { *@
+                            @*     <li class="nav-item"> *@
+                            @*         <a class="nav-link" asp-area="" asp-controller="user" asp-action="Index">Find Runners</a> *@
+                            @*     </li> *@
+                            @* } *@
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Club" asp-action="Index">Find Attractions</a>
+                            </li>
+                            @* <li class="nav-item"> *@
+                            @*     <a class="nav-link" asp-area="" asp-controller="Race" asp-action="Index">Find Races</a> *@
+                            @* </li> *@
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                            </li>
+                        </ul>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle p-lg-0" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @if (!string.IsNullOrEmpty(currentUser.ProfileImageUrl))
+                                        {
+                                            <img alt="Image" src="@currentUser.ProfileImageUrl" class="avatar avatar-xs">
+                                        }
+                                        else
+                                        {
+                                            <img alt="Image" src="/img/avatar-male-4.jpg" class="avatar avatar-xs">
+                                        }
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                        <a class="dropdown-item" asp-controller="User" asp-action="Detail" asp-route-id="@currentUser.Id">
+                                            <span class="h6 mb-0">View Profile</span>
+                                        </a>
+
+                                        <a class="dropdown-item" asp-controller="User" asp-action="EditProfile">
+                                            <span class="h6 mb-0">Edit Profile</span>
+                                        </a>
+
+                                        <a class="dropdown-item" asp-area="" asp-controller="Club" asp-action="Create">
+                                            <span class="h6 mb-0">Create Attractions</span>
+                                        </a>
+                                        @* <a class="dropdown-item" asp-area="" asp-controller="Race" asp-action="Create"> *@
+                                        @*     <span class="h6 mb-0">Create Race</span> *@
+                                        @* </a> *@
+                                        @* <a class="dropdown-item" asp-area="" asp-controller="Dashboard" asp-action="Index"> *@
+                                        @*     <span class="h6 mb-0">Dashboard</span> *@
+                                        @* </a> *@
+                                        <a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Logout">
+                                            <span su class="h6 mb-0">Logout</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a asp-area="" asp-controller="Account" asp-action="Register">Sign up</a>
+                                    <span>&nbsp;or&nbsp;</span>
+                                    <a asp-area="" asp-controller="Account" asp-action="Login">Sign in</a>
+                                </li>
+                            </ul>
+                        }
+
+                    </div>
+                    <!--end nav collapse-->
+                </nav>
+            </div>
+            <!--end of container-->
+        </div>
+    </div>
+    <div class="main-container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <small class="d-block mb-3 text-muted">&copy; 2025 Company Name</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Developer stuff</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/theme.js"></script>
+    <script src="~/js/custom.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
