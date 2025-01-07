@@ -1,0 +1,13 @@
+﻿@page
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "權限不符";
+}
+
+<header>
+    <h1 class="text-danger">@ViewData["Title"]</h1>
+	<h4 class="text-danger">你沒有使用此功能的權限</h4>
+</header>
+<div>
+	<h5><a asp-action="Index">返回首頁</a></h5>
+</div>

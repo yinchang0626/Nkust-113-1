@@ -2,35 +2,65 @@
 @using X.PagedList.Mvc.Core
 
 @{
-    ViewData["Title"] = "首頁";
+    ViewData["Title"] = "新增/編輯/刪除羊隻行情資料";
 }
 
-<p>
-    <a asp-controller="Sheep" asp-action="Charts" class="btn btn-primary">查看統計圖表</a>
-</p>
+<h1>新增行情資料</h1>
+
+<div class="col-md-6">
+    <div class="card">
+        <p>
+            <h5>以單筆資料匯入資料:</h5>
+            <br />
+			<a asp-action="Create"><h6>新增資料</h6></a>
+        </p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+				<h5>以CSV檔案匯入資料</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="ImportCsv" enctype="multipart/form-data" method="post">
+                    <div class="form-group">
+                        <label for="csvFile">選擇 CSV 檔案:</label>
+                        <input type="file" class="form-control-file" id="csvFile" name="csvFile" accept=".csv" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">上傳</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>編輯/刪除行情資料</h1>
+
 <form method="get" asp-action="Index">
     <div class="card-body">
         <div class="mb-3">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                            <label for="searchArea">以地區搜尋:</label>
-                            <input type="text" name="searchArea" id="searchArea" value="@ViewData["CurrentSearchArea"]" class="form-control" />
+                        <label for="searchArea">以地區搜尋:</label>
+                        <input type="text" name="searchArea" id="searchArea" value="@ViewData["CurrentSearchArea"]" class="form-control" />
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                            <label for="searchMarketName">以市場名稱搜尋:</label>
-                            <input type="text" name="searchMarketName" id="searchMarketName" value="@ViewData["CurrentSearchMarketName"]" class="form-control" />
+                        <label for="searchMarketName">以市場名稱搜尋:</label>
+                        <input type="text" name="searchMarketName" id="searchMarketName" value="@ViewData["CurrentSearchMarketName"]" class="form-control" />
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                            <label for="searchProductName">以商品名稱搜尋:</label>
-                            <input type="text" name="searchProductName" id="searchProductName" value="@ViewData["CurrentSearchProductName"]" class="form-control" />
+                        <label for="searchProductName">以商品名稱搜尋:</label>
+                        <input type="text" name="searchProductName" id="searchProductName" value="@ViewData["CurrentSearchProductName"]" class="form-control" />
                     </div>
-				</div>
-			</div>
+                </div>
+            </div>
             <br />
             <button type="submit" class="btn btn-primary">搜尋</button>
         </div>
@@ -68,7 +98,7 @@
                    asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
                    asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">平均價格</a>
             </th>
-
+            
         </tr>
     </thead>
     <tbody>
@@ -79,10 +109,11 @@
                 <td>@item.Area</td>
                 <td>@item.MarketName</td>
                 <td>@item.ProductName</td>
-				<td>@item.AvgPrice</td>
-				<td>
-					<a asp-action="Details" asp-controller="Sheep" asp-route-id="@item.Id">詳情</a>
-				</td>
+                <td>@item.AvgPrice</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">編輯</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">刪除</a>
+                </td>
             </tr>
         }
     </tbody>
@@ -98,3 +129,5 @@
             searchProductName = ViewData["CurrentSearchProductName"]
         }))
 </div>
+
+
