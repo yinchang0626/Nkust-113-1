@@ -14,6 +14,12 @@
     let priceChart = null;
     let ratioChart = null;
 
+    // 定義共用的字體設置
+    const fontSettings = {
+        size: 16,
+        family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+    };
+
     try {
         // 提取唯一值
         const products = Array.from(new Set(chartData.priceData.map(d => d.productName)));
@@ -32,7 +38,7 @@
             ratioChart: document.getElementById('ratioChart')
         };
 
-        // 檢查所有必要的DOM元素是否存在
+        // 檢查所有必要的DOM元素
         for (const [key, element] of Object.entries(elements)) {
             if (!element) {
                 console.error(`Required element ${key} not found`);
@@ -47,6 +53,21 @@
                 const optionElement = new Option(option, option);
                 selectElement.appendChild(optionElement);
             });
+        }
+
+        // 顯示無數據訊息
+        function displayNoDataMessage(canvas, message) {
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 設置文字樣式
+            ctx.fillStyle = '#666666';
+            ctx.font = `${fontSettings.size}px ${fontSettings.family}`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // 在畫布中心顯示訊息
+            ctx.fillText(message, canvas.width / 2, canvas.height / 2);
         }
 
         // 填充所有下拉選單
@@ -88,6 +109,11 @@
                 priceChart.destroy();
             }
 
+            if (datasets.length === 0) {
+                displayNoDataMessage(elements.priceChart, '查無相關資料');
+                return;
+            }
+
             priceChart = new Chart(elements.priceChart, {
                 type: 'line',
                 data: { datasets },
@@ -96,15 +122,44 @@
                     scales: {
                         x: {
                             type: 'category',
-                            title: { display: true, text: '日期' }
+                            title: {
+                                display: true,
+                                text: '日期',
+                                font: fontSettings
+                            },
+                            ticks: {
+                                font: fontSettings
+                            }
                         },
                         y: {
                             beginAtZero: true,
-                            title: { display: true, text: '平均價格' }
+                            title: {
+                                display: true,
+                                text: '平均價格',
+                                font: fontSettings
+                            },
+                            ticks: {
+                                font: fontSettings
+                            }
                         }
                     },
                     plugins: {
-                        legend: { position: 'bottom' }
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: fontSettings,
+                                padding: 20
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: '價格趨勢圖',
+                            font: {
+                                size: fontSettings.size + 4,
+                                family: fontSettings.family
+                            },
+                            padding: 20
+                        }
                     }
                 }
             });
@@ -124,7 +179,6 @@
                 filteredData = filteredData.filter(d => d.area === selectedArea);
             }
 
-            // 計算各產品總數
             const aggregatedData = products.map(product => ({
                 name: product,
                 value: filteredData
@@ -137,7 +191,7 @@
             }
 
             if (aggregatedData.length === 0) {
-                console.warn('No data available for the selected filters');
+                displayNoDataMessage(elements.ratioChart, '查無相關資料');
                 return;
             }
 
@@ -152,11 +206,27 @@
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: true, // 保持寬高比
+                    aspectRatio: 1.5,  // 設置寬高比，可以調整這個值來改變圖表大小
                     plugins: {
-                        legend: { position: 'bottom' },
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: fontSettings,
+                                padding: 20
+                            }
+                        },
                         title: {
                             display: true,
-                            text: `${selectedArea === 'all' ? '全部地區' : selectedArea} - ${selectedDate === 'all' ? '全部日期' : selectedDate} 羊隻銷售比例`
+                            text: `${selectedArea === 'all' ? '全部地區' : selectedArea} - ${selectedDate === 'all' ? '全部日期' : selectedDate} 羊隻銷售比例`,
+                            font: {
+                                size: fontSettings.size + 4,
+                                family: fontSettings.family
+                            },
+                            padding: {
+                                top: 10,
+                                bottom: 20
+                            }
                         }
                     }
                 }
