@@ -1,0 +1,22 @@
+app.MapGet("/", (HttpContext context) =>
+{
+   string html = @" <html>
+   <body>
+   <h1>Welcome to Asp.net</h1>
+   </body>
+   </html>
+   ";
+
+   writeHtml(context, html);
+});
+
+void writeHtml(HttpContext context, string html)
+{
+   context.Response.ContentType = "Html";
+   context.Response.StatusCode = 200;
+   context.Response.WriteAsync(html);
+}
+
+
+explicit razor expression
+ href attribute : href="@($"/categories/edit/{category.CategoryId}")"

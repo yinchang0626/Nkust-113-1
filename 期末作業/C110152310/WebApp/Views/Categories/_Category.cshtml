@@ -1,0 +1,23 @@
+@model Category
+
+
+<form asp-controller="categories" asp-action="@ViewBag.Action" method="post">
+   <div class="mb-3">
+      <div class="text-danger" asp-validation-summary="All">
+
+      </div>
+      <label for="" class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
+         value="@(ViewBag.Action == "edit" ? Model.Name : "")" placeholder="Enter Name" />
+
+   </div>
+   <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" name="description" id="description" aria-describedby="helpId"
+         placeholder="description" value="@(ViewBag.Action == "edit" ? Model.Name : "")" />
+      <div class="text-danger">
+         @Html.ValidationMessage("Description")
+      </div>
+      <input type="submit" value="@ViewBag.SubmitButtonText" class="btn mt-3 btn-primary" />
+
+</form>
