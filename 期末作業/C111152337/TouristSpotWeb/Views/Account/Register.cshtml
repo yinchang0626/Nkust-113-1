@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "註冊";
+}
+
+<h2>註冊</h2>
+
+<form asp-action="Register" method="post">
+    <label>帳號：</label>
+    <input type="text" name="username" required />
+    <br />
+    <label>密碼：</label>
+    <input type="password" name="password" required />
+    <br />
+    <label>電子郵件：</label>
+    <input type="email" name="email" required />
+    <br />
+    <button type="submit">註冊</button>
+</form>
+
+@if (ViewData["SuccessMessage"] != null)
+{
+    <div style="color: green;">
+        <p>@ViewData["SuccessMessage"]</p>
+    </div>
+    <script>
+        // 等待2秒後導向首頁
+        setTimeout(function() {
+            window.location.href = '@Url.Action("Index", "Home")';
+        }, 2000);
+    </script>
+}

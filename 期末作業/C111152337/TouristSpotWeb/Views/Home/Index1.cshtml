@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "景點詳細資料";
+}
+
+<h1 id="spotName">加載中...</h1>
+
+<!-- 顯示景點詳細資料 -->
+<div id="spotDetails">
+    <p>正在加載景點資料...</p>
+</div>
+
+<!-- 顯示返回或其他操作 -->
+<a href="/TouristSpot">返回景點列表</a>
+
+<!-- 使用 JavaScript 從 API 獲取資料 -->
+<script>
+    // 設定 API 路徑，從 URL 中動態獲取 ID
+    var spotId = window.location.pathname.split("/").pop();  // 獲取 URL 中的 id
+    var apiUrl = `https://localhost:7015/api/TouristSpot/${spotId}`;
+
+    // 使用 fetch 發送請求到 API
+    fetch(apiUrl)
+        .then(response => response.json())  // 解析 JSON 數據
+        .then(data => {
+            // 更新頁面內容
+            document.getElementById("spotName").textContent = data.name; // 顯示名稱
+            document.getElementById("spotDetails").innerHTML = `
+                <p><strong>簡介:</strong> ${data.toldescribe}</p>
+                <p><strong>經度:</strong> ${data.px}</p>
+                <p><strong>緯度:</strong> ${data.py}</p>
+            `;
+        })
+        .catch(error => {
+            console.error("無法加載景點資料:", error);
+            document.getElementById("spotDetails").innerHTML = "<p>無法加載景點資料。</p>";
+        });
+</script>

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "登入";
+}
+
+<h2>登入</h2>
+
+<!-- 顯示登入錯誤訊息 -->
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<form asp-action="Login" method="post">
+    <label>帳號：</label>
+    <input type="text" name="username" required />
+    <br />
+    <label>密碼：</label>
+    <input type="password" name="password" required />
+    <br />
+    <button type="submit">登入</button>
+</form>

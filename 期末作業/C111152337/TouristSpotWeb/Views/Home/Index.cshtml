@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "景點列表";
+}
+<h1>@ViewData["Title"]</h1>
+
+<!-- 顯示景點詳細資料 -->
+<div id="spotDetails" style="margin-top: 20px;">
+    <h2>請選擇一個景點查看詳細資料。</h2>
+</div>
+<!-- 顯示台灣地圖，並設定地圖容器為滿屏 -->
+<div id="map" style="height: 100vh; width: 100%;"></div>
+
+
+<!-- 加載中的遮罩層 -->
+<div id="loadingOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 9999;">
+    <div style="color: white; font-size: 20px;">加載中...</div>
+</div>
+
+<script>
+    // 初始化地圖，並設置為台灣的中心
+    var map = L.map('map').setView([23.5, 121], 9); // 台灣的經緯度，縮放級別設為 9
+
+    // 加載 OpenStreetMap 作為底圖
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // 當頁面加載完成時，取得景點資料並顯示
+    window.onload = function() {
+        // 顯示加載中的遮罩層
+        document.getElementById('loadingOverlay').style.display = 'flex';
+
+        fetch('/api/TouristSpot')  // 從 API 獲取所有景點資料
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(spot => {
+                    // 檢查 Px 和 Py 是否存在且為有效的數字
+                    var lat = parseFloat(spot.py);
+                    var lng = parseFloat(spot.px);
+
+                    // 如果經緯度無效，跳過此景點
+                    if (isNaN(lat) || isNaN(lng)) {
+                        console.warn(`無效的經緯度資料：${spot.name}`);
+                        return; // 跳過這個景點
+                    }
+
+                    // 根據景點的 Px 和 Py 創建標記，並視為按鈕
+                    var icon = L.divIcon({
+                        className: 'custom-icon',
+                        html: `<div style="background-color: #007bff; color: white; padding: 1px; border-radius: 50%; cursor: pointer;"></div>`,
+                        iconSize: [10, 10],
+                        iconAnchor: [15, 15]
+                    });
+
+                    // 根據有效的經緯度放置標記
+                    var marker = L.marker([lat, lng], { icon: icon }).addTo(map);
+
+                    // 為標記綁定提示框，顯示名稱
+                    marker.bindTooltip(spot.name, { permanent: false, direction: 'top' });
+
+                    // 當標記被點擊時顯示簡介框
+                    marker.on('click', function() {
+                        // 顯示景點簡介資料
+                        const spotDetailsElement = document.getElementById('spotDetails');
+                        spotDetailsElement.innerHTML = `
+                            <h2>${spot.name}</h2>
+                            <p>${spot.toldescribe}</p>
+                            <button onclick="window.location.href='/TouristSpotDetails/${spot.id}'">查看更多詳細資料</button>
+                        `;
+
+                        // 檢查是否登入，若已登入顯示景點管理按鈕
+                        const username = '@Context.Session.GetString("Username")'; // 從 Session 獲取使用者名稱
+                        if (username) {
+                            spotDetailsElement.innerHTML += `
+                                <button onclick="window.location.href='/TouristSpot/Manage/${spot.id}'">景點管理</button>
+                            `;
+                        }
+                    });
+                });
+
+                // 加載完畢，隱藏加載中的遮罩層
+                document.getElementById('loadingOverlay').style.display = 'none';
+            })
+            .catch(error => {
+                console.error('無法加載景點資料:', error);
+                // 加載錯誤時隱藏遮罩層
+                document.getElementById('loadingOverlay').style.display = 'none';
+            });
+    };
+</script>
+
+<style>
+    /* 自定義圖標的樣式 */
+    .custom-icon {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    /* 設置地圖容器為滿屏 */
+    #map {
+        height: 100vh; /* 設置為視窗高度的 100% */
+        width: 100%; /* 設置為視窗寬度的 100% */
+    }
+
+    /* 設置加載中的遮罩層 */
+    #loadingOverlay {
+        display: none; /* 預設隱藏 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+</style>
