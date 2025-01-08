@@ -37,6 +37,16 @@ namespace project.Controllers
                              select s;
 
             // 搜尋邏輯
+            if (!string.IsNullOrEmpty(searchArea))
+            {
+                sheepQuery = sheepQuery.Where(s => s.Area == searchArea);
+            }
+
+            if (!string.IsNullOrEmpty(searchMarketName))
+            {
+                sheepQuery = sheepQuery.Where(s => s.MarketName == searchMarketName);
+            }
+
             if (!string.IsNullOrEmpty(searchProductName))
             {
                 sheepQuery = sheepQuery.Where(s => s.ProductName == searchProductName);
@@ -70,6 +80,7 @@ namespace project.Controllers
                     sheepQuery = sheepQuery.OrderBy(s => s.Date);
                     break;
             }
+
             // 設定目前的頁碼
             int pageNumber = (page ?? 1);
 
