@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Financial Data Dashboard</h1>
+
+    <!-- Filters Section -->
+    <section id="filters">
+        <h2>Filters</h2>
+            <label for="yearRange">Year Range:</label>
+            <input  id="startYear">
+            <input  id="endYear">
+        <button id="applyFilters">Apply Filters</button>
+    </section>
+
+    <!-- Data Table Section -->
+    <section id="data-table">
+        <h2>Financial Data Table</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Operational Income</th>
+                    <th>Non-operational Income</th>
+                    <th>Operational Expense</th>
+                    <th>Non-operational Expense</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Chart Section -->
+    <section id="charts">
+        <h2>Financial Data Charts</h2>
+        <canvas id="financialChart" width="800" height="400"></canvas>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
