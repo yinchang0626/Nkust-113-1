@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Title"] = "Stock Data Index";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<div>
+    <button class="btn btn-info" data-toggle="modal" data-target="#tradeVolumeModal">查看成交股數圖表</button>
+</div>
+
+
+<div>
+    <button class="btn btn-info" data-toggle="modal" data-target="#tradeValueModal">查看成交金額圖表</button>
+</div>
+
+
+<form method="get">
+    <div class="form-group">
+        <input type="text" name="searchString" class="form-control" placeholder="搜尋證券代號或名稱" value="@ViewData["CurrentFilter"]" />
+    </div>
+    <button type="submit" class="btn btn-primary">搜尋</button>
+</form>
+
+
+<p>
+    <a href="?sortOrder=securitycode_desc">證券代號降序</a> |
+    <a href="?sortOrder=securityname_desc">證券名稱降序</a> |
+    <a href="?sortOrder=tradevalue_desc">成交金額降序</a> |
+    <a href="?sortOrder=">默認排序</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>證券代號</th>
+            <th>證券名稱</th>
+            <th>成交股數</th>
+            <th>成交金額</th>
+            <th>開盤價</th>
+            <th>最高價</th>
+            <th>最低價</th>
+            <th>收盤價</th>
+            <th>漲跌價差</th>
+            <th>成交筆數</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SecurityCode</td>
+                <td>@item.SecurityName</td>
+                <td>@item.TradeVolume</td>
+                <td>@item.TradeValue</td>
+                <td>@item.OpeningPrice</td>
+                <td>@item.HighestPrice</td>
+                <td>@item.LowestPrice</td>
+                <td>@item.ClosingPrice</td>
+                <td>@item.PriceDifference</td>
+                <td>@item.TradeCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div class="modal fade" id="tradeVolumeModal" tabindex="-1" role="dialog" aria-labelledby="tradeVolumeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tradeVolumeModalLabel">成交股數圖表</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <canvas id="tradeVolumeChartInModal"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="tradeValueModal" tabindex="-1" role="dialog" aria-labelledby="tradeValueModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tradeValueModalLabel">成交金額圖表</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <canvas id="tradeValueChartInModal"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+    var securityCodes = [];
+    var tradeVolumes = [];
+    var tradeValues = [];
+
+    @foreach (var item in Model)
+    {
+        @:securityCodes.push("@item.SecurityCode");
+        @:tradeVolumes.push(@item.TradeVolume);
+        @:tradeValues.push(@item.TradeValue);
+    }
+
+        var ctx = document.getElementById('tradeVolumeChartInModal').getContext('2d');
+    var tradeVolumeChart = new Chart(ctx, {
+        type: 'bar',  
+        data: {
+            labels: securityCodes,  
+            datasets: [{
+                label: '成交股數',
+                data: tradeVolumes, 
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    $('#tradeValueModal').on('shown.bs.modal', function () {
+        var ctx2 = document.getElementById('tradeValueChartInModal').getContext('2d');
+        var tradeValueChartInModal = new Chart(ctx2, {
+            type: 'line',  
+            data: {
+                labels: securityCodes,  
+                datasets: [{
+                    label: '成交金額',
+                    data: tradeValues, 
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>

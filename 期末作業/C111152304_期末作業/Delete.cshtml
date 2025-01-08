@@ -1,0 +1,27 @@
+﻿@model WebApplication1.Models.StockData
+
+@{
+    ViewData["Title"] = "刪除資料";
+    Layout = "_Layout";
+}
+
+<h2>確定要刪除資料嗎？</h2>
+
+<div>
+    <p><strong>證券代號：</strong>@Model.SecurityCode</p>
+    <p><strong>證券名稱：</strong>@Model.SecurityName</p>
+    <p><strong>成交股數：</strong>@Model.TradeVolume</p>
+    <p><strong>成交金額：</strong>@Model.TradeValue</p>
+    <p><strong>開盤價：</strong>@Model.OpeningPrice</p>
+    <p><strong>最高價：</strong>@Model.HighestPrice</p>
+    <p><strong>最低價：</strong>@Model.LowestPrice</p>
+    <p><strong>收盤價：</strong>@Model.ClosingPrice</p>
+    <p><strong>漲跌價差：</strong>@Model.PriceDifference</p>
+    <p><strong>成交筆數：</strong>@Model.TradeCount</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">刪除</button>
+    <a href="@Url.Action("Index", "StockData")" class="btn btn-secondary">取消</a>
+</form>

@@ -1,0 +1,64 @@
+﻿@model WebApplication1.Models.StockData
+
+@{
+    ViewData["Title"] = "編輯資料";
+    Layout = "_Layout";
+}
+
+<h2>編輯資料</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="SecurityCode"></label>
+        <input asp-for="SecurityCode" class="form-control" />
+        <span asp-validation-for="SecurityCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SecurityName"></label>
+        <input asp-for="SecurityName" class="form-control" />
+        <span asp-validation-for="SecurityName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TradeVolume"></label>
+        <input asp-for="TradeVolume" class="form-control" />
+        <span asp-validation-for="TradeVolume" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TradeValue"></label>
+        <input asp-for="TradeValue" class="form-control" />
+        <span asp-validation-for="TradeValue" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="OpeningPrice"></label>
+        <input asp-for="OpeningPrice" class="form-control" />
+        <span asp-validation-for="OpeningPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HighestPrice"></label>
+        <input asp-for="HighestPrice" class="form-control" />
+        <span asp-validation-for="HighestPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LowestPrice"></label>
+        <input asp-for="LowestPrice" class="form-control" />
+        <span asp-validation-for="LowestPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClosingPrice"></label>
+        <input asp-for="ClosingPrice" class="form-control" />
+        <span asp-validation-for="ClosingPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PriceDifference"></label>
+        <input asp-for="PriceDifference" class="form-control" />
+        <span asp-validation-for="PriceDifference" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TradeCount"></label>
+        <input asp-for="TradeCount" class="form-control" />
+        <span asp-validation-for="TradeCount" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">儲存變更</button>
+    <a href="@Url.Action("Index", "StockData")" class="btn btn-secondary">取消</a>
+</form>
