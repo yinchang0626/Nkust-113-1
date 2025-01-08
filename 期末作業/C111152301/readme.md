@@ -6,14 +6,14 @@
     提供資料包括：市場代碼、市場簡稱、市場名稱、交易日期、產品代碼、產品名稱、產品類型、數量、平均重、平均價、最高價格等欄位資料。
 ## 功能
 - 顯示羊隻資料
-    - 條列顯示
-![alt text](image.png)
+    - 條列顯示  
+<img src="image.png" width="350" />
     - 圖表顯示    
-    <img src="image-1.png" width="350" />      
-    <img src="image-2.png" width="450" />    
-    可以透過選取產品種類或是地區來查看價格趨勢    
-    <img src="image-3.png" width="350" />      
-    以透過選取地區或日期來查看各地區羊隻種類售賣比例  
+    <img src="image-1.png" width="350" />  
+    <img src="image-2.png" width="450" />  
+    可以透過選取產品種類或是地區來查看價格趨勢  
+    <img src="image-3.png" width="350" />        
+    以透過選取地區或日期來查看各地區羊隻種類售賣比例    
 - 排序資料    
     可以根據不同的項目對資料進行排序  
     - 日期
@@ -30,11 +30,11 @@
     <img src="image-5.png" width="500" />  
 
 - 顯示全部資料  
-    可以清除搜尋，顯示所有資料
+    可以清除搜尋，顯示所有資料  
     <img src="image-6.png" width="500" />  
 
 - 詳情資料顯示
-    可以顯示該筆資料的詳細資訊
+    可以顯示該筆資料的詳細資訊  
     <img src="image-6.png" width="500" />  
     <img src="image-7.png" width="350" />  
 
