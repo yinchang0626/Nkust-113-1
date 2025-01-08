@@ -51,7 +51,7 @@ CREATE TABLE Messages (
     message TEXT NOT NULL,
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (username) REFERENCES Users(username)
-);
+);```
 
 ### 步驟 3: 匯入 CSV 資料
 ```sql
@@ -62,7 +62,7 @@ INTO TABLE Courses
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
-IGNORE 1 ROWS;
+IGNORE 1 ROWS;```
 
 ### 步驟 4: 訪問網站
 1.配置好資料庫後，啟動您的本地伺服器。
