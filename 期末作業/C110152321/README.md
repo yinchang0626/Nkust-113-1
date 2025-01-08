@@ -54,7 +54,7 @@ CREATE TABLE Messages (
     FOREIGN KEY (username) REFERENCES Users(username)
 );
 ```
-###步驟 3: 匯入 CSV 資料
+##步驟 3: 匯入 CSV 資料
 ```sql
 USE open_data_project;
 
@@ -66,7 +66,7 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 ```
 
-###步驟 4: 訪問網站
+##步驟 4: 訪問網站
 配置好資料庫後，啟動您的本地伺服器。
 在瀏覽器中開啟 localhost，即可使用該系統。
 ![cmd](https://github.com/Shirleen03/Nkust-113-1/blob/main/%E6%9C%9F%E6%9C%AB%E4%BD%9C%E6%A5%AD/C110152321/image/cmd.png)
