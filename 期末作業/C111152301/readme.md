@@ -7,7 +7,7 @@
 ## 功能
 - 顯示羊隻資料
     - 條列顯示  
-    <img src="readme_image/image.png" width="350" />  
+    <img src="readme_image/image.png" width="450" />  
 
     - 圖表顯示  
     <img src="readme_image/image-1.png" width="350" />  
@@ -27,7 +27,7 @@
     - 地區
     - 商品名稱
     - 平均價格  
-    <img src="readme_image/image-4.png" width="500" />  
+    <img src="readme_image/image-20.png" width="500" />
 
 - 搜尋資料  
     可以根據不同的資料進行搜尋  
@@ -42,32 +42,32 @@
 
 - 詳情資料顯示
     可以顯示該筆資料的詳細資訊  
-    <img src="readme_image/image-6.png" width="500" />  
-    <img src="readme_image/image-7.png" width="350" />  
+    <img src="readme_image/image-21.png" width="500" />
 
 - 新增、編輯與刪除功能  
     <img src="readme_image/image-8.png" width="350" />  
     - 新增  
         可以新增單筆資料或是CSV檔上去  
         <img src="readme_image/image-9.png" width="350" />  
-        <img src="readme_image/image-10.png" width="250" />  
+        <img src="readme_image/image-10.png" width="300" />  
     - 編輯  
         可以對該筆資料進行編輯    
         <img src="readme_image/image-11.png" width="500" />  
         <img src="readme_image/image-12.png" width="300" />  
     - 刪除  
         可以對該筆資料進行刪除    
-        <img src="readme_image/image-11.png" width="500" />  
+        <img src="readme_image/image-11.png" width="500" />
+        <img src="readme_image/image-22.png" width="300" /> 
 
 - 帳號功能  
     - 註冊  
         可以註冊帳號    
         <img src="readme_image/image-14.png" width="200" />    
-        <img src="readme_image/image-15.png" width="300" />  
+        <img src="readme_image/image-23.png" width="300" />
     - 登入   
         可以登入帳號  
         <img src="readme_image/image-14.png" width="200" />    
-        <img src="readme_image/image-16.png" width="300" />  
+        <img src="readme_image/image-15.png" width="300" />  
     - 登出  
         可以登出帳號  
         <img src="readme_image/image-17.png" width="200" />  
