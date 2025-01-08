@@ -30,9 +30,8 @@
    開啟命令提示字元，並進入 MySQL 目錄：
    ```bash
    C:\Program Files\MySQL\MySQL Server 9.1\bin> .\mysql -u root -p
-建立資料表：
-sql
-複製程式碼
+2.建立資料表：
+```sql
 CREATE DATABASE open_data_project;
 
 CREATE TABLE Courses(
@@ -54,9 +53,8 @@ CREATE TABLE Messages (
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (username) REFERENCES Users(username)
 );
-步驟 3: 匯入 CSV 資料
-sql
-複製程式碼
+###步驟 3: 匯入 CSV 資料
+```sql
 USE open_data_project;
 
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 9.1/Uploads/Taipei_Courses_112.csv'
@@ -65,7 +63,8 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
-步驟 4: 訪問網站
+
+###步驟 4: 訪問網站
 配置好資料庫後，啟動您的本地伺服器。
 在瀏覽器中開啟 localhost，即可使用該系統。
 ![cmd](https://github.com/Shirleen03/Nkust-113-1/blob/main/%E6%9C%9F%E6%9C%AB%E4%BD%9C%E6%A5%AD/C110152321/image/cmd.png)
