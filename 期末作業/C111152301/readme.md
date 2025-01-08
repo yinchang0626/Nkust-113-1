@@ -58,7 +58,6 @@
     - 刪除  
         可以對該筆資料進行刪除    
         <img src="readme_image/image-11.png" width="500" />  
-        <img src="readme_image/image-13.png" width="300" />  
 
 - 帳號功能  
     - 註冊  
