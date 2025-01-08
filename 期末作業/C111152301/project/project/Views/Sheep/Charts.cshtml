@@ -4,8 +4,6 @@
 
 <div class="container mt-4">
     <h1 class="mb-4">羊隻行情統計圖表</h1>
-
-    <!-- 價格趨勢圖 -->
     <div class="card mb-4">
         <div class="card-header">
             <h5 class="card-title mb-0">羊隻價格趨勢圖</h5>
@@ -34,10 +32,7 @@
         </div>
     </div>
     <div class="row">
-        <!-- 合併後的比例圖 -->
-        <!-- 修改圓餅圖的容器大小 -->
         <div class="col-md-6">
-            <!-- 從 col-md-12 改為 col-md-6 來縮小寬度 -->
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title mb-0">各地區羊隻種類銷售比例</h5>
@@ -62,9 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 添加一個固定大小的容器 -->
                     <div style="position: relative; height: 400px;">
-                        <!-- 控制圖表高度 -->
                         <canvas id="ratioChart"></canvas>
                     </div>
                 </div>
@@ -76,7 +69,6 @@
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script>
-        // 確保數據正確傳遞
         const chartData = {
             priceData: @Html.Raw(ViewBag.PriceData),
             productRatioData: @Html.Raw(ViewBag.ProductRatioData),

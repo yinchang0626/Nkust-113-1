@@ -1,32 +1,26 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    // 確保數據正確載入
     if (!chartData || !chartData.priceData) {
         console.error('Chart data not properly loaded');
         return;
     }
 
-    // 定義顏色陣列
     const colors = [
         '#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d'
     ];
 
-    // 初始化圖表參考
     let priceChart = null;
     let ratioChart = null;
 
-    // 定義共用的字體設置
     const fontSettings = {
         size: 16,
         family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
     };
 
     try {
-        // 提取唯一值
         const products = Array.from(new Set(chartData.priceData.map(d => d.productName)));
         const areas = Array.from(new Set(chartData.priceData.map(d => d.area)));
         const dates = Array.from(new Set(chartData.priceData.map(d => d.date))).sort();
 
-        // 獲取所有需要的DOM元素
         const elements = {
             trendProductSelect: document.getElementById('trendProductSelect'),
             trendAreaSelect: document.getElementById('trendAreaSelect'),
@@ -38,7 +32,6 @@
             ratioChart: document.getElementById('ratioChart')
         };
 
-        // 檢查所有必要的DOM元素
         for (const [key, element] of Object.entries(elements)) {
             if (!element) {
                 console.error(`Required element ${key} not found`);
@@ -46,7 +39,6 @@
             }
         }
 
-        // 填充下拉選單
         function populateSelect(selectElement, options, defaultOption = 'all') {
             selectElement.innerHTML = `<option value="${defaultOption}">${defaultOption === 'all' ? '所有' : defaultOption}</option>`;
             options.forEach(option => {
@@ -55,28 +47,23 @@
             });
         }
 
-        // 顯示無數據訊息
         function displayNoDataMessage(canvas, message) {
             const ctx = canvas.getContext('2d');
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // 設置文字樣式
             ctx.fillStyle = '#666666';
             ctx.font = `${fontSettings.size}px ${fontSettings.family}`;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
-            // 在畫布中心顯示訊息
             ctx.fillText(message, canvas.width / 2, canvas.height / 2);
         }
 
-        // 填充所有下拉選單
         populateSelect(elements.trendProductSelect, products);
         populateSelect(elements.trendAreaSelect, areas);
         populateSelect(elements.ratioAreaSelect, areas);
         populateSelect(elements.ratioDateSelect, dates);
 
-        // 更新價格趨勢圖
         function updatePriceChart() {
             const selectedProduct = elements.trendProductSelect.value;
             const selectedArea = elements.trendAreaSelect.value;
@@ -165,7 +152,6 @@
             });
         }
 
-        // 更新比例圖
         function updateRatioChart() {
             const selectedArea = elements.ratioAreaSelect.value;
             const selectedDate = elements.ratioDateSelect.value;
@@ -206,8 +192,8 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: true, // 保持寬高比
-                    aspectRatio: 1.5,  // 設置寬高比，可以調整這個值來改變圖表大小
+                    maintainAspectRatio: true, 
+                    aspectRatio: 1.5, 
                     plugins: {
                         legend: {
                             position: 'bottom',
@@ -233,11 +219,9 @@
             });
         }
 
-        // 綁定事件監聽器
         elements.trendConfirmBtn.addEventListener('click', updatePriceChart);
         elements.ratioConfirmBtn.addEventListener('click', updateRatioChart);
 
-        // 初始化圖表
         updatePriceChart();
         updateRatioChart();
 

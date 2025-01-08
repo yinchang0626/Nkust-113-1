@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "登入";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -13,13 +13,13 @@
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="off" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.Email" class="form-label">email</label>
+                    <input asp-for="Input.Email" class="form-control" autocomplete="off" aria-required="true" placeholder="name@gmail.com" />
+                    <label asp-for="Input.Email" class="form-label">信箱</label>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">password</label>
+                    <input asp-for="Input.Password" class="form-control" autocomplete="off" aria-required="true" />
+                    <label asp-for="Input.Password" class="form-label">密碼</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
                 <div class="checkbox mb-3">
@@ -29,17 +29,17 @@
                     </label>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Login</button>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">登入</button>
                 </div>
                 <div>
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">forget password</a>
+                        <a id="forgot-password" asp-page="./ForgotPassword">忘記密碼</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">creat a new account</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">註冊新帳號</a>
                     </p>
                     <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">resend email to confirm</a>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">發送驗證信至信箱</a>
                     </p>
                 </div>
             </form>
