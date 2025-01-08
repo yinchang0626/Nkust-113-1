@@ -38,9 +38,10 @@
 
 - 顯示全部資料  
     可以清除搜尋，顯示所有資料  
-    <img src="readme_image/image-6.png" width="500" />  
+    <img src="readme_image/image-24.png" width="500" />  
 
 - 詳情資料顯示
+
     可以顯示該筆資料的詳細資訊  
     <img src="readme_image/image-21.png" width="500" />
 
