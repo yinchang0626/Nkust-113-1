@@ -9,7 +9,7 @@
     - 條列顯示
 ![alt text](image.png)
     - 圖表顯示  
-    <img src="image-1.png" width="350" />  
+    <img src="image-1.png" width="350" />    
     <img src="image-2.png" width="450" />  
     可以透過選取產品種類或是地區來查看價格趨勢  
     <img src="image-3.png" width="350" />    
