@@ -17,7 +17,7 @@
 
     <img src="readme_image/image-2.png" width="450" /> 
 
-    以透過選取地區或日期來查看各地區羊隻種類售賣比例
+    可以透過選取地區或日期來查看各地區羊隻種類售賣比例
 
     <img src="readme_image/image-3.png" width="350" />  
 
