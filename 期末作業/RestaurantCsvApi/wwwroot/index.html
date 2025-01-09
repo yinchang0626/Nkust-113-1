@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查詢店家資料</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .store {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>查詢店家資料</h1>
+    <label for="area">選擇區域：</label>
+    <select id="area" onchange="filterStores()">
+        <option value="">請選擇區域</option>
+    </select>
+    <div id="stores-list"></div>
+
+    <script>
+        let stores = [];
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('http://localhost:5000/api/stores')
+                .then(response => response.json())
+                .then(data => {
+                    stores = data;
+                    const areaSelect = document.getElementById('area');
+                    const uniqueAreas = [...new Set(stores.map(store => store.區域))];
+
+                    uniqueAreas.forEach(area => {
+                        const option = document.createElement('option');
+                        option.value = area;
+                        option.textContent = area;
+                        areaSelect.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Error fetching stores:', error));
+        });
+
+        function filterStores() {
+            const selectedArea = document.getElementById('area').value;
+            const storesList = document.getElementById('stores-list');
+            storesList.innerHTML = '';
+
+            const filteredStores = stores.filter(store => store.區域 === selectedArea);
+
+            filteredStores.forEach(store => {
+                const storeDiv = document.createElement('div');
+                storeDiv.className = 'store';
+                storeDiv.innerHTML = `<strong>${store.店家}</strong><br>地址: ${store.營業地址}`;
+                storesList.appendChild(storeDiv);
+            });
+        }
+    </script>
+</body>
+</html>
