@@ -1,0 +1,1299 @@
+[
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "AccessDenied",
+    "RelativePath": "Account/AccessDenied",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "Account/ConfirmEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ExternalLogin",
+    "RelativePath": "Account/ExternalLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "provider",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ExternalLoginCallback",
+    "RelativePath": "Account/ExternalLoginCallback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "remoteError",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ExternalLoginConfirmation",
+    "RelativePath": "Account/ExternalLoginConfirmation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "Account/ForgotPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "Account/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ForgotPasswordConfirmation",
+    "RelativePath": "Account/ForgotPasswordConfirmation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "Lockout",
+    "RelativePath": "Account/Lockout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "Account/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "Account/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "LoginWith2fa",
+    "RelativePath": "Account/LoginWith2fa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "LoginWith2fa",
+    "RelativePath": "Account/LoginWith2fa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TwoFactorCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RememberMachine",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "rememberMe",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "LoginWithRecoveryCode",
+    "RelativePath": "Account/LoginWithRecoveryCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "LoginWithRecoveryCode",
+    "RelativePath": "Account/LoginWithRecoveryCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RecoveryCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "Logout",
+    "RelativePath": "Account/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "SignedOut",
+    "RelativePath": "Account/Logout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "Account/Register",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "Account/ResetPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "Account/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.AccountController",
+    "Method": "ResetPasswordConfirmation",
+    "RelativePath": "Account/ResetPasswordConfirmation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/Authenticate",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.AuthenticateResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/CreateBooking",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/CreateCoupon",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/DeleteBooking",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/DeleteCoupon",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/Hello",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Sinewave.ServiceModel.HelloResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/QueryBookings",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.QueryResponse\u00601[[Sinewave.ServiceModel.Booking, Sinewave.ServiceModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/QueryCoupons",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.QueryResponse\u00601[[Sinewave.ServiceModel.Coupon, Sinewave.ServiceModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/UpdateBooking",
+    "HttpMethod": "PATCH",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.PredefinedRoutesFeature\u002B\u003C\u003Ec__DisplayClass20_3",
+    "Method": "\u003CAfterInit\u003Eb__2",
+    "RelativePath": "api/UpdateCoupon",
+    "HttpMethod": "PATCH",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "auth",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.AuthenticateResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "auth",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.AuthenticateResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "auth/{provider}",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.AuthenticateResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "booking/{Id}",
+    "HttpMethod": "PATCH",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "booking/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "bookings",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.QueryResponse\u00601[[Sinewave.ServiceModel.Booking, Sinewave.ServiceModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "bookings",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "bookings/{Id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.QueryResponse\u00601[[Sinewave.ServiceModel.Booking, Sinewave.ServiceModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "coupons",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.QueryResponse\u00601[[Sinewave.ServiceModel.Coupon, Sinewave.ServiceModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "coupons",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "coupons/{Id}",
+    "HttpMethod": "PATCH",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceStack.IdResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "coupons/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      }
+    ]
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.DocsController",
+    "Method": "Index",
+    "RelativePath": "docs/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "hello",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Sinewave.ServiceModel.HelloResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceStack.AppHostBase\u002B\u003C\u003Ec__DisplayClass48_0",
+    "Method": "\u003CMapUserDefinedRoutes\u003Eb__1",
+    "RelativePath": "hello/{Name}",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Sinewave.ServiceModel.HelloResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "ApiKeys",
+    "RelativePath": "Manage/ApiKeys",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "ChangePassword",
+    "RelativePath": "Manage/ChangePassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "ChangePassword",
+    "RelativePath": "Manage/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OldPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "Disable2fa",
+    "RelativePath": "Manage/Disable2fa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "Disable2faWarning",
+    "RelativePath": "Manage/Disable2faWarning",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "EnableAuthenticator",
+    "RelativePath": "Manage/EnableAuthenticator",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "EnableAuthenticator",
+    "RelativePath": "Manage/EnableAuthenticator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SharedKey",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AuthenticatorUri",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "ExternalLogins",
+    "RelativePath": "Manage/ExternalLogins",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "GenerateRecoveryCodes",
+    "RelativePath": "Manage/GenerateRecoveryCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "GenerateRecoveryCodesWarning",
+    "RelativePath": "Manage/GenerateRecoveryCodesWarning",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "Index",
+    "RelativePath": "Manage/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "Index",
+    "RelativePath": "Manage/Index",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsEmailConfirmed",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "LinkLogin",
+    "RelativePath": "Manage/LinkLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "provider",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "LinkLoginCallback",
+    "RelativePath": "Manage/LinkLoginCallback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "RemoveLogin",
+    "RelativePath": "Manage/RemoveLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LoginProvider",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProviderKey",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "ResetAuthenticator",
+    "RelativePath": "Manage/ResetAuthenticator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "ResetAuthenticatorWarning",
+    "RelativePath": "Manage/ResetAuthenticatorWarning",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "SendVerificationEmail",
+    "RelativePath": "Manage/SendVerificationEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsEmailConfirmed",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "SetPassword",
+    "RelativePath": "Manage/SetPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "SetPassword",
+    "RelativePath": "Manage/SetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NewPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StatusMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "ShowRecoveryCodes",
+    "RelativePath": "Manage/ShowRecoveryCodes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.ManageController",
+    "Method": "TwoFactorAuthentication",
+    "RelativePath": "Manage/TwoFactorAuthentication",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.BlogController",
+    "Method": "Index",
+    "RelativePath": "posts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "author",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tag",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.BlogController",
+    "Method": "Post",
+    "RelativePath": "posts/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.BlogController",
+    "Method": "Delete",
+    "RelativePath": "posts/delete/{slug}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.BlogController",
+    "Method": "Edit",
+    "RelativePath": "posts/edit/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sinewave.Controllers.BlogController",
+    "Method": "Edit",
+    "RelativePath": "posts/edit/{slug}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Slug",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

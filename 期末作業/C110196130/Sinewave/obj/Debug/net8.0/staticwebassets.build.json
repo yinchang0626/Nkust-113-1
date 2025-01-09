@@ -1,0 +1,6202 @@
+{
+  "Version": 1,
+  "Hash": "oqfhYTGHvlzxRQA6jgJKxka+pmRb4eVzvVojy9XihPI=",
+  "Source": "Sinewave",
+  "BasePath": "_content/Sinewave",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Sinewave\\wwwroot",
+      "Source": "Sinewave",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\app.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "css/app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2yi5foxas3",
+      "Integrity": "1rFkqojow1arSQeiMh116SVh4VmLt5FiwvglwPSijz8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\lite-yt-embed.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "css/lite-yt-embed#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7egpcsxshd",
+      "Integrity": "P6uE90m0HvwOmRvg09NkbjAU/9/kiWh4sAemx1S+/I8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\lite-yt-embed.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\site.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kueontv72o",
+      "Integrity": "LBzMrrsT3wkI3g1SUTIA1VHWQn7RjOxVwKudjteLPHk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\typography.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "css/typography#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w2lrqsewum",
+      "Integrity": "iDIH3oDxgxbE7xAYH21eLqFqqwbJMUQ+G8VBOOkU0DY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\typography.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\favicon.ico",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "niysynalls",
+      "Integrity": "v5unavebomoD3pCfCKsw26nnvlFQnc/0JhSaiV1af5E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\logo.svg",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "img/logo#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "11n3n48isj",
+      "Integrity": "q2GE95zIETmW7i1NM9KYQ40ZmP9x5l/MB2kppQCwwME=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo.svg"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user1.svg",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "img/profiles/user1#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s3tzorufjc",
+      "Integrity": "GII88T65Zc008xi1WG0twoIQA351WmEIIl2uXgnE78s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\profiles\\user1.svg"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user2.svg",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "img/profiles/user2#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t5kemniif9",
+      "Integrity": "kY+V8z4Uc7gk7qCVblNNn+a+iMs8fNjpHEYjUngVbi4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\profiles\\user2.svg"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user3.svg",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "img/profiles/user3#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "etip2bobf6",
+      "Integrity": "grnnHI/NscgC+fNLScLngUTX15MJkED2cI2OqBGQHBs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\profiles\\user3.svg"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\js\\site.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bnkqy1y0r8",
+      "Integrity": "BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/css/all#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qz8z3pfh2j",
+      "Integrity": "Ri/CmB/x5N8K+JAtNW3WVyYILJpD2TuRJBnONlaJAes=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\css\\all.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.min.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/css/all.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "doewxyq8x5",
+      "Integrity": "TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8/wTPigGKe6E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/css/brands#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jb5wwpfxpq",
+      "Integrity": "EcmB6grAplP/5BrljkvLoBbvDtYGlDVhSyPCWK9JkEs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.min.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/css/brands.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s7dezgju7a",
+      "Integrity": "mNIRbgN3MiOc4/ZB2S6kd1xmGEkQ3IG0lt3Yw1chrJY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/css/fa-solid#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j9eu6ezjhj",
+      "Integrity": "Sa6wupeIenrbvcT8ZY9Be89FAUR7IGCvwTkYrMp3+0U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.min.css",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/css/fa-solid.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aogeb5qnlv",
+      "Integrity": "6sq5KJ7DeWVAwAmmER9C8TpxQ1e9rW7ftM9qsf/w/YA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-brands-400#[.{fingerprint}]?.eot",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vqrg808i0n",
+      "Integrity": "d/g9rqKWZYtBEwQaW1zTbChVTQq5BO+h8VzWdcPp/sc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-brands-400#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ttsv9kmuro",
+      "Integrity": "sfyTovPyrb8XA2RZ2KLFWPw3kO8WkcwmYfPFO4dI5Ks=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-brands-400#[.{fingerprint}]?.woff",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9p2znq1car",
+      "Integrity": "bSd7nLHSzgIlQ0unXiRr1Bc2SsUDgf+c+X604qO8EPA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-brands-400#[.{fingerprint}]?.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ar3o8bqd2b",
+      "Integrity": "+uLNVjDVPLCV+Ft49V9kXvvZGIP4kz0BaxyFNpGhVa8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-regular-400#[.{fingerprint}]?.eot",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0ll3loq4yu",
+      "Integrity": "/Dr5TKVRiS+s62FZ1289aZqabOx/rogj50Bn2dvULmQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-regular-400#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4qrw3ocxt2",
+      "Integrity": "pGjMHmZksj2Pmb32Pb0vFokowVF1nQN0I2TxjzUVjm4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-regular-400#[.{fingerprint}]?.woff",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a4634cpkrr",
+      "Integrity": "RvradVElr6iowPmPZKhRsuzbmuDbdz+8Kp6FLaUYcxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-regular-400#[.{fingerprint}]?.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "60xakjwxxy",
+      "Integrity": "lsVTNdtugPk1gOYhSvolgjICNaNTUlvuYDBAwv0u0+k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-solid-900#[.{fingerprint}]?.eot",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5bfpqi664e",
+      "Integrity": "PyQYksDriUuH5w6sWZiSh4Rdc0k89IWfoQFxtlytW6U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-solid-900#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nf3h8k7bmb",
+      "Integrity": "ozNmLNk97hBwSeWIVYd12qoIvGFlLRuvCEobjUPktBw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-solid-900#[.{fingerprint}]?.woff",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3ikuerccvr",
+      "Integrity": "tWLp5LACwX7k66yHNXz+5t/lt0zmFe7ekDrSY4KE9kQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/css/font-awesome/webfonts/fa-solid-900#[.{fingerprint}]?.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pzbqczbcrl",
+      "Integrity": "NWfqau5C361Ku7VGokEcx8JFWNqi1/uQiP71jLHo8Vo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\additional-methods.min.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/additional-methods.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qlccset4i1",
+      "Integrity": "MtEA819Zls6dtLt5S5BpEMOhifPyz7gfzfgtNtY75lE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\additional-methods.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/jquery#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0i3buxo5is",
+      "Integrity": "eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\jquery.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/jquery.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o1o13a6vjx",
+      "Integrity": "/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\jquery.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.map",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/jquery.min#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ql58znfkzc",
+      "Integrity": "Xn1tnCi38hAGU16IdetH6WZ4UqFMRiTu0wHGzqGa5is=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\jquery.min.map"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/jquery.validate#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lzl9nlhx6b",
+      "Integrity": "kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\jquery.validate.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.min.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/jquery.validate.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ag7o75518u",
+      "Integrity": "umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dairyzo5ux",
+      "Integrity": "VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dairyzo5ux",
+      "Integrity": "VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\lite-yt-embed.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/lite-yt-embed#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5769fjj9xl",
+      "Integrity": "oZLEPgaFv4FbjGdgTh1kzXsFWKSV/ONoWUjAwlAWMUk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\lite-yt-embed.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\qrcode.min.js",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/js/qrcode.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h5gslb8p3n",
+      "Integrity": "xUHvBjJ4hahBW8qN9gceFBibSFUzbe9PNttUvehITzY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\js\\qrcode.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.min.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/mjs/servicestack-client.min#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fbwm42foj6",
+      "Integrity": "5fYQTOLgOB29tXyELa0mciIfocOIfeGYdH0JLAu0vmU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\mjs\\servicestack-client.min.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/mjs/servicestack-client#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9taczz7zw1",
+      "Integrity": "Q5+xZXr46gTXJX7J25aG+Of1Jd3pHx/Ji4ElXBEMxS0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\mjs\\servicestack-client.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.min.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/mjs/servicestack-vue.min#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "etr9wb18ow",
+      "Integrity": "EjEZ2UTP4W8zPasksXQnyhlYMgawVjbh4lCup3kYE+M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\mjs\\servicestack-vue.min.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/mjs/servicestack-vue#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4z2ewwduzv",
+      "Integrity": "cAm/IGHjpVPgChwW9MFt6BGyreamBqzHdq3ZnY2R9O8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\mjs\\servicestack-vue.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.min.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/mjs/vue.min#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xy5qy3xakb",
+      "Integrity": "R4FWnhz0AHGlEiea0rmfFb8fo1caR3W77j/n8qc+0mM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\mjs\\vue.min.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "lib/mjs/vue#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6gjtvp9ogh",
+      "Integrity": "SuU0TTRUpiLEeYD2W8Ck6t2erHk6aVIaWSAwnhLobqk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\mjs\\vue.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\app.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "mjs/app#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ytvz53y5tu",
+      "Integrity": "GgP6EPKgJ3KngvN52/oNsfHWNErkt9XlGy3ZMXyyhg4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\mjs\\app.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\components\\HelloApi.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "mjs/components/HelloApi#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6fdrrn2h5v",
+      "Integrity": "spMtlZOhhxglnswahmioF5hKKQowkYSzBLsJYxeR2uQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\mjs\\components\\HelloApi.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\dtos.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "mjs/dtos#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "95ffgap6ig",
+      "Integrity": "bYLv/P3h6icZVL73VqIYQ6OOFqvnPHZuYavE/tozfus=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\mjs\\dtos.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\dtos.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "pages/Account/Manage/dtos#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7wm22pfsgo",
+      "Integrity": "mekvLRRIedPluzn2pPSsd3X+H3HcuImgDq7sLAuTvEQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\Account\\Manage\\dtos.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\EnableAuthenticator.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "pages/Account/Manage/EnableAuthenticator#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yewddjqrw4",
+      "Integrity": "pmGGDH8dbbWx9O2+sqWe35e67ereWCkXqAO08diwwAU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\Account\\Manage\\EnableAuthenticator.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\ManageUserApiKeys.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "pages/Account/Manage/ManageUserApiKeys#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9ut1sdbtcf",
+      "Integrity": "r9ILiVwamaq5O4W2LUysw/DyVJt9eB0HgfNGkfk0JCs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\Account\\Manage\\ManageUserApiKeys.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\components\\ShellCommand.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "pages/components/ShellCommand#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kr9kj5z2g4",
+      "Integrity": "kLo5YQ0409WWb5Ewm2AT9V3nx5sOGuFPSgy/o9aIWP8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\components\\ShellCommand.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\Bookings.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "pages/Home/Bookings#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bwnef4iqef",
+      "Integrity": "hfDeIqmzsHD/8D13xCv/lMopjQotIdbu1YEqxB2Iz8k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\Home\\Bookings.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\GettingStarted.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "pages/Home/GettingStarted#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "thcufsvoc5",
+      "Integrity": "PxZHvlybzcCh2rAfouN3wibHsfqIliemP7tvvTidUnQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pages\\Home\\GettingStarted.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\ChartJs.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "posts/components/ChartJs#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x2b0jyzsp3",
+      "Integrity": "GSMEXBrG8NI9xPVHiQCEua9n6D4xlpDjygBfYUz/fbs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\components\\ChartJs.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentGallery.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "posts/components/VueComponentGallery#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4uri5xxzp6",
+      "Integrity": "bHaRS6a6kMpp5UDdsc/htPi5ae3mbJBq2aT6eH4SRGE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\components\\VueComponentGallery.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentLibrary.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "posts/components/VueComponentLibrary#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7gpefeslru",
+      "Integrity": "qSD8UsgmQ5z8NP1yAFtn0vPzMtdrEE7lnGJP/vOwXO4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\components\\VueComponentLibrary.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\javascript.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "posts/javascript#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hsla3xsvyi",
+      "Integrity": "0RMtv0IyGm1GsqT8rmU1bmeSZpnf8IzGTgKXh72a5uE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\javascript.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\razor-ssg-new-blog-features.mjs",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "posts/razor-ssg-new-blog-features#[.{fingerprint}]?.mjs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w1m77zk5z9",
+      "Integrity": "nEGnTVrCYqvKaa7xZVF2Ct9NCosspYDy9QdbTMvmsr8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\posts\\razor-ssg-new-blog-features.mjs"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\README.txt",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "tailwind/README#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4lpcfq2lvv",
+      "Integrity": "eHwtv4gjdZLoKkSVQYQEpK5gBsaZGI1w41hJVqWUNbA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tailwind\\README.txt"
+    },
+    {
+      "Identity": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\ServiceStack.Blazor.html",
+      "SourceId": "Sinewave",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\",
+      "BasePath": "_content/Sinewave",
+      "RelativePath": "tailwind/ServiceStack.Blazor#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dfx67prcjt",
+      "Integrity": "R/Zkcs6d0NTPLeA0qa4G2FZfVEK1ja44kss0AbQFjZo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tailwind\\ServiceStack.Blazor.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/app.2yi5foxas3.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87051"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1rFkqojow1arSQeiMh116SVh4VmLt5FiwvglwPSijz8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2yi5foxas3"
+        },
+        {
+          "Name": "label",
+          "Value": "css/app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1rFkqojow1arSQeiMh116SVh4VmLt5FiwvglwPSijz8="
+        }
+      ]
+    },
+    {
+      "Route": "css/app.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87051"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1rFkqojow1arSQeiMh116SVh4VmLt5FiwvglwPSijz8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1rFkqojow1arSQeiMh116SVh4VmLt5FiwvglwPSijz8="
+        }
+      ]
+    },
+    {
+      "Route": "css/lite-yt-embed.7egpcsxshd.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\lite-yt-embed.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P6uE90m0HvwOmRvg09NkbjAU/9/kiWh4sAemx1S+/I8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7egpcsxshd"
+        },
+        {
+          "Name": "label",
+          "Value": "css/lite-yt-embed.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-P6uE90m0HvwOmRvg09NkbjAU/9/kiWh4sAemx1S+/I8="
+        }
+      ]
+    },
+    {
+      "Route": "css/lite-yt-embed.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\lite-yt-embed.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2754"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"P6uE90m0HvwOmRvg09NkbjAU/9/kiWh4sAemx1S+/I8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-P6uE90m0HvwOmRvg09NkbjAU/9/kiWh4sAemx1S+/I8="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LBzMrrsT3wkI3g1SUTIA1VHWQn7RjOxVwKudjteLPHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LBzMrrsT3wkI3g1SUTIA1VHWQn7RjOxVwKudjteLPHk="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.kueontv72o.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LBzMrrsT3wkI3g1SUTIA1VHWQn7RjOxVwKudjteLPHk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kueontv72o"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LBzMrrsT3wkI3g1SUTIA1VHWQn7RjOxVwKudjteLPHk="
+        }
+      ]
+    },
+    {
+      "Route": "css/typography.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\typography.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iDIH3oDxgxbE7xAYH21eLqFqqwbJMUQ+G8VBOOkU0DY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iDIH3oDxgxbE7xAYH21eLqFqqwbJMUQ+G8VBOOkU0DY="
+        }
+      ]
+    },
+    {
+      "Route": "css/typography.w2lrqsewum.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\typography.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iDIH3oDxgxbE7xAYH21eLqFqqwbJMUQ+G8VBOOkU0DY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w2lrqsewum"
+        },
+        {
+          "Name": "label",
+          "Value": "css/typography.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iDIH3oDxgxbE7xAYH21eLqFqqwbJMUQ+G8VBOOkU0DY="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32988"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v5unavebomoD3pCfCKsw26nnvlFQnc/0JhSaiV1af5E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-v5unavebomoD3pCfCKsw26nnvlFQnc/0JhSaiV1af5E="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.niysynalls.ico",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32988"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"v5unavebomoD3pCfCKsw26nnvlFQnc/0JhSaiV1af5E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "niysynalls"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-v5unavebomoD3pCfCKsw26nnvlFQnc/0JhSaiV1af5E="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo.11n3n48isj.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q2GE95zIETmW7i1NM9KYQ40ZmP9x5l/MB2kppQCwwME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "11n3n48isj"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-q2GE95zIETmW7i1NM9KYQ40ZmP9x5l/MB2kppQCwwME="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\logo.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"q2GE95zIETmW7i1NM9KYQ40ZmP9x5l/MB2kppQCwwME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-q2GE95zIETmW7i1NM9KYQ40ZmP9x5l/MB2kppQCwwME="
+        }
+      ]
+    },
+    {
+      "Route": "img/profiles/user1.s3tzorufjc.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user1.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GII88T65Zc008xi1WG0twoIQA351WmEIIl2uXgnE78s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s3tzorufjc"
+        },
+        {
+          "Name": "label",
+          "Value": "img/profiles/user1.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GII88T65Zc008xi1WG0twoIQA351WmEIIl2uXgnE78s="
+        }
+      ]
+    },
+    {
+      "Route": "img/profiles/user1.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user1.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GII88T65Zc008xi1WG0twoIQA351WmEIIl2uXgnE78s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GII88T65Zc008xi1WG0twoIQA351WmEIIl2uXgnE78s="
+        }
+      ]
+    },
+    {
+      "Route": "img/profiles/user2.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user2.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kY+V8z4Uc7gk7qCVblNNn+a+iMs8fNjpHEYjUngVbi4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kY+V8z4Uc7gk7qCVblNNn+a+iMs8fNjpHEYjUngVbi4="
+        }
+      ]
+    },
+    {
+      "Route": "img/profiles/user2.t5kemniif9.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user2.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kY+V8z4Uc7gk7qCVblNNn+a+iMs8fNjpHEYjUngVbi4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t5kemniif9"
+        },
+        {
+          "Name": "label",
+          "Value": "img/profiles/user2.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kY+V8z4Uc7gk7qCVblNNn+a+iMs8fNjpHEYjUngVbi4="
+        }
+      ]
+    },
+    {
+      "Route": "img/profiles/user3.etip2bobf6.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user3.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2830"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"grnnHI/NscgC+fNLScLngUTX15MJkED2cI2OqBGQHBs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "etip2bobf6"
+        },
+        {
+          "Name": "label",
+          "Value": "img/profiles/user3.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-grnnHI/NscgC+fNLScLngUTX15MJkED2cI2OqBGQHBs="
+        }
+      ]
+    },
+    {
+      "Route": "img/profiles/user3.svg",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user3.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2830"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"grnnHI/NscgC+fNLScLngUTX15MJkED2cI2OqBGQHBs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-grnnHI/NscgC+fNLScLngUTX15MJkED2cI2OqBGQHBs="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.bnkqy1y0r8.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "226"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bnkqy1y0r8"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "226"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/all.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ri/CmB/x5N8K+JAtNW3WVyYILJpD2TuRJBnONlaJAes=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ri/CmB/x5N8K+JAtNW3WVyYILJpD2TuRJBnONlaJAes="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/all.min.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8/wTPigGKe6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8/wTPigGKe6E="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/all.min.doewxyq8x5.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8/wTPigGKe6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "doewxyq8x5"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/css/all.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8/wTPigGKe6E="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/all.qz8z3pfh2j.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ri/CmB/x5N8K+JAtNW3WVyYILJpD2TuRJBnONlaJAes=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qz8z3pfh2j"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/css/all.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ri/CmB/x5N8K+JAtNW3WVyYILJpD2TuRJBnONlaJAes="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/brands.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EcmB6grAplP/5BrljkvLoBbvDtYGlDVhSyPCWK9JkEs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EcmB6grAplP/5BrljkvLoBbvDtYGlDVhSyPCWK9JkEs="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/brands.jb5wwpfxpq.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EcmB6grAplP/5BrljkvLoBbvDtYGlDVhSyPCWK9JkEs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jb5wwpfxpq"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/css/brands.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EcmB6grAplP/5BrljkvLoBbvDtYGlDVhSyPCWK9JkEs="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/brands.min.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "642"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mNIRbgN3MiOc4/ZB2S6kd1xmGEkQ3IG0lt3Yw1chrJY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mNIRbgN3MiOc4/ZB2S6kd1xmGEkQ3IG0lt3Yw1chrJY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/brands.min.s7dezgju7a.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "642"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mNIRbgN3MiOc4/ZB2S6kd1xmGEkQ3IG0lt3Yw1chrJY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s7dezgju7a"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/css/brands.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mNIRbgN3MiOc4/ZB2S6kd1xmGEkQ3IG0lt3Yw1chrJY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/fa-solid.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sa6wupeIenrbvcT8ZY9Be89FAUR7IGCvwTkYrMp3+0U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sa6wupeIenrbvcT8ZY9Be89FAUR7IGCvwTkYrMp3+0U="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/fa-solid.j9eu6ezjhj.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "699"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sa6wupeIenrbvcT8ZY9Be89FAUR7IGCvwTkYrMp3+0U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j9eu6ezjhj"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/css/fa-solid.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sa6wupeIenrbvcT8ZY9Be89FAUR7IGCvwTkYrMp3+0U="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/fa-solid.min.aogeb5qnlv.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "643"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6sq5KJ7DeWVAwAmmER9C8TpxQ1e9rW7ftM9qsf/w/YA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aogeb5qnlv"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/css/fa-solid.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6sq5KJ7DeWVAwAmmER9C8TpxQ1e9rW7ftM9qsf/w/YA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/css/fa-solid.min.css",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "643"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6sq5KJ7DeWVAwAmmER9C8TpxQ1e9rW7ftM9qsf/w/YA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6sq5KJ7DeWVAwAmmER9C8TpxQ1e9rW7ftM9qsf/w/YA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.9p2znq1car.woff",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144284"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bSd7nLHSzgIlQ0unXiRr1Bc2SsUDgf+c+X604qO8EPA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9p2znq1car"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-brands-400.woff"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bSd7nLHSzgIlQ0unXiRr1Bc2SsUDgf+c+X604qO8EPA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.ar3o8bqd2b.woff2",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "123576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+uLNVjDVPLCV+Ft49V9kXvvZGIP4kz0BaxyFNpGhVa8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ar3o8bqd2b"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-brands-400.woff2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+uLNVjDVPLCV+Ft49V9kXvvZGIP4kz0BaxyFNpGhVa8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.eot",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d/g9rqKWZYtBEwQaW1zTbChVTQq5BO+h8VzWdcPp/sc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d/g9rqKWZYtBEwQaW1zTbChVTQq5BO+h8VzWdcPp/sc="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.ttf",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sfyTovPyrb8XA2RZ2KLFWPw3kO8WkcwmYfPFO4dI5Ks=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sfyTovPyrb8XA2RZ2KLFWPw3kO8WkcwmYfPFO4dI5Ks="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.ttsv9kmuro.ttf",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sfyTovPyrb8XA2RZ2KLFWPw3kO8WkcwmYfPFO4dI5Ks=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ttsv9kmuro"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-brands-400.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sfyTovPyrb8XA2RZ2KLFWPw3kO8WkcwmYfPFO4dI5Ks="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.vqrg808i0n.eot",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "138231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d/g9rqKWZYtBEwQaW1zTbChVTQq5BO+h8VzWdcPp/sc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vqrg808i0n"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-brands-400.eot"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d/g9rqKWZYtBEwQaW1zTbChVTQq5BO+h8VzWdcPp/sc="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.woff",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "144284"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bSd7nLHSzgIlQ0unXiRr1Bc2SsUDgf+c+X604qO8EPA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bSd7nLHSzgIlQ0unXiRr1Bc2SsUDgf+c+X604qO8EPA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-brands-400.woff2",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "123576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+uLNVjDVPLCV+Ft49V9kXvvZGIP4kz0BaxyFNpGhVa8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+uLNVjDVPLCV+Ft49V9kXvvZGIP4kz0BaxyFNpGhVa8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.0ll3loq4yu.eot",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/Dr5TKVRiS+s62FZ1289aZqabOx/rogj50Bn2dvULmQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0ll3loq4yu"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-regular-400.eot"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/Dr5TKVRiS+s62FZ1289aZqabOx/rogj50Bn2dvULmQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.4qrw3ocxt2.ttf",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46643"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pGjMHmZksj2Pmb32Pb0vFokowVF1nQN0I2TxjzUVjm4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4qrw3ocxt2"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-regular-400.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pGjMHmZksj2Pmb32Pb0vFokowVF1nQN0I2TxjzUVjm4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.60xakjwxxy.woff2",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lsVTNdtugPk1gOYhSvolgjICNaNTUlvuYDBAwv0u0+k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "60xakjwxxy"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-regular-400.woff2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lsVTNdtugPk1gOYhSvolgjICNaNTUlvuYDBAwv0u0+k="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.a4634cpkrr.woff",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RvradVElr6iowPmPZKhRsuzbmuDbdz+8Kp6FLaUYcxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a4634cpkrr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-regular-400.woff"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RvradVElr6iowPmPZKhRsuzbmuDbdz+8Kp6FLaUYcxo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.eot",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/Dr5TKVRiS+s62FZ1289aZqabOx/rogj50Bn2dvULmQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/Dr5TKVRiS+s62FZ1289aZqabOx/rogj50Bn2dvULmQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.ttf",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46643"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pGjMHmZksj2Pmb32Pb0vFokowVF1nQN0I2TxjzUVjm4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pGjMHmZksj2Pmb32Pb0vFokowVF1nQN0I2TxjzUVjm4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.woff",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32923"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RvradVElr6iowPmPZKhRsuzbmuDbdz+8Kp6FLaUYcxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RvradVElr6iowPmPZKhRsuzbmuDbdz+8Kp6FLaUYcxo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-regular-400.woff2",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lsVTNdtugPk1gOYhSvolgjICNaNTUlvuYDBAwv0u0+k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lsVTNdtugPk1gOYhSvolgjICNaNTUlvuYDBAwv0u0+k="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.3ikuerccvr.woff",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169069"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tWLp5LACwX7k66yHNXz+5t/lt0zmFe7ekDrSY4KE9kQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3ikuerccvr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-solid-900.woff"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tWLp5LACwX7k66yHNXz+5t/lt0zmFe7ekDrSY4KE9kQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.5bfpqi664e.eot",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "224300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PyQYksDriUuH5w6sWZiSh4Rdc0k89IWfoQFxtlytW6U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5bfpqi664e"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-solid-900.eot"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PyQYksDriUuH5w6sWZiSh4Rdc0k89IWfoQFxtlytW6U="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.eot",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "224300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-fontobject"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PyQYksDriUuH5w6sWZiSh4Rdc0k89IWfoQFxtlytW6U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PyQYksDriUuH5w6sWZiSh4Rdc0k89IWfoQFxtlytW6U="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.nf3h8k7bmb.ttf",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "224066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ozNmLNk97hBwSeWIVYd12qoIvGFlLRuvCEobjUPktBw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nf3h8k7bmb"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-solid-900.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ozNmLNk97hBwSeWIVYd12qoIvGFlLRuvCEobjUPktBw="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.pzbqczbcrl.woff2",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "130028"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NWfqau5C361Ku7VGokEcx8JFWNqi1/uQiP71jLHo8Vo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pzbqczbcrl"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/css/font-awesome/webfonts/fa-solid-900.woff2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NWfqau5C361Ku7VGokEcx8JFWNqi1/uQiP71jLHo8Vo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.ttf",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "224066"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ozNmLNk97hBwSeWIVYd12qoIvGFlLRuvCEobjUPktBw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ozNmLNk97hBwSeWIVYd12qoIvGFlLRuvCEobjUPktBw="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.woff",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "169069"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/font-woff"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tWLp5LACwX7k66yHNXz+5t/lt0zmFe7ekDrSY4KE9kQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tWLp5LACwX7k66yHNXz+5t/lt0zmFe7ekDrSY4KE9kQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/css/font-awesome/webfonts/fa-solid-900.woff2",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "130028"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NWfqau5C361Ku7VGokEcx8JFWNqi1/uQiP71jLHo8Vo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NWfqau5C361Ku7VGokEcx8JFWNqi1/uQiP71jLHo8Vo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/additional-methods.min.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\additional-methods.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MtEA819Zls6dtLt5S5BpEMOhifPyz7gfzfgtNtY75lE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MtEA819Zls6dtLt5S5BpEMOhifPyz7gfzfgtNtY75lE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/additional-methods.min.qlccset4i1.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\additional-methods.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MtEA819Zls6dtLt5S5BpEMOhifPyz7gfzfgtNtY75lE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qlccset4i1"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/additional-methods.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MtEA819Zls6dtLt5S5BpEMOhifPyz7gfzfgtNtY75lE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.0i3buxo5is.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "285314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0i3buxo5is"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/jquery.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "285314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.min.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87533"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.min.map",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "134767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xn1tnCi38hAGU16IdetH6WZ4UqFMRiTu0wHGzqGa5is=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xn1tnCi38hAGU16IdetH6WZ4UqFMRiTu0wHGzqGa5is="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.min.o1o13a6vjx.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87533"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o1o13a6vjx"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/jquery.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.min.ql58znfkzc.map",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "134767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xn1tnCi38hAGU16IdetH6WZ4UqFMRiTu0wHGzqGa5is=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ql58znfkzc"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/jquery.min.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xn1tnCi38hAGU16IdetH6WZ4UqFMRiTu0wHGzqGa5is="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.lzl9nlhx6b.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52536"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzl9nlhx6b"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/jquery.validate.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kRL82372ur5YrVTjFWp9muao9yeU8AoLiJxSb5ekmHg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.min.ag7o75518u.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ag7o75518u"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/jquery.validate.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25308"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.unobtrusive.dairyzo5ux.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dairyzo5ux"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/jquery.validate.unobtrusive.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.unobtrusive.min.dairyzo5ux.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dairyzo5ux"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/jquery.validate.unobtrusive.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VSNSvTmx1G4RaL/3R6bM2hZ39Vsxo9GGglTDjtBipwk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/lite-yt-embed.5769fjj9xl.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\lite-yt-embed.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5802"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oZLEPgaFv4FbjGdgTh1kzXsFWKSV/ONoWUjAwlAWMUk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5769fjj9xl"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/lite-yt-embed.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oZLEPgaFv4FbjGdgTh1kzXsFWKSV/ONoWUjAwlAWMUk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/lite-yt-embed.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\lite-yt-embed.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5802"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oZLEPgaFv4FbjGdgTh1kzXsFWKSV/ONoWUjAwlAWMUk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oZLEPgaFv4FbjGdgTh1kzXsFWKSV/ONoWUjAwlAWMUk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/qrcode.min.h5gslb8p3n.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\qrcode.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xUHvBjJ4hahBW8qN9gceFBibSFUzbe9PNttUvehITzY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h5gslb8p3n"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/js/qrcode.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xUHvBjJ4hahBW8qN9gceFBibSFUzbe9PNttUvehITzY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/js/qrcode.min.js",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\qrcode.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19927"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xUHvBjJ4hahBW8qN9gceFBibSFUzbe9PNttUvehITzY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xUHvBjJ4hahBW8qN9gceFBibSFUzbe9PNttUvehITzY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-client.9taczz7zw1.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99683"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q5+xZXr46gTXJX7J25aG+Of1Jd3pHx/Ji4ElXBEMxS0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9taczz7zw1"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/mjs/servicestack-client.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q5+xZXr46gTXJX7J25aG+Of1Jd3pHx/Ji4ElXBEMxS0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-client.min.fbwm42foj6.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.min.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5fYQTOLgOB29tXyELa0mciIfocOIfeGYdH0JLAu0vmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fbwm42foj6"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/mjs/servicestack-client.min.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5fYQTOLgOB29tXyELa0mciIfocOIfeGYdH0JLAu0vmU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-client.min.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.min.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54089"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5fYQTOLgOB29tXyELa0mciIfocOIfeGYdH0JLAu0vmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5fYQTOLgOB29tXyELa0mciIfocOIfeGYdH0JLAu0vmU="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-client.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99683"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q5+xZXr46gTXJX7J25aG+Of1Jd3pHx/Ji4ElXBEMxS0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q5+xZXr46gTXJX7J25aG+Of1Jd3pHx/Ji4ElXBEMxS0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-vue.4z2ewwduzv.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "316961"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cAm/IGHjpVPgChwW9MFt6BGyreamBqzHdq3ZnY2R9O8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4z2ewwduzv"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/mjs/servicestack-vue.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cAm/IGHjpVPgChwW9MFt6BGyreamBqzHdq3ZnY2R9O8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-vue.min.etr9wb18ow.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.min.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "213320"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EjEZ2UTP4W8zPasksXQnyhlYMgawVjbh4lCup3kYE+M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "etr9wb18ow"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/mjs/servicestack-vue.min.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EjEZ2UTP4W8zPasksXQnyhlYMgawVjbh4lCup3kYE+M="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-vue.min.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.min.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "213320"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EjEZ2UTP4W8zPasksXQnyhlYMgawVjbh4lCup3kYE+M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EjEZ2UTP4W8zPasksXQnyhlYMgawVjbh4lCup3kYE+M="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/servicestack-vue.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "316961"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cAm/IGHjpVPgChwW9MFt6BGyreamBqzHdq3ZnY2R9O8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cAm/IGHjpVPgChwW9MFt6BGyreamBqzHdq3ZnY2R9O8="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/vue.6gjtvp9ogh.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "529666"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SuU0TTRUpiLEeYD2W8Ck6t2erHk6aVIaWSAwnhLobqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 15:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gjtvp9ogh"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/mjs/vue.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SuU0TTRUpiLEeYD2W8Ck6t2erHk6aVIaWSAwnhLobqk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/vue.min.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.min.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "163846"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R4FWnhz0AHGlEiea0rmfFb8fo1caR3W77j/n8qc+0mM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R4FWnhz0AHGlEiea0rmfFb8fo1caR3W77j/n8qc+0mM="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/vue.min.xy5qy3xakb.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.min.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "163846"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R4FWnhz0AHGlEiea0rmfFb8fo1caR3W77j/n8qc+0mM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xy5qy3xakb"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/mjs/vue.min.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R4FWnhz0AHGlEiea0rmfFb8fo1caR3W77j/n8qc+0mM="
+        }
+      ]
+    },
+    {
+      "Route": "lib/mjs/vue.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "529666"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SuU0TTRUpiLEeYD2W8Ck6t2erHk6aVIaWSAwnhLobqk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 15:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SuU0TTRUpiLEeYD2W8Ck6t2erHk6aVIaWSAwnhLobqk="
+        }
+      ]
+    },
+    {
+      "Route": "mjs/app.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\app.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5407"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GgP6EPKgJ3KngvN52/oNsfHWNErkt9XlGy3ZMXyyhg4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GgP6EPKgJ3KngvN52/oNsfHWNErkt9XlGy3ZMXyyhg4="
+        }
+      ]
+    },
+    {
+      "Route": "mjs/app.ytvz53y5tu.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\app.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5407"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GgP6EPKgJ3KngvN52/oNsfHWNErkt9XlGy3ZMXyyhg4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ytvz53y5tu"
+        },
+        {
+          "Name": "label",
+          "Value": "mjs/app.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GgP6EPKgJ3KngvN52/oNsfHWNErkt9XlGy3ZMXyyhg4="
+        }
+      ]
+    },
+    {
+      "Route": "mjs/components/HelloApi.6fdrrn2h5v.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\components\\HelloApi.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "736"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"spMtlZOhhxglnswahmioF5hKKQowkYSzBLsJYxeR2uQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6fdrrn2h5v"
+        },
+        {
+          "Name": "label",
+          "Value": "mjs/components/HelloApi.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-spMtlZOhhxglnswahmioF5hKKQowkYSzBLsJYxeR2uQ="
+        }
+      ]
+    },
+    {
+      "Route": "mjs/components/HelloApi.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\components\\HelloApi.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "736"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"spMtlZOhhxglnswahmioF5hKKQowkYSzBLsJYxeR2uQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-spMtlZOhhxglnswahmioF5hKKQowkYSzBLsJYxeR2uQ="
+        }
+      ]
+    },
+    {
+      "Route": "mjs/dtos.95ffgap6ig.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\dtos.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16100"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bYLv/P3h6icZVL73VqIYQ6OOFqvnPHZuYavE/tozfus=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "95ffgap6ig"
+        },
+        {
+          "Name": "label",
+          "Value": "mjs/dtos.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bYLv/P3h6icZVL73VqIYQ6OOFqvnPHZuYavE/tozfus="
+        }
+      ]
+    },
+    {
+      "Route": "mjs/dtos.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\dtos.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16100"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bYLv/P3h6icZVL73VqIYQ6OOFqvnPHZuYavE/tozfus=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bYLv/P3h6icZVL73VqIYQ6OOFqvnPHZuYavE/tozfus="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Account/Manage/dtos.7wm22pfsgo.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\dtos.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5703"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mekvLRRIedPluzn2pPSsd3X+H3HcuImgDq7sLAuTvEQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7wm22pfsgo"
+        },
+        {
+          "Name": "label",
+          "Value": "pages/Account/Manage/dtos.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mekvLRRIedPluzn2pPSsd3X+H3HcuImgDq7sLAuTvEQ="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Account/Manage/dtos.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\dtos.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5703"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mekvLRRIedPluzn2pPSsd3X+H3HcuImgDq7sLAuTvEQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mekvLRRIedPluzn2pPSsd3X+H3HcuImgDq7sLAuTvEQ="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Account/Manage/EnableAuthenticator.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\EnableAuthenticator.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "233"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pmGGDH8dbbWx9O2+sqWe35e67ereWCkXqAO08diwwAU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pmGGDH8dbbWx9O2+sqWe35e67ereWCkXqAO08diwwAU="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Account/Manage/EnableAuthenticator.yewddjqrw4.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\EnableAuthenticator.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "233"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pmGGDH8dbbWx9O2+sqWe35e67ereWCkXqAO08diwwAU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yewddjqrw4"
+        },
+        {
+          "Name": "label",
+          "Value": "pages/Account/Manage/EnableAuthenticator.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pmGGDH8dbbWx9O2+sqWe35e67ereWCkXqAO08diwwAU="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Account/Manage/ManageUserApiKeys.9ut1sdbtcf.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\ManageUserApiKeys.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18710"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r9ILiVwamaq5O4W2LUysw/DyVJt9eB0HgfNGkfk0JCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9ut1sdbtcf"
+        },
+        {
+          "Name": "label",
+          "Value": "pages/Account/Manage/ManageUserApiKeys.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r9ILiVwamaq5O4W2LUysw/DyVJt9eB0HgfNGkfk0JCs="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Account/Manage/ManageUserApiKeys.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\ManageUserApiKeys.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18710"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r9ILiVwamaq5O4W2LUysw/DyVJt9eB0HgfNGkfk0JCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r9ILiVwamaq5O4W2LUysw/DyVJt9eB0HgfNGkfk0JCs="
+        }
+      ]
+    },
+    {
+      "Route": "pages/components/ShellCommand.kr9kj5z2g4.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\components\\ShellCommand.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2215"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kLo5YQ0409WWb5Ewm2AT9V3nx5sOGuFPSgy/o9aIWP8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kr9kj5z2g4"
+        },
+        {
+          "Name": "label",
+          "Value": "pages/components/ShellCommand.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kLo5YQ0409WWb5Ewm2AT9V3nx5sOGuFPSgy/o9aIWP8="
+        }
+      ]
+    },
+    {
+      "Route": "pages/components/ShellCommand.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\components\\ShellCommand.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2215"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kLo5YQ0409WWb5Ewm2AT9V3nx5sOGuFPSgy/o9aIWP8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kLo5YQ0409WWb5Ewm2AT9V3nx5sOGuFPSgy/o9aIWP8="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Home/Bookings.bwnef4iqef.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\Bookings.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2082"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hfDeIqmzsHD/8D13xCv/lMopjQotIdbu1YEqxB2Iz8k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bwnef4iqef"
+        },
+        {
+          "Name": "label",
+          "Value": "pages/Home/Bookings.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hfDeIqmzsHD/8D13xCv/lMopjQotIdbu1YEqxB2Iz8k="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Home/Bookings.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\Bookings.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2082"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hfDeIqmzsHD/8D13xCv/lMopjQotIdbu1YEqxB2Iz8k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hfDeIqmzsHD/8D13xCv/lMopjQotIdbu1YEqxB2Iz8k="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Home/GettingStarted.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\GettingStarted.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3931"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PxZHvlybzcCh2rAfouN3wibHsfqIliemP7tvvTidUnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 15:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PxZHvlybzcCh2rAfouN3wibHsfqIliemP7tvvTidUnQ="
+        }
+      ]
+    },
+    {
+      "Route": "pages/Home/GettingStarted.thcufsvoc5.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\GettingStarted.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3931"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PxZHvlybzcCh2rAfouN3wibHsfqIliemP7tvvTidUnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Jan 2025 15:23:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "thcufsvoc5"
+        },
+        {
+          "Name": "label",
+          "Value": "pages/Home/GettingStarted.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PxZHvlybzcCh2rAfouN3wibHsfqIliemP7tvvTidUnQ="
+        }
+      ]
+    },
+    {
+      "Route": "posts/components/ChartJs.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\ChartJs.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GSMEXBrG8NI9xPVHiQCEua9n6D4xlpDjygBfYUz/fbs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GSMEXBrG8NI9xPVHiQCEua9n6D4xlpDjygBfYUz/fbs="
+        }
+      ]
+    },
+    {
+      "Route": "posts/components/ChartJs.x2b0jyzsp3.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\ChartJs.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "769"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GSMEXBrG8NI9xPVHiQCEua9n6D4xlpDjygBfYUz/fbs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x2b0jyzsp3"
+        },
+        {
+          "Name": "label",
+          "Value": "posts/components/ChartJs.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GSMEXBrG8NI9xPVHiQCEua9n6D4xlpDjygBfYUz/fbs="
+        }
+      ]
+    },
+    {
+      "Route": "posts/components/VueComponentGallery.4uri5xxzp6.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentGallery.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9602"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bHaRS6a6kMpp5UDdsc/htPi5ae3mbJBq2aT6eH4SRGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4uri5xxzp6"
+        },
+        {
+          "Name": "label",
+          "Value": "posts/components/VueComponentGallery.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bHaRS6a6kMpp5UDdsc/htPi5ae3mbJBq2aT6eH4SRGE="
+        }
+      ]
+    },
+    {
+      "Route": "posts/components/VueComponentGallery.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentGallery.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9602"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bHaRS6a6kMpp5UDdsc/htPi5ae3mbJBq2aT6eH4SRGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bHaRS6a6kMpp5UDdsc/htPi5ae3mbJBq2aT6eH4SRGE="
+        }
+      ]
+    },
+    {
+      "Route": "posts/components/VueComponentLibrary.7gpefeslru.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentLibrary.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qSD8UsgmQ5z8NP1yAFtn0vPzMtdrEE7lnGJP/vOwXO4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7gpefeslru"
+        },
+        {
+          "Name": "label",
+          "Value": "posts/components/VueComponentLibrary.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qSD8UsgmQ5z8NP1yAFtn0vPzMtdrEE7lnGJP/vOwXO4="
+        }
+      ]
+    },
+    {
+      "Route": "posts/components/VueComponentLibrary.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentLibrary.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2565"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qSD8UsgmQ5z8NP1yAFtn0vPzMtdrEE7lnGJP/vOwXO4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qSD8UsgmQ5z8NP1yAFtn0vPzMtdrEE7lnGJP/vOwXO4="
+        }
+      ]
+    },
+    {
+      "Route": "posts/javascript.hsla3xsvyi.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\javascript.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RMtv0IyGm1GsqT8rmU1bmeSZpnf8IzGTgKXh72a5uE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hsla3xsvyi"
+        },
+        {
+          "Name": "label",
+          "Value": "posts/javascript.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RMtv0IyGm1GsqT8rmU1bmeSZpnf8IzGTgKXh72a5uE="
+        }
+      ]
+    },
+    {
+      "Route": "posts/javascript.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\javascript.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "955"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0RMtv0IyGm1GsqT8rmU1bmeSZpnf8IzGTgKXh72a5uE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0RMtv0IyGm1GsqT8rmU1bmeSZpnf8IzGTgKXh72a5uE="
+        }
+      ]
+    },
+    {
+      "Route": "posts/razor-ssg-new-blog-features.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\razor-ssg-new-blog-features.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "98"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nEGnTVrCYqvKaa7xZVF2Ct9NCosspYDy9QdbTMvmsr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nEGnTVrCYqvKaa7xZVF2Ct9NCosspYDy9QdbTMvmsr8="
+        }
+      ]
+    },
+    {
+      "Route": "posts/razor-ssg-new-blog-features.w1m77zk5z9.mjs",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\razor-ssg-new-blog-features.mjs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "98"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nEGnTVrCYqvKaa7xZVF2Ct9NCosspYDy9QdbTMvmsr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w1m77zk5z9"
+        },
+        {
+          "Name": "label",
+          "Value": "posts/razor-ssg-new-blog-features.mjs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nEGnTVrCYqvKaa7xZVF2Ct9NCosspYDy9QdbTMvmsr8="
+        }
+      ]
+    },
+    {
+      "Route": "tailwind/README.4lpcfq2lvv.txt",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\README.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eHwtv4gjdZLoKkSVQYQEpK5gBsaZGI1w41hJVqWUNbA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4lpcfq2lvv"
+        },
+        {
+          "Name": "label",
+          "Value": "tailwind/README.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eHwtv4gjdZLoKkSVQYQEpK5gBsaZGI1w41hJVqWUNbA="
+        }
+      ]
+    },
+    {
+      "Route": "tailwind/README.txt",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\README.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eHwtv4gjdZLoKkSVQYQEpK5gBsaZGI1w41hJVqWUNbA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eHwtv4gjdZLoKkSVQYQEpK5gBsaZGI1w41hJVqWUNbA="
+        }
+      ]
+    },
+    {
+      "Route": "tailwind/ServiceStack.Blazor.dfx67prcjt.html",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\ServiceStack.Blazor.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96447"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/Zkcs6d0NTPLeA0qa4G2FZfVEK1ja44kss0AbQFjZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dfx67prcjt"
+        },
+        {
+          "Name": "label",
+          "Value": "tailwind/ServiceStack.Blazor.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/Zkcs6d0NTPLeA0qa4G2FZfVEK1ja44kss0AbQFjZo="
+        }
+      ]
+    },
+    {
+      "Route": "tailwind/ServiceStack.Blazor.html",
+      "AssetFile": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\ServiceStack.Blazor.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "96447"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/Zkcs6d0NTPLeA0qa4G2FZfVEK1ja44kss0AbQFjZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 31 Dec 2024 16:15:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/Zkcs6d0NTPLeA0qa4G2FZfVEK1ja44kss0AbQFjZo="
+        }
+      ]
+    }
+  ]
+}
