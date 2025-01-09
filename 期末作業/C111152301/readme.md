@@ -77,10 +77,10 @@
 - 權限等級
     - 訪客  
         僅能查看資料詳情以及搜尋和排序
-    - Menber  
+    - Member  
         比訪客多新增資料的權限
     - Manager  
-        比Menber多編輯資料的權限
+        比Member多編輯資料的權限
     - Admin  
         比Manager多刪除資料的權限 
      
