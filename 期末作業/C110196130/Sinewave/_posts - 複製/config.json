@@ -1,0 +1,9 @@
+{
+  "localBaseUrl": "https://localhost:5002",
+  "publicBaseUrl": "https://mvc.web-templates.io",
+  "siteTwitter": "@Mvc",
+  "blogTitle": "Referendum",
+  "blogDescription": "Exploring various aspects of referendums, including their importance, process, and impact on democracy."
+  "blogEmail": "email@example.org (MVC)",
+  "blogImageUrl": "https://servicestack.net/img/logo.png"
+}
