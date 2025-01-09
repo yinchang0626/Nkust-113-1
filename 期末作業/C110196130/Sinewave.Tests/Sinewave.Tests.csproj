@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DebugType>portable</DebugType>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sinewave.ServiceInterface\Sinewave.ServiceInterface.csproj" />
+    <ProjectReference Include="..\Sinewave.ServiceModel\Sinewave.ServiceModel.csproj" />
+
+    <PackageReference Include="NUnit" Version="3.13.*" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
+    <PackageReference Include="ServiceStack" Version="8.*" />
+    <PackageReference Include="ServiceStack.OrmLite.Sqlite.Data" Version="8.*" />
+    <PackageReference Include="ServiceStack.Kestrel" Version="8.*" />
+    <ProjectReference Include="..\Sinewave\Sinewave.csproj" />
+  </ItemGroup>
+
+</Project>

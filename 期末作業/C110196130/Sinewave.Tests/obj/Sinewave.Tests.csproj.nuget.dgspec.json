@@ -1,0 +1,416 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.Tests\\Sinewave.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\Sinewave.ServiceInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\Sinewave.ServiceInterface.csproj",
+        "projectName": "Sinewave.ServiceInterface",
+        "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\Sinewave.ServiceInterface.csproj",
+        "packagesPath": "C:\\Users\\krameri120\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\krameri120\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj": {
+                "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.Ormlite": {
+              "target": "Package",
+              "version": "[8.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj",
+        "projectName": "Sinewave.ServiceModel",
+        "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj",
+        "packagesPath": "C:\\Users\\krameri120\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\krameri120\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[8.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.Tests\\Sinewave.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.Tests\\Sinewave.Tests.csproj",
+        "projectName": "Sinewave.Tests",
+        "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.Tests\\Sinewave.Tests.csproj",
+        "packagesPath": "C:\\Users\\krameri120\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\krameri120\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\Sinewave.ServiceInterface.csproj": {
+                "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\Sinewave.ServiceInterface.csproj"
+              },
+              "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj": {
+                "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj"
+              },
+              "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\Sinewave.csproj": {
+                "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\Sinewave.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.*, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.*, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.1.*, )"
+            },
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.Kestrel": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.OrmLite.Sqlite.Data": {
+              "target": "Package",
+              "version": "[8.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\Sinewave.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\Sinewave.csproj",
+        "projectName": "Sinewave",
+        "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\Sinewave.csproj",
+        "packagesPath": "C:\\Users\\krameri120\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\krameri120\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\Sinewave.ServiceInterface.csproj": {
+                "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceInterface\\Sinewave.ServiceInterface.csproj"
+              },
+              "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj": {
+                "projectPath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Markdig": {
+              "target": "Package",
+              "version": "[0.37.*, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.AspNetCore.Authentication.MicrosoftAccount": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.Extensions": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.Jobs": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.Mvc": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.OrmLite.Sqlite.Data": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "ServiceStack.Server": {
+              "target": "Package",
+              "version": "[8.*, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
