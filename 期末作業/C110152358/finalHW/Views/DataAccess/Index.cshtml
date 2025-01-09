@@ -1,0 +1,73 @@
+﻿@model List<DataContent>
+<div class="row pt-4">
+	<div class="col-12 text-center">
+		<h2>DATA LIST</h2>
+	</div>
+	<div class="col-6">
+	<a class="btn btn-primary text-light" asp-controller="DataAccess" asp-action="Create">
+		Enter new Data
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+</svg>
+		</a>	
+	</div>
+	<div class="col-6" >
+		<form method="get" asp-controller="DataAccess" asp-action="Index">
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" name="searchTerm" placeholder="Search by First Name, Last Name, or Email" value="@ViewBag.SearchTerm">
+				<button class="btn btn-outline-secondary" type="submit">Search</button>
+			</div>
+		</form>
+	</div>
+	
+
+		<!-- Search form -->
+
+	
+
+    
+</div>
+
+
+<div class="table-responsive">
+<table class="table table-striped table-hover">
+<thead>
+	<tr>
+		<th>Id</th>
+		<th>Last Name</th>
+		<th>First Name</th>
+		
+		<th>Email</th>
+		<th>Gender</th>
+		<th>Company Name</th>
+		<th>Actions</th>
+	</tr>
+</thead>
+<tbody>
+			@foreach (var entry in Model)
+			{
+			<tr>
+				<td>@entry.Id</td>
+				<td>@entry.LastName</td>
+				<td>@entry.FirstName</td>
+				
+				<td>@entry.Email</td>
+				<td>@entry.Gender</td>
+				<td>@entry.CompanyName</td>
+				<td>
+					<a class="btn btn-primary btn-sm" asp-controller="DataAccess" asp-route-id="@entry.Id" asp-action="Edit">Edit<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+  <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+</svg></a>	
+						<a class="btn btn-danger btn-sm" asp-controller="DataAccess" asp-route-id="@entry.Id" asp-action="Delete">Delete<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+	  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+	</svg></a>	
+
+				</td>
+
+			</tr>
+			}
+</tbody>
+</table>
+</div>

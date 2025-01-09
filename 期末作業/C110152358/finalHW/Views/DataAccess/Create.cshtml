@@ -1,0 +1,49 @@
+﻿@model DataContent
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class ="card">
+                <div class="card-header bg-primary text-white" >
+                    <h2>Enter New Data</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group mb-3">
+                        <label asp-for="FirstName" class="form-label">First Name</label> 
+                        <input asp-for="FirstName" class="form-control" type="text"/>
+                        </div>
+                         <div class="form-group mb-3">
+                        <label asp-for="LastName" class="form-label">Last Name</label> 
+                        <input asp-for="LastName" class="form-control" type="text"/>
+                        </div>
+                         <div class="form-group mb-3">
+                        <label asp-for="Email" class="form-label">Email</label> 
+                        <input asp-for="Email" class="form-control" type="text"/>
+                        </div>
+                         <div class="form-group mb-3">
+                        <label asp-for="Gender" class="form-label">Gender</label> 
+                        <input asp-for="Gender" class="form-control" type="text"/>
+                        </div>
+                         <div class="form-group mb-3">
+                        <label asp-for="CompanyName" class="form-label">Company Name</label> 
+                        <input asp-for="CompanyName" class="form-control" type="text"/>
+                        </div>
+                     
+                         <div class="d-flex justify-content-between">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                        	<a class="btn btn-danger" asp-controller="DataAccess" asp-action="Index">Cancel</a>	
+                        </div>
+
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"/>
+}
