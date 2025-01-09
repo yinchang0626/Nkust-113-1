@@ -1,0 +1,23 @@
+﻿@model Sinewave.Models.BlogEditViewModel
+
+<h1>Edit Post: @Model.Title</h1>
+
+<form method="post">
+    <div>
+        <label for="Content">Content</label>
+        <textarea id="Content" name="Content" rows="20" style="width: 100%;">@Model.Content</textarea>
+    </div>
+    <div style="margin-top: 1rem;">
+        <!-- Save 按钮 -->
+        <button type="submit"
+                style="background-color: green; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer;">
+            Save
+        </button>
+
+        <!-- Cancel 按钮 -->
+        <a href="@Url.Action("Index", "Blog")"
+           style="background-color: red; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; text-decoration: none; margin-left: 1rem; cursor: pointer;">
+            Cancel
+        </a>
+    </div>
+</form>
