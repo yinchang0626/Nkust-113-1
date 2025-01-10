@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>login</h2>
+
+<div class="container">
+    <form action="~/Default/Login" method="post">
+        <div>
+            <label>帳號:</label>
+            <input type="text" name="id" class="form-control" required />
+        </div>
+        <br />
+        <div>
+            <label>密碼:</label>
+            <input type="password" name="password" class="form-control" required />
+        </div>
+        <br />
+        <div>
+            <input type="submit" name="submit" value="登入" class="btn btn-primary" />
+        </div>
+
+    </form>
+</div>

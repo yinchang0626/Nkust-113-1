@@ -1,0 +1,50 @@
+﻿@using WebApplication4.Models
+@model Member
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Id, "帳號")
+            @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, "密碼")
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Age, "年齡")
+            @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, "電子信箱")
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Birthday, "生日")
+            @Html.TextBoxFor(m => m.Birthday, new { @class = "form-control", type = "date" })
+        </div>
+        <div class="form-group">
+            <input type="submit" value="註冊" class="btn btn-primary" />
+        </div>
+    </div>
+}
+
+@if (Model != null)
+{
+    <hr />
+    <div class="container">
+        <ul>
+            <li>@Html.DisplayNameFor(m => m.Id) : @Html.DisplayFor(m => m.Id)</li>
+            <li>@Html.DisplayNameFor(m => m.Password) : @Html.DisplayFor(m => m.Password)</li>
+            <li>@Html.DisplayNameFor(m => m.Age) : @Html.DisplayFor(m => m.Age)</li>
+            <li>@Html.DisplayNameFor(m => m.Email) : @Html.DisplayFor(m => m.Email)</li>
+            <li>@Html.DisplayNameFor(m => m.Birthday) : @Html.DisplayFor(m => m.Birthday)</li>
+        </ul>
+    </div>
+}
