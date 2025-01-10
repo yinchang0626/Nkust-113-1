@@ -1,0 +1,102 @@
+﻿@model FinalProject.Models.hotels
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+	</dd>
+	<dt>
+		@Html.DisplayNameFor(model => model._class)
+	</dt>
+
+	<dd>
+		@Html.DisplayFor(model => model._class)
+	</dd>
+	<dt>
+		@Html.DisplayNameFor(model => model.star)
+	</dt>
+
+	<dd>
+		@Html.DisplayFor(model => model.star)
+	</dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.name)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.name)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.address)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.address)
+    </dd>
+    
+    <dt>
+        @Html.DisplayNameFor(model => model.district)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.district)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.tel)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.tel)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.email)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.email)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.website)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.website)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.lng)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.lng)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.lat)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.lat)
+    </dd>
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Back to List", "HotelManage")
+        </div>
+    }

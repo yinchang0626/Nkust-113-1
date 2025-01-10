@@ -1,0 +1,55 @@
+﻿@using FinalProject.Models
+@model IEnumerable<members>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <title>table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">Member list</h1>
+</div>
+
+<table id="myTable">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>名稱</th>
+            <th>信箱</th>
+            <th>密碼</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td>@member.id</td>
+                <td>@member.name</td>
+                <td>@member.mail</td>
+                <td>@member.password</td>
+            </tr>
+        }
+    </tbody>
+</table>
