@@ -1,0 +1,32 @@
+/* 標題樣式 */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* 下拉選單樣式 */
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+select {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+/* 圖表容器樣式 */
+.chart-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 圖表的畫布會自適應容器大小 */
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
