@@ -1,0 +1,52 @@
+﻿@model IEnumerable<NewsDto>
+
+@{
+    ViewData["Title"] = "Index2";
+}
+
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form action="/News2" method="get">
+    <input type="text" name="keyword" placeholder="請輸入標題" />
+    <button type="submit">搜尋</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                標題
+            </th>
+            <th>
+                部門
+            </th>
+            <th>
+                開始時間
+            </th>
+            <th>
+                點擊率
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.DepartmentName
+                </td>
+                <td>
+                    @item.StartDateTime.ToString("yyyy-MM-dd")
+                </td>
+                <td>
+                    @item.Click
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

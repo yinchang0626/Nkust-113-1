@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>News</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" action="/News2/Create" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="Title" class="control-label">Title</label>
+                <input name="Title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Contents" class="control-label">Contents</label>
+                <input name="Contents" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="DepartmentId" class="control-label">DepartmentId</label>
+                <input name="DepartmentId" type="number" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="StartDateTime" class="control-label">StartDateTime</label>
+                <input name="StartDateTime" type="datetime-local" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="EndDateTime" class="control-label">EndDateTime</label>
+                <input name="EndDateTime" type="datetime-local" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Files" class="control-label">Files</label>
+                <input name="Files" type="file" multiple class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a href="/News2">Back to List</a>
+</div>
