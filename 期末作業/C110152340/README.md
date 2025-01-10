@@ -38,18 +38,11 @@
 ### 後端
 - **框架**: Flask
 - **資料庫**: MySQL
-- **API**:
-    - `GET /data`: 查詢資料。
-    - `POST /data`: 新增資料。
-    - `PUT /data`: 批量更新資料。
-    - `DELETE /data`: 刪除資料。
 
 ### 前端
 - **技術**:
     - HTML5
     - JavaScript (搭配 Axios 處理 API 請求)
-    - Bootstrap 5 (提供樣式和模態框功能)
-
 ---
 
 ## 文件結構
