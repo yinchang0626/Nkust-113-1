@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "搜尋景點";
+}
+
+<h2>搜尋景點</h2>
+
+<!-- 搜尋表單 -->
+<form method="get" action="/Home/Search">
+    <div>
+        <label for="keyword">關鍵字：</label>
+        <input type="text" id="keyword" name="keyword" placeholder="輸入關鍵字" />
+    </div>
+    <div>
+        <label for="Region">地區：</label>
+        <select id="Region" name="Region">
+            <option value="">選擇縣市</option>
+            @foreach (var town in (ViewBag.RegionList as List<string>)?.Where(t => !string.IsNullOrEmpty(t)) ?? new List<string>())
+            {
+                <option value="@town">@town</option>
+            }
+        </select>
+        @* <select id="Town" name="Town"> *@
+        @*     <option value="">選擇區</option> *@
+        @*     @foreach (var town in (ViewBag.TownList as List<string>)?.Where(t => !string.IsNullOrEmpty(t)) ?? new List<string>()) *@
+        @*     { *@
+        @*         <option value="@town">@town</option> *@
+        @*     } *@
+        @* </select> *@
+    </div>
+    <button type="submit">搜尋</button>
+</form>
+
+@if (ViewBag.SearchResults != null && ViewBag.SearchResults.Count > 0)
+{
+    <h3>搜尋結果</h3>
+    <ul>
+        @foreach (var spot in ViewBag.SearchResults)
+        {
+            <li>
+                <a href="https://localhost:7015/TouristSpotDetails/@spot.Id">
+                    @spot.Name
+                </a> - @spot.Toldescribe
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>沒有找到符合條件的景點。</p>
+}

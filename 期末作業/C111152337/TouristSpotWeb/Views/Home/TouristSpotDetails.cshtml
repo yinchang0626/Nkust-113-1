@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "景點詳細資料";
+}
+
+<h1 id="spotName">@Model.Name</h1>
+
+<!-- 顯示圖片，如果有圖片資料 -->
+@if (!string.IsNullOrEmpty(Model.Picture1))
+{
+    <img src="@Model.Picture1" alt="圖片1" style="max-width: 100%; margin-top: 20px;" />
+}
+@if (!string.IsNullOrEmpty(Model.Picture2))
+{
+    <img src="@Model.Picture2" alt="圖片2" style="max-width: 100%; margin-top: 20px;" />
+}
+@if (!string.IsNullOrEmpty(Model.Picture3))
+{
+    <img src="@Model.Picture3" alt="圖片3" style="max-width: 100%; margin-top: 20px;" />
+}
+
+<!-- 顯示景點詳細資料 -->
+<div id="spotDetails">
+    <p><strong>簡介:</strong> @(string.IsNullOrEmpty(Model.Description) ? "無簡介" : Model.Description)</p>
+    <p><strong>經度:</strong> @(string.IsNullOrEmpty(Model.Px?.ToString()) ? "無資料" : Model.Px)</p>
+    <p><strong>緯度:</strong> @(string.IsNullOrEmpty(Model.Py?.ToString()) ? "無資料" : Model.Py)</p>
+    <p><strong>開放時間:</strong> @(string.IsNullOrEmpty(Model.Opentime) ? "無開放時間資料" : Model.Opentime)</p>
+    <p><strong>地址:</strong> @(string.IsNullOrEmpty(Model.Address) ? "無地址資料" : Model.Address)</p>
+    <p><strong>聯絡電話:</strong> @(string.IsNullOrEmpty(Model.Tel) ? "無聯絡電話" : Model.Tel)</p>
+    <p><strong>票價:</strong> @(string.IsNullOrEmpty(Model.Ticketinfo) ? "無票價資料" : Model.Ticketinfo)</p>
+    <p><strong>網站:</strong> @if (string.IsNullOrEmpty(Model.Website))
+        {
+            <span>無網站</span>
+        }
+        else
+        {
+            <a href="@Model.Website" target="_blank">@Model.Website</a>
+        }</p>
+    <p><strong>交通資訊:</strong> @(string.IsNullOrEmpty(Model.Travellinginfo) ? "無交通資訊" : Model.Travellinginfo)</p>
+    <p><strong>地區:</strong> @(string.IsNullOrEmpty(Model.Region) ? "無地區資訊" : Model.Region)</p>
+    <p><strong>區域:</strong> @(string.IsNullOrEmpty(Model.Zone) ? "無區域資訊" : Model.Zone)</p>
+    <p><strong>備註:</strong> @(string.IsNullOrEmpty(Model.Remarks) ? "無備註" : Model.Remarks)</p>
+    <p><strong>政府資訊:</strong> @(string.IsNullOrEmpty(Model.Gov) ? "無政府資訊" : Model.Gov)</p>
+    <p><strong>關鍵字:</strong> @(string.IsNullOrEmpty(Model.Keyword) ? "無關鍵字" : Model.Keyword)</p>
+</div>
+
+<!-- 顯示返回或其他操作 -->
+<a href="/">返回景點列表</a>
+
+<script>
+    // 檢查是否登入，若已登入顯示景點管理按鈕
+    const username = '@Context.Session.GetString("Username")'; // 從 Session 獲取使用者名稱
+    const spotDetailsElement = document.getElementById("spotDetails");
+
+    if (username) {
+        // 如果有登入，則動態新增景點管理按鈕
+        const manageButton = document.createElement("button");
+        manageButton.innerText = "景點管理";
+        manageButton.onclick = function() {
+            window.location.href = '/TouristSpot/Manage/' + '@Model.Id';
+        };
+        spotDetailsElement.appendChild(manageButton);
+    }
+</script>

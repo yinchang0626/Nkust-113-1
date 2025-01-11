@@ -1,0 +1,77 @@
+﻿@model TouristSpotWeb.Models.TouristSpots
+
+<h2>管理景點: @Model.Name</h2>
+
+<form asp-action="Update" method="post">
+    <div class="form-group">
+        <label for="Id">景點Id</label>
+        <input type="text" id="Id" name="Id" class="form-control" value="@Model.Id" readonly  />
+    </div>
+    <div class="form-group">
+        <label for="Name">景點名稱</label>
+        <input type="text" id="Name" name="Name" class="form-control" value="@Model.Name" required />
+    </div>
+    <div class="form-group">
+        <label for="Toldescribe">景點介紹</label>
+        <textarea id="Toldescribe" name="Toldescribe" class="form-control" required>@Model.Toldescribe</textarea>
+    </div>
+    <div class="form-group">
+        <label for="Zone">區域</label>
+        <input type="text" id="Zone" name="Zone" class="form-control" value="@Model.Zone" />
+    </div>
+    <div class="form-group">
+        <label for="Tel">電話</label>
+        <input type="text" id="Tel" name="Tel" class="form-control" value="@Model.Tel" />
+    </div>
+    <div class="form-group">
+        <label for="Address">地址</label>
+        <input type="text" id="Address" name="Address" class="form-control" value="@Model.Address" />
+    </div>
+    <div class="form-group">
+        <label for="Zipcode">郵遞區號</label>
+        <input type="number" id="Zipcode" name="Zipcode" class="form-control" value="@Model.Zipcode" />
+    </div>
+    <div class="form-group">
+        <label for="Region">地區</label>
+        <input type="text" id="Region" name="Region" class="form-control" value="@Model.Region" />
+    </div>
+    <div class="form-group">
+        <label for="Town">城市</label>
+        <input type="text" id="Town" name="Town" class="form-control" value="@Model.Town" />
+    </div>
+    <div class="form-group">
+        <label for="Travellinginfo">旅遊資訊</label>
+        <textarea id="Travellinginfo" name="Travellinginfo" class="form-control">@Model.Travellinginfo</textarea>
+    </div>
+    <div class="form-group">
+        <label for="Opentime">開放時間</label>
+        <input type="text" id="Opentime" name="Opentime" class="form-control" value="@Model.Opentime" />
+    </div>
+    <div class="form-group">
+        <label for="Px">經度</label>
+        <input type="number" id="Px" name="Px" class="form-control" value="@Model.Px" />
+    </div>
+    <div class="form-group">
+        <label for="Py">緯度</label>
+        <input type="number" id="Py" name="Py" class="form-control" value="@Model.Py" />
+    </div>
+    <div class="form-group">
+        <label for="Website">網站</label>
+        <input type="url" id="Website" name="Website" class="form-control" value="@Model.Website" />
+    </div>
+    <div class="form-group">
+        <label for="Parkinginfo">停車資訊</label>
+        <input type="text" id="Parkinginfo" name="Parkinginfo" class="form-control" value="@Model.Parkinginfo" />
+    </div>
+    <div class="form-group">
+        <label for="Ticketinfo">票價資訊</label>
+        <input type="text" id="Ticketinfo" name="Ticketinfo" class="form-control" value="@Model.Ticketinfo" />
+    </div>
+    <div class="form-group">
+        <label for="Remarks">備註</label>
+        <textarea id="Remarks" name="Remarks" class="form-control">@Model.Remarks</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">確認修改</button>
+    <a href="@Url.Action("TouristSpotDetails", new { id = Model.Id })" class="btn btn-secondary">取消</a>
+</form>

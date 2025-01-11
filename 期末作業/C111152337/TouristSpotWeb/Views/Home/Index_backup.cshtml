@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "景點列表";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<!-- 選單 -->
+<select id="touristSpotSelect" style="padding: 5px; font-size: 16px; color: #333;">
+    <option value="">選擇景點</option>
+</select>
+
+<!-- 顯示景點詳細資料 -->
+<div id="spotDetails" style="margin-top: 20px;">
+    <p>請選擇一個景點查看詳細資料。</p>
+</div>
+
+<script>
+    // 當頁面加載完成時，取得景點列表
+    window.onload = function() {
+        fetch('/api/TouristSpot')  // 從 API 獲取所有景點資料
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data);
+                // 清空選單並填入新資料
+                const selectElement = document.getElementById('touristSpotSelect');
+                data.forEach(spot => {
+                    const option = document.createElement('option');
+                    option.value = spot.id;
+                    option.textContent = spot.name;
+                    selectElement.appendChild(option);
+                });
+            })
+            .catch(error => console.error('無法加載景點資料:', error));
+    };
+
+    // 當選擇景點時，取得詳細資料並顯示
+    document.getElementById('touristSpotSelect').addEventListener('change', function() {
+        const selectedId = this.value;
+        if (selectedId) {
+            fetch(`/api/TouristSpot/${selectedId}`)  // 根據選擇的 ID 從 API 獲取詳細資料
+                .then(response => response.json())
+                .then(data => {
+                    // 顯示詳細資料
+                    const spotDetailsElement = document.getElementById('spotDetails');
+                    spotDetailsElement.innerHTML = `
+                        <h2>${data.name}</h2>
+                        <p>${data.description}</p>
+                        <!-- 其他詳細資料可以根據需要顯示 -->
+                    `;
+                })
+                .catch(error => console.error('無法獲取景點詳細資料:', error));
+        } else {
+            // 如果未選擇景點，顯示提示文字
+            document.getElementById('spotDetails').innerHTML = '<p>請選擇一個景點查看詳細資料。</p>';
+        }
+    });
+</script>
