@@ -1,0 +1,64 @@
+﻿@using FinalProject.Models
+@model IEnumerable<hotels>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <title>table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">Hotel list</h1>
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "CreateHotel")
+</p>
+<table id="myTable">
+    <thead>
+        <tr>
+            <th>類別</th>
+            <th>星等</th>
+            <th>飯店名稱</th>
+            <th>地址</th>
+            <th>動作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hotel in Model)
+        {
+            <tr>
+                <td>@hotel._class</td>
+                <td>@hotel.star</td>
+                <td>@hotel.name</td>
+                <td>@hotel.address</td>
+                <td>
+                    @Html.ActionLink("Edit", "EditHotel", new { id = hotel.id }) |
+                    @Html.ActionLink("Details", "DetailHotel", new { id = hotel.id }) |
+                    @Html.ActionLink("Delete", "DeleteHotel", new { id = hotel.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
