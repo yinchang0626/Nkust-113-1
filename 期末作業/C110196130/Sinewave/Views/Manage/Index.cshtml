@@ -1,0 +1,69 @@
+﻿@model IndexViewModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData.AddActivePage(ManageNavPages.Index);
+}
+
+<div class="">
+    <div class="max-w-xl">
+        <h1 class="mb-4 text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            @ViewData["Title"]
+        </h1>
+        <div>
+            @await Html.PartialAsync("_StatusMessage", Model.StatusMessage)
+        </div>
+        <div class="shadow overflow-hidden sm:rounded-md">
+            <form method="post" class="px-4 bg-white dark:bg-black sm:p-6">
+                <div asp-validation-summary="All" class="text-danger text-center font-semibold"></div>
+                <div class="flex flex-col gap-y-4">
+                    <div>
+                        <label asp-for="Username" class="block text-sm font-medium text-gray-700 dark:text-gray-300"></label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" class="@Css.InputText" asp-for="Username" disabled>
+                        </div>
+                    </div>                            
+                    <div>
+                        <label asp-for="Email" class="@Css.LabelClasses"></label>
+                        @if (Model.IsEmailConfirmed)
+                        {
+                            <div class="input-group">
+                                <div class="mt-1 relative flex">
+                                    <input asp-for="Email" class="@Css.InputText">
+                                    <div class="ml-4">
+                                        <span class="text-xl text-success font-bold">✓</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="flex justify-between">
+                                <div>
+                                    <input asp-for="Email" class="@Css.InputText grow">
+                                </div>
+                                <div>
+                                    <button asp-action="SendVerificationEmail" class="@Css.SecondaryButton grow-0">Send verification email</button>
+                                </div>
+                            </div>
+                        }
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>                            
+                    <div>
+                        <label asp-for="PhoneNumber" class="block text-sm font-medium text-gray-700 dark:text-gray-300"></label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" class="@Css.InputText" asp-for="PhoneNumber">
+                        </div>
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>                            
+                    <div>
+                        <button type="submit" class="@Css.PrimaryButton">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

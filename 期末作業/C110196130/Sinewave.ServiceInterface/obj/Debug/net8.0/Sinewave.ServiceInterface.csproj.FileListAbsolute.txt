@@ -1,0 +1,15 @@
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\bin\Debug\net8.0\Sinewave.ServiceInterface.deps.json
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\bin\Debug\net8.0\Sinewave.ServiceInterface.dll
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\bin\Debug\net8.0\Sinewave.ServiceInterface.pdb
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\bin\Debug\net8.0\Sinewave.ServiceModel.dll
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\bin\Debug\net8.0\Sinewave.ServiceModel.pdb
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.ServiceInterface.csproj.AssemblyReference.cache
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.ServiceInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.ServiceInterface.AssemblyInfoInputs.cache
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.ServiceInterface.AssemblyInfo.cs
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.ServiceInterface.csproj.CoreCompileInputs.cache
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.04112110.Up2Date
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.ServiceInterface.dll
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\refint\Sinewave.ServiceInterface.dll
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\Sinewave.ServiceInterface.pdb
+C:\Users\krameri120\Desktop\Sinewave\Sinewave\Sinewave.ServiceInterface\obj\Debug\net8.0\ref\Sinewave.ServiceInterface.dll

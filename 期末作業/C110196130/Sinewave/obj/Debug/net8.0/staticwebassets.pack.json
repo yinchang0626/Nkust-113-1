@@ -1,0 +1,265 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\lite-yt-embed.css",
+      "PackagePath": "staticwebassets\\css\\lite-yt-embed.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\css\\typography.css",
+      "PackagePath": "staticwebassets\\css\\typography.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\img\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user1.svg",
+      "PackagePath": "staticwebassets\\img\\profiles\\user1.svg"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user2.svg",
+      "PackagePath": "staticwebassets\\img\\profiles\\user2.svg"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\img\\profiles\\user3.svg",
+      "PackagePath": "staticwebassets\\img\\profiles\\user3.svg"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.css",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\css\\fa-solid.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\css\\fa-solid.min.css",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\css\\fa-solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\lib\\css\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\lite-yt-embed.js",
+      "PackagePath": "staticwebassets\\lib\\js\\lite-yt-embed.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\js\\qrcode.min.js",
+      "PackagePath": "staticwebassets\\lib\\js\\qrcode.min.js"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\mjs\\servicestack-client.min.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-client.mjs",
+      "PackagePath": "staticwebassets\\lib\\mjs\\servicestack-client.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\mjs\\servicestack-vue.min.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\servicestack-vue.mjs",
+      "PackagePath": "staticwebassets\\lib\\mjs\\servicestack-vue.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.min.mjs",
+      "PackagePath": "staticwebassets\\lib\\mjs\\vue.min.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\lib\\mjs\\vue.mjs",
+      "PackagePath": "staticwebassets\\lib\\mjs\\vue.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\app.mjs",
+      "PackagePath": "staticwebassets\\mjs\\app.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\components\\HelloApi.mjs",
+      "PackagePath": "staticwebassets\\mjs\\components\\HelloApi.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\mjs\\dtos.mjs",
+      "PackagePath": "staticwebassets\\mjs\\dtos.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\EnableAuthenticator.mjs",
+      "PackagePath": "staticwebassets\\pages\\Account\\Manage\\EnableAuthenticator.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\ManageUserApiKeys.mjs",
+      "PackagePath": "staticwebassets\\pages\\Account\\Manage\\ManageUserApiKeys.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Account\\Manage\\dtos.mjs",
+      "PackagePath": "staticwebassets\\pages\\Account\\Manage\\dtos.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\Bookings.mjs",
+      "PackagePath": "staticwebassets\\pages\\Home\\Bookings.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\Home\\GettingStarted.mjs",
+      "PackagePath": "staticwebassets\\pages\\Home\\GettingStarted.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\pages\\components\\ShellCommand.mjs",
+      "PackagePath": "staticwebassets\\pages\\components\\ShellCommand.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\ChartJs.mjs",
+      "PackagePath": "staticwebassets\\posts\\components\\ChartJs.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentGallery.mjs",
+      "PackagePath": "staticwebassets\\posts\\components\\VueComponentGallery.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\components\\VueComponentLibrary.mjs",
+      "PackagePath": "staticwebassets\\posts\\components\\VueComponentLibrary.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\javascript.mjs",
+      "PackagePath": "staticwebassets\\posts\\javascript.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\posts\\razor-ssg-new-blog-features.mjs",
+      "PackagePath": "staticwebassets\\posts\\razor-ssg-new-blog-features.mjs"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\README.txt",
+      "PackagePath": "staticwebassets\\tailwind\\README.txt"
+    },
+    {
+      "Id": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave\\wwwroot\\tailwind\\ServiceStack.Blazor.html",
+      "PackagePath": "staticwebassets\\tailwind\\ServiceStack.Blazor.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Sinewave.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Sinewave.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Sinewave.props",
+      "PackagePath": "build\\Sinewave.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Sinewave.props",
+      "PackagePath": "buildMultiTargeting\\Sinewave.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Sinewave.props",
+      "PackagePath": "buildTransitive\\Sinewave.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

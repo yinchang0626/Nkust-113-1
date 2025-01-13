@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n7139bR9G+w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\krameri120\\Desktop\\Sinewave\\Sinewave\\Sinewave.ServiceModel\\Sinewave.ServiceModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\krameri120\\.nuget\\packages\\servicestack.interfaces\\8.5.2\\servicestack.interfaces.8.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

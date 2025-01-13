@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Requires Role";
+}
+
+<div class="mt-8 flex justify-center">
+    <div>
+        <h1 class="@Html.ClassNames(Css.H1, "text-danger")">@ViewData["Title"]</h1>
+
+        <p class="my-6">
+            This page is only accessible to <b>Authenticated Users</b> with the <b>Manager</b> role.
+        </p>
+
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+            <a href="/" class="@Css.LinkUnderline">&lt; Home</a> 
+            <span class="px-2">|</span>
+            <button type="submit" class="@Css.SecondaryButton">Sign Out</button>
+        </form>
+    </div>
+</div>

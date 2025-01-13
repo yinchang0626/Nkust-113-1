@@ -1,0 +1,29 @@
+@using Sinewave.Views.Shared
+@model MarkdownFileInfo
+
+@{
+    var doc = Model;
+}
+
+@section head {
+    @await Html.PartialAsync("MetaHeaders", new MetaHeaders(doc) {
+       CanonicalUrl = AppConfig.Instance.PublicBaseUrl.CombineWith(doc.Slug),
+    })
+}
+
+<link rel="stylesheet" href="css/typography.css">
+<section class="flex-col md:flex-row flex justify-center mt-16 mb-16 md:mb-12">
+    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-50 sm:text-5xl md:text-6xl">
+        @doc.Title
+    </h1>
+</section>    
+<div class="mx-auto">
+    <div class="mx-auto prose lg:prose-xl mb-24">
+        @Html.Raw(doc.Preview)
+    </div>
+</div>
+
+<link rel="stylesheet" href="//unpkg.com/@@highlightjs/cdn-assets/styles/atom-one-dark.min.css">
+<script src="//unpkg.com/@@highlightjs/cdn-assets/highlight.min.js"></script>
+<script>hljs.highlightAll()</script>
+<script src="/lib/js/lite-yt-embed.js"></script>

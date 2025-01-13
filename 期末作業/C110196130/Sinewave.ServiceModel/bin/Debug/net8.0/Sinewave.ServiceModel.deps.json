@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Sinewave.ServiceModel/1.0.0": {
+        "dependencies": {
+          "ServiceStack.Interfaces": "8.5.2"
+        },
+        "runtime": {
+          "Sinewave.ServiceModel.dll": {}
+        }
+      },
+      "ServiceStack.Interfaces/8.5.2": {
+        "runtime": {
+          "lib/net8.0/ServiceStack.Interfaces.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "8.5.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sinewave.ServiceModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ServiceStack.Interfaces/8.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NYRqs1Nais8oH+QDln1gJzEYUD+3CYcyERZzqohofoLhA5XP4NSDwBjojCRpDIUNcRvoTbA8HKVThA+bK0j7sw==",
+      "path": "servicestack.interfaces/8.5.2",
+      "hashPath": "servicestack.interfaces.8.5.2.nupkg.sha512"
+    }
+  }
+}

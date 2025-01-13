@@ -1,0 +1,61 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="mt-8">
+    <div class="max-w-xl mx-auto">
+        <h1 class="mb-4 text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            Create a new account.
+        </h1>
+        <div class="sm:shadow overflow-hidden sm:rounded-md">
+            <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" class="px-4 bg-white dark:bg-black sm:p-6">
+                <div asp-validation-summary="All" class="text-danger text-center font-semibold"></div>
+                <div class="flex flex-col gap-y-4">
+                    <div>
+                        <label asp-for="FirstName" class="block text-sm font-medium text-gray-700 dark:text-gray-300"></label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" class="@Css.InputText" asp-for="FirstName" spellcheck="false">
+                        </div>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="LastName" class="block text-sm font-medium text-gray-700 dark:text-gray-300"></label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" class="@Css.InputText" asp-for="LastName" spellcheck="false">
+                        </div>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Email" class="block text-sm font-medium text-gray-700 dark:text-gray-300"></label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" class="@Css.InputText" asp-for="Email" spellcheck="false">
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Password" class="block text-sm font-medium text-gray-700 dark:text-gray-300"></label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="password" class="@Css.InputText" asp-for="Password" spellcheck="false">
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="ConfirmPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300"></label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="password" class="@Css.InputText" asp-for="ConfirmPassword" spellcheck="false">
+                        </div>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <button type="submit" class="@Css.PrimaryButton">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
