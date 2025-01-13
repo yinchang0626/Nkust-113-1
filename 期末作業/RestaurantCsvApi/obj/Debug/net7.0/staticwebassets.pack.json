@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\Desktop\\RestaurantCsvApi\\wwwroot\\112年度「美食在台北-鍋際大賞」店家.csv",
+      "PackagePath": "staticwebassets\\112年度「美食在台北-鍋際大賞」店家.csv"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\RestaurantCsvApi\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.RestaurantCsvApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.RestaurantCsvApi.props",
+      "PackagePath": "build\\RestaurantCsvApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.RestaurantCsvApi.props",
+      "PackagePath": "buildMultiTargeting\\RestaurantCsvApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.RestaurantCsvApi.props",
+      "PackagePath": "buildTransitive\\RestaurantCsvApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

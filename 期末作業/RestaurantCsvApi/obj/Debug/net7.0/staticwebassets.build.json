@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "KnL+2K8Jjmxn+QnOWUQ7t+tnQfLTI0AERP7zK4Ot8OY=",
+  "Source": "RestaurantCsvApi",
+  "BasePath": "_content/RestaurantCsvApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "RestaurantCsvApi\\wwwroot",
+      "Source": "RestaurantCsvApi",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\RestaurantCsvApi\\wwwroot\\",
+      "BasePath": "_content/RestaurantCsvApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\RestaurantCsvApi\\wwwroot\\112年度「美食在台北-鍋際大賞」店家.csv",
+      "SourceId": "RestaurantCsvApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\RestaurantCsvApi\\wwwroot\\",
+      "BasePath": "_content/RestaurantCsvApi",
+      "RelativePath": "112年度「美食在台北-鍋際大賞」店家.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\112年度「美食在台北-鍋際大賞」店家.csv"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\RestaurantCsvApi\\wwwroot\\index.html",
+      "SourceId": "RestaurantCsvApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\RestaurantCsvApi\\wwwroot\\",
+      "BasePath": "_content/RestaurantCsvApi",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
