@@ -1,0 +1,22 @@
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\CSV to SQL Server.exe
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\CSV to SQL Server.deps.json
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\CSV to SQL Server.runtimeconfig.json
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\CSV to SQL Server.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\CSV to SQL Server.pdb
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.AssemblyInfo.cs
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to S.6D6115C2.Up2Date
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\refint\CSV to SQL Server.dll
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.pdb
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\CSV to SQL Server.genruntimeconfig.cache
+C:\Users\user\Desktop\mvc\CSV to SQL Server\CSV to SQL Server\CSV to SQL Server\obj\Debug\net8.0\ref\CSV to SQL Server.dll

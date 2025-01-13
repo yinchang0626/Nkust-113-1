@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- 可以在此處添加導航欄 -->
+        </nav>
+    </header>
+
+    <div class="container">
+        @RenderBody()  <!-- 這裡會渲染具體頁面的內容 -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 StockData</p>
+    </footer>
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
