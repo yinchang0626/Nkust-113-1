@@ -1,0 +1,40 @@
+﻿@page
+@model LoginWith2faModel
+@{
+    ViewData["Title"] = "雙重身份驗證";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<p>您的登入受到身份需要驗證，請在下面輸入您的驗證碼。</p>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-route-returnUrl="@Model.ReturnUrl">
+            <input asp-for="RememberMe" type="hidden" />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.TwoFactorCode" class="form-control" autocomplete="off" />
+                <label asp-for="Input.TwoFactorCode" class="form-label"></label>
+                <span asp-validation-for="Input.TwoFactorCode" class="text-danger"></span>
+            </div>
+            <div class="checkbox mb-3">
+                <label asp-for="Input.RememberMachine" class="form-label">
+                    <input asp-for="Input.RememberMachine" />
+                    @Html.DisplayNameFor(m => m.Input.RememberMachine)
+                </label>
+            </div>
+            <div>
+                <button type="submit" class="w-100 btn btn-lg btn-primary">登入</button>
+            </div>
+        </form>
+    </div>
+</div>
+<p>
+
+    無法使用您的設備？您可以
+    <a id="recovery-code-login" asp-page="./LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">使用恢復代碼登入</a>.
+</p>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

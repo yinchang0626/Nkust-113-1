@@ -1,0 +1,100 @@
+﻿@model X.PagedList.IPagedList<project.Models.Sheep>
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewData["Title"] = "首頁";
+}
+<h4>查看價格趨勢/各地區羊隻種類售賣比例</h4>
+<p>
+    <a asp-controller="Sheep" asp-action="Charts" class="btn btn-primary">查看統計圖表</a>
+</p>
+<form method="get" asp-action="Index">
+    <div class="card-body">
+        <div class="mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label for="searchArea">以地區搜尋:</label>
+                            <input type="text" name="searchArea" id="searchArea" value="@ViewData["CurrentSearchArea"]" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label for="searchMarketName">以市場名稱搜尋:</label>
+                            <input type="text" name="searchMarketName" id="searchMarketName" value="@ViewData["CurrentSearchMarketName"]" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label for="searchProductName">以商品名稱搜尋:</label>
+                            <input type="text" name="searchProductName" id="searchProductName" value="@ViewData["CurrentSearchProductName"]" class="form-control" />
+                    </div>
+				</div>
+			</div>
+            <br />
+            <button type="submit" class="btn btn-primary">搜尋</button>
+        </div>
+    </div>
+    <a asp-action="Index">顯示全部資料</a>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">日期</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AreaSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">地區</a>
+            </th>
+            <th>
+                市場名稱
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["ProductNameSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">商品名稱</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">平均價格</a>
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Date.ToShortDateString()</td>
+                <td>@item.Area</td>
+                <td>@item.MarketName</td>
+                <td>@item.ProductName</td>
+				<td>@item.AvgPrice</td>
+				<td>
+					<a asp-action="Details" asp-controller="Sheep" asp-route-id="@item.Id">詳情</a>
+				</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new
+        {
+            page,
+            sortOrder = ViewData["CurrentSort"],
+            searchArea = ViewData["CurrentSearchArea"],
+            searchMarketName = ViewData["CurrentSearchMarketName"],
+            searchProductName = ViewData["CurrentSearchProductName"]
+        }))
+</div>

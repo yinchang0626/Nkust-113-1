@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "羊隻行情統計圖表";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">羊隻行情統計圖表</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="card-title mb-0">羊隻價格趨勢圖</h5>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-label">選擇產品種類：</label>
+                        <select id="trendProductSelect" class="form-select">
+                            <option value="all">所有種類</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">選擇地區：</label>
+                        <select id="trendAreaSelect" class="form-select">
+                            <option value="all">所有地區</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button id="trendConfirmBtn" class="btn btn-primary">確認</button>
+                    </div>
+                </div>
+            </div>
+            <canvas id="priceChart"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">各地區羊隻種類銷售比例</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="form-label">選擇地區：</label>
+                                <select id="ratioAreaSelect" class="form-select">
+                                    <option value="all">所有地區</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">選擇日期：</label>
+                                <select id="ratioDateSelect" class="form-select">
+                                    <option value="all">所有日期</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button id="ratioConfirmBtn" class="btn btn-primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="position: relative; height: 400px;">
+                        <canvas id="ratioChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script>
+        const chartData = {
+            priceData: @Html.Raw(ViewBag.PriceData),
+            productRatioData: @Html.Raw(ViewBag.ProductRatioData),
+            areaRatioData: @Html.Raw(ViewBag.AreaRatioData)
+        };
+        console.log('Chart data loaded:', chartData);
+    </script>
+    <script src="~/js/sheepCharts.js"></script>
+}

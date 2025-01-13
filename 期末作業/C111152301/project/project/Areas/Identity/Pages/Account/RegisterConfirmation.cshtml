@@ -1,0 +1,22 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "註冊驗證";
+}
+
+<h1>@ViewData["Title"]</h1>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+<p>
+          點擊此處確認您的帳戶以發送驗證信。
+</p>
+    }
+    else
+    {
+<p>
+        請確認您的驗證信箱。
+</p>
+    }
+}
+

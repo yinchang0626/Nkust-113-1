@@ -1,0 +1,133 @@
+﻿@model X.PagedList.IPagedList<project.Models.Sheep>
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewData["Title"] = "新增/編輯/刪除羊隻行情資料";
+}
+
+<h1>新增行情資料</h1>
+
+<div class="col-md-6">
+    <div class="card">
+        <p>
+            <h5>以單筆資料匯入資料:</h5>
+            <br />
+			<a asp-action="Create"><h6>新增資料</h6></a>
+        </p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+				<h5>以CSV檔案匯入資料</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="ImportCsv" enctype="multipart/form-data" method="post">
+                    <div class="form-group">
+                        <label for="csvFile">選擇 CSV 檔案:</label>
+                        <input type="file" class="form-control-file" id="csvFile" name="csvFile" accept=".csv" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">上傳</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>編輯/刪除行情資料</h1>
+
+<form method="get" asp-action="Index">
+    <div class="card-body">
+        <div class="mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="searchArea">以地區搜尋:</label>
+                        <input type="text" name="searchArea" id="searchArea" value="@ViewData["CurrentSearchArea"]" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="searchMarketName">以市場名稱搜尋:</label>
+                        <input type="text" name="searchMarketName" id="searchMarketName" value="@ViewData["CurrentSearchMarketName"]" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="searchProductName">以商品名稱搜尋:</label>
+                        <input type="text" name="searchProductName" id="searchProductName" value="@ViewData["CurrentSearchProductName"]" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">搜尋</button>
+        </div>
+    </div>
+    <a asp-action="Index">顯示全部資料</a>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">日期</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["AreaSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">地區</a>
+            </th>
+            <th>
+                市場名稱
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["ProductNameSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">商品名稱</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParam"]"
+                   asp-route-searchArea="@ViewData["CurrentSearchArea"]"
+                   asp-route-searchMarketName="@ViewData["CurrentSearchMarketName"]"
+                   asp-route-searchProductName="@ViewData["CurrentSearchProductName"]">平均價格</a>
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Date.ToShortDateString()</td>
+                <td>@item.Area</td>
+                <td>@item.MarketName</td>
+                <td>@item.ProductName</td>
+                <td>@item.AvgPrice</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">編輯</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">刪除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new
+        {
+            page,
+            sortOrder = ViewData["CurrentSort"],
+            searchArea = ViewData["CurrentSearchArea"],
+            searchMarketName = ViewData["CurrentSearchMarketName"],
+            searchProductName = ViewData["CurrentSearchProductName"]
+        }))
+</div>
+
+
