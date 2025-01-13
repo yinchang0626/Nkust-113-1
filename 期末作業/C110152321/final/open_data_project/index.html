@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>開放資料專案</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .form-container {
+      margin-bottom: 20px;
+    }
+    .form-container input, button {
+      margin: 5px;
+    }
+    .hidden {
+      display: none;
+    }
+    #comments-section {
+      margin-top: 30px;
+    }
+    #comments-list {
+      margin-top: 10px;
+    }
+    .comment {
+      border-bottom: 1px solid #ddd;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>臺北市家庭教育中心 112 年度辦理情形</h1>
+
+  <!-- 登入表單 -->
+  <div id="login-form" class="form-container">
+    <h3>登入</h3>
+    <input type="text" id="username" placeholder="使用者名稱">
+    <input type="password" id="password" placeholder="密碼">
+    <button onclick="login()">登入</button>
+  </div>
+
+  <!-- 登出按鈕 -->
+  <div id="logout-button" class="form-container hidden">
+    <button onclick="logout()">登出</button>
+  </div>
+
+  <!-- 新增或更新資料 -->
+  <div id="form-container" class="form-container hidden">
+    <h3>新增或更新資料</h3>
+    <input type="text" id="courseName" placeholder="課程名稱">
+    <input type="number" id="sessions" placeholder="辦理場次">
+    <input type="number" id="participants" placeholder="參與人次">
+    <button onclick="addData()">新增</button>
+    <button onclick="updateData()" style="display:none;" id="updateButton">更新</button>
+  </div>
+
+  <!-- 顯示資料表格 -->
+  <table id="data-table" class="hidden">
+    <thead>
+      <tr>
+        <th>課程名稱</th>
+        <th>辦理場次</th>
+        <th>參與人次</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody id="data-table-body">
+    </tbody>
+  </table>
+
+  <!-- 留言區 -->
+  <div id="comments-section" class="hidden">
+    <h3>新增留言</h3>
+    <textarea id="commentText" rows="4" placeholder="請輸入留言..."></textarea><br>
+    <button onclick="addComment()">發送留言</button>
+
+    <h3>留言列表</h3>
+    <div id="comments-list"></div>
+  </div>
+
+  <script>
+    const API_URL = 'http://localhost:3000';
+
+    // 驗證用戶是否登入
+    function checkLoginStatus() {
+      const token = localStorage.getItem('token');
+      if (token) {
+        document.getElementById('login-form').classList.add('hidden');
+        document.getElementById('logout-button').classList.remove('hidden');
+        document.getElementById('form-container').classList.remove('hidden');
+        document.getElementById('data-table').classList.remove('hidden');
+        document.getElementById('comments-section').classList.remove('hidden');
+        loadData(); // 登入後載入資料
+        loadComments(); // 載入留言
+      } else {
+        document.getElementById('login-form').classList.remove('hidden');
+        document.getElementById('logout-button').classList.add('hidden');
+        document.getElementById('form-container').classList.add('hidden');
+        document.getElementById('data-table').classList.add('hidden');
+        document.getElementById('comments-section').classList.add('hidden');
+      }
+    }
+
+    // 登入功能
+    async function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        alert('請填寫使用者名稱和密碼！');
+        return;
+      }
+
+      try {
+        const response = await fetch(`${API_URL}/login`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          localStorage.setItem('token', data.token); // 儲存 token
+          alert('登入成功！');
+          checkLoginStatus(); // 登入後更新頁面狀態
+        } else {
+          alert('登入失敗！');
+        }
+      } catch (error) {
+        console.error('登入錯誤:', error);
+      }
+    }
+
+    // 登出功能
+    function logout() {
+      localStorage.removeItem('token'); // 清除 token
+      checkLoginStatus(); // 更新頁面狀態
+    }
+
+    // 載入資料
+    async function loadData() {
+      const token = localStorage.getItem('token');
+      try {
+        const response = await fetch(`${API_URL}/courses`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        const data = await response.json();
+        const table = document.getElementById('data-table-body');
+        table.innerHTML = ''; // 清空表格
+
+        data.forEach((item) => {
+          const row = `
+            <tr>
+              <td>${item.course_name}</td>
+              <td>${item.sessions}</td>
+              <td>${item.participants}</td>
+              <td>
+                <button onclick="editData('${item.course_name}', ${item.sessions}, ${item.participants})">更新</button>
+                <button onclick="deleteData('${item.course_name}')">刪除</button>
+              </td>
+            </tr>
+          `;
+          table.innerHTML += row; // 添加新行
+        });
+      } catch (error) {
+        console.error('錯誤:', error);
+      }
+    }
+
+    // 留言路由
+app.get('/messages', (req, res) => {
+  const sql = 'SELECT * FROM Messages';
+  db.query(sql, (err, results) => {
+    if (err) {
+      res.status(500).send('取得留言資料錯誤。');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+app.post('/messages', authenticateToken, (req, res) => {
+  const { message } = req.body;
+  const username = req.user.username; // 假設驗證成功後，req.user 包含了使用者資料
+  const sql = 'INSERT INTO Messages (username, message) VALUES (?, ?)';
+  db.query(sql, [username, message], err => {
+    if (err) {
+      res.status(500).send('發送留言時發生錯誤。');
+    } else {
+      res.status(201).send('留言發送成功。');
+    }
+  });
+});
+
+// 載入留言
+async function loadComments() {
+  const token = localStorage.getItem('token');
+  try {
+    const response = await fetch(`${API_URL}/messages`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    const comments = await response.json();
+    const commentsList = document.getElementById('comments-list');
+    commentsList.innerHTML = ''; // 清空留言列表
+
+    comments.forEach((comment) => {
+      const commentDiv = `<div class="comment">${comment.message}</div>`; // 確保使用 message
+      commentsList.innerHTML += commentDiv; // 顯示留言
+    });
+  } catch (error) {
+    console.error('錯誤:', error);
+  }
+}
+
+// 新增留言
+async function addComment() {
+  const commentText = document.getElementById('commentText').value;
+  const token = localStorage.getItem('token');
+
+  if (!commentText) {
+    alert('請輸入留言內容！');
+    return;
+  }
+
+  try {
+    const response = await fetch(`${API_URL}/messages`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ message: commentText }) // 使用 message 而非 text
+    });
+
+    if (response.ok) {
+      alert('留言發送成功！');
+      loadComments(); // 發送後載入留言
+    } else {
+      alert('留言發送失敗！');
+    }
+  } catch (error) {
+    console.error('錯誤:', error);
+  }
+}
+
+
+    // 初始檢查登入狀態
+    checkLoginStatus();
+  </script>
+</body>
+</html>
