@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料庫管理系統</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">資料庫管理系統</h1>
+
+        <!-- 查詢與篩選 -->
+        <div class="my-3">
+            <form id="search-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="district" class="form-label">行政區別</label>
+                        <input type="text" id="district" class="form-control" placeholder="輸入行政區名稱">
+                    </div>
+                    <div class="col-md-6 d-flex align-items-end">
+                        <button type="button" class="btn btn-primary w-100" onclick="searchData()">查詢</button>
+                        <button type="button" class="btn btn-success w-100 ms-2" onclick="openAddModal()">新增</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <label for="sort-key" class="form-label">排序依據</label>
+                        <select id="sort-key" class="form-select">
+                            <option value="總計">總計</option>
+                            <option value="文理類合計">文理類合計</option>
+                            <option value="技藝類合計">技藝類合計</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="sort-order" class="form-label">排序方式</label>
+                        <select id="sort-order" class="form-select">
+                            <option value="desc">從大到小</option>
+                            <option value="asc">從小到大</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="button" class="btn btn-secondary w-100" onclick="sortData()">排序</button>
+                    </div>
+                </div>
+            </form>
+        </div>        
+
+        <!-- 資料表 -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>行政區別</th>
+                    <th>總計</th>
+                    <th>文理類合計</th>
+                    <th>技藝類合計</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+                <!-- 資料將由 JavaScript 動態插入 -->
+            </tbody>
+        </table>
+
+        <!-- 資料編輯模態框 -->
+        <div class="modal fade" id="dataModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">編輯資料</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="edit-form">
+                            <div class="mb-3">
+                                <label for="總計" class="form-label">總計</label>
+                                <input type="number" id="總計" class="form-control" readonly>
+                            </div>
+                            <div id="edit-options" class="mt-3">
+                                <!-- 動態生成細項編輯項目 -->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" onclick="saveEdit()">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 資料新增模態框 -->
+        <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">新增資料</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="add-form">
+                            <div class="mb-3">
+                                <label for="add-行政區別" class="form-label">行政區別</label>
+                                <input type="text" id="add-行政區別" class="form-control" placeholder="輸入行政區別">
+                            </div>
+                            <div id="add-options" class="mt-3">
+                                <!-- 動態生成細項新增項目 -->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-success" onclick="saveAdd()">新增</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const BASE_URL = 'http://localhost:5000';
+        const keys = [
+            '文理類[法政]', '文理類[文理]', '文理類[外語]', '技藝類[音樂_舞蹈]',
+            '技藝類[電機_汽車修護_建築_工藝_製圖類]', '技藝類[速讀]', '技藝類[資訊]',
+            '技藝類[美術_書法_攝影_美工設計_圍棋]', '技藝類[美容_美髮_理髮]',
+            '技藝類[縫紉]', '技藝類[瑜珈]', '技藝類[心算_珠算_會計]',
+            '技藝類[家政_插花烹飪]', '技藝類[其他]'
+        ];
+
+        let currentData = []; // 用於保存查詢的當前資料
+
+        async function searchData() {
+            const district = document.getElementById('district').value.trim();
+
+            try {
+                const response = await axios.get(`${BASE_URL}/data`, {
+                    params: { district: district || undefined }
+                });
+
+                currentData = response.data; // 保存當前數據到全局變量
+                renderTable(currentData);    // 渲染表格
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                alert('無法獲取資料，請檢查後端連線！');
+            }
+        }
+
+function applySorting(sortKey, sortOrder) {
+    if (currentData.length === 0) return; // 當無資料時跳過
+
+    // 排序資料
+    currentData.sort((a, b) => {
+        const valueA = parseInt(a[sortKey]) || 0;
+        const valueB = parseInt(b[sortKey]) || 0;
+        return sortOrder === 'asc' ? valueA - valueB : valueB - valueA;
+    });
+
+    renderTable(currentData); // 重新渲染表格
+}
+
+function renderTable(data) {
+    const tableBody = document.getElementById('data-table');
+    tableBody.innerHTML = ''; // 清空表格內容
+
+    data.forEach(row => {
+        const 文理類合計 = row['文理類合計'] || 0;
+        const 技藝類合計 = row['技藝類合計'] || 0;
+
+        const tableRow = `
+            <tr>
+                <td>${row['行政區別']}</td>
+                <td>${row['總計'] || 0}</td>
+                <td>${文理類合計}</td>
+                <td>${技藝類合計}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick='editData(${JSON.stringify(row)})'>編輯</button>
+                    <button class="btn btn-danger btn-sm" onclick='deleteData("${row['行政區別']}")'>刪除</button>
+                </td>
+            </tr>
+        `;
+        tableBody.innerHTML += tableRow;
+    });
+}
+
+function sortData() {
+    const sortKey = document.getElementById('sort-key').value;
+    const sortOrder = document.getElementById('sort-order').value;
+
+    if (!currentData || currentData.length === 0) {
+        alert('無數據可排序！');
+        return;
+    }
+
+    // 排序
+    currentData.sort((a, b) => {
+        const valueA = parseInt(a[sortKey]) || 0;
+        const valueB = parseInt(b[sortKey]) || 0;
+        return sortOrder === 'asc' ? valueA - valueB : valueB - valueA;
+    });
+
+    renderTable(currentData); // 重新渲染表格
+}
+
+        function openAddModal() {
+            const modal = new bootstrap.Modal(document.getElementById('addModal'));
+
+            const addOptions = document.getElementById('add-options');
+            addOptions.innerHTML = ''; // 清空內容
+
+            keys.forEach(key => {
+                addOptions.innerHTML += `
+                    <div class="mb-3">
+                        <label for="add-${key}" class="form-label">${key}</label>
+                        <input type="number" id="add-${key}" class="form-control" value="0">
+                    </div>
+                `;
+            });
+
+            modal.show();
+        }
+
+        async function saveAdd() {
+            const newRow = {
+                district: document.getElementById('add-行政區別').value.trim(),
+            };
+
+            if (!newRow.district) {
+                alert('行政區別為必填項！');
+                return;
+            }
+
+            let 文理類合計 = 0;
+            let 技藝類合計 = 0;
+
+            keys.forEach(key => {
+                const value = parseInt(document.getElementById(`add-${key}`).value) || 0;
+                newRow[key] = value;
+                if (key.startsWith('文理類')) {
+                    文理類合計 += value;
+                } else if (key.startsWith('技藝類')) {
+                    技藝類合計 += value;
+                }
+            });
+
+            newRow['總計'] = 文理類合計 + 技藝類合計;
+
+            try {
+                await axios.post(`${BASE_URL}/data`, newRow);
+                alert('資料新增成功！');
+                searchData(); // 更新後重新查詢
+
+                // 自動關閉模態框
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addModal'));
+                modal.hide();
+            } catch (error) {
+                console.error('Error adding data:', error);
+                alert('無法新增資料，請檢查後端連線！');
+            }
+        }
+
+        function editData(row) {
+        currentData = row;
+        const modal = new bootstrap.Modal(document.getElementById('dataModal'));
+
+        document.getElementById('總計').value = row.總計;
+
+        const editOptions = document.getElementById('edit-options');
+        editOptions.innerHTML = ''; // 清空內容
+
+        Object.keys(row).forEach(key => {
+            if (!['行政區別', '總計', '文理類合計', '技藝類合計'].includes(key)) {
+                editOptions.innerHTML += `
+                    <div class="mb-3">
+                        <label for="edit-${key}" class="form-label">${key}</label>
+                        <input type="number" id="edit-${key}" class="form-control" value="${row[key]}" onchange="updateTotals()">
+                    </div>
+                `;
+            }
+        });
+
+        modal.show();
+    }
+
+    function updateTotals() {
+        let 文理類合計 = 0;
+        let 技藝類合計 = 0;
+
+        keys.forEach(key => {
+            const input = document.getElementById(`edit-${key}`);
+            if (input) {
+                const value = parseInt(input.value) || 0;
+                if (key.startsWith('文理類')) {
+                    文理類合計 += value;
+                } else if (key.startsWith('技藝類')) {
+                    技藝類合計 += value;
+                }
+            }
+        });
+
+        document.getElementById('總計').value = 文理類合計 + 技藝類合計;
+        currentData['文理類合計'] = 文理類合計;
+        currentData['技藝類合計'] = 技藝類合計;
+    }
+
+    async function saveEdit() {
+        const updatedData = {
+            district: currentData['行政區別'],
+            總計: parseInt(document.getElementById('總計').value) || 0,
+        };
+
+        keys.forEach(key => {
+            const input = document.getElementById(`edit-${key}`);
+            if (input) {
+                updatedData[key] = parseInt(input.value) || 0;
+            }
+        });
+
+        try {
+            await axios.put(`${BASE_URL}/data`, { updates: [updatedData] });
+            alert('資料更新成功！');
+            searchData();
+
+            const modal = bootstrap.Modal.getInstance(document.getElementById('dataModal'));
+            modal.hide();
+        } catch (error) {
+            console.error('Error updating data:', error);
+            alert('無法更新資料，請檢查後端連線！');
+        }
+    }
+
+
+    async function deleteData(district) {
+        if (!confirm(`確定要刪除行政區別為 ${district} 的資料嗎？`)) {
+            return;
+        }
+
+        try {
+            await axios.delete(`${BASE_URL}/data`, { data: { district } });
+            alert('資料刪除成功！');
+            searchData();
+        } catch (error) {
+            console.error('Error deleting data:', error);
+            alert('無法刪除資料，請檢查後端連線！');
+        }
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
