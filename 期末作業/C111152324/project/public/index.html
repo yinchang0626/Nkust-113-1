@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺灣豬證明標章商家資料</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>臺灣豬證明標章商家資料</h1>
+
+    <!-- 搜尋與篩選 -->
+    <div class="controls">
+        <input type="text" id="search-input" placeholder="輸入名稱或地址">
+        <button id="search-button">搜尋</button>
+        <select id="sort-select">
+            <option value="asc">最早營業時間排序</option>
+            <option value="desc">最晚關店時間排序</option>
+        </select>
+        <select id="filter-select">
+            <option value="">所有區域</option>
+            <option value="北">北區</option>
+            <option value="中">中區</option>
+            <option value="南">南區</option>
+            <option value="東">東區</option>
+        </select>
+    </div>
+
+    <!-- 資料表 -->
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>名稱</th>
+                <th>地址</th>
+                <th>營業時間</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- 圖表 -->
+    <div class="chart-wrapper">
+        <canvas id="chart"></canvas>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+mysql -h database-1.c54qu48sokg2.ap-northeast-3.rds.amazonaws.com -P 3306 -u admin -p
+a12345678
+
+
+CREATE TABLE IF NOT EXISTS `my_table` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY COMMENT '流水號',
+    `case_code` VARCHAR(50) NOT NULL COMMENT '案件代號',
+    `market_name` VARCHAR(255) NOT NULL COMMENT '店家名稱',
+    `addr` TEXT COMMENT '地址',
+    `business_week` TEXT COMMENT '營業週',
+    `context` TEXT COMMENT '店家介紹或說明',
+    `ValidDate` DATETIME COMMENT '有效日期',
+    `Latitude` DOUBLE COMMENT '緯度',
+    `Lontitude` DOUBLE COMMENT '經度',
+    `type` VARCHAR(50) COMMENT '店家類型(餐飲、販售、工廠與製造等)',
+    `badge_code` VARCHAR(50) COMMENT '徽章代號',
+    `business_hours` VARCHAR(10) COMMENT '營業起始時間',
+    `business_hurs_end` VARCHAR(10) COMMENT '營業結束時間',
+    `last_edited_date` DATETIME COMMENT '最後編輯時間'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='儲存JSON資料表';
+
+
+USE a1;
+
+SELECT * FROM my_table;
