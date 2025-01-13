@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人口統計資料 - 歷年趨勢</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">年齡區間分布</a></li>
+        <li><a href="trend.html">歷月趨勢</a></li>
+    </ul>
+</nav>
+
+<h1>人口統計資料109年1月-10月 - 歷月趨勢</h1>
+
+<div class="layout-container">
+    <!-- 左側勾選框 -->
+    <div class="sidebar">
+        <h2>選擇地區：</h2>
+        <div id="regionCheckboxes">
+            <label><input type="checkbox" value="臺北市" checked> 臺北市</label>
+            <label><input type="checkbox" value="新北市"> 新北市</label>
+            <label><input type="checkbox" value="桃園市"> 桃園市</label>
+            <label><input type="checkbox" value="臺中市"> 臺中市</label>
+            <label><input type="checkbox" value="臺南市"> 臺南市</label>
+            <label><input type="checkbox" value="高雄市"> 高雄市</label>
+            <label><input type="checkbox" value="宜蘭縣"> 宜蘭縣</label>
+            <label><input type="checkbox" value="新竹縣"> 新竹縣</label>
+            <label><input type="checkbox" value="苗栗縣"> 苗栗縣</label>
+            <label><input type="checkbox" value="彰化縣"> 彰化縣</label>
+            <label><input type="checkbox" value="南投縣"> 南投縣</label>
+            <label><input type="checkbox" value="雲林縣"> 雲林縣</label>
+            <label><input type="checkbox" value="嘉義縣"> 嘉義縣</label>
+            <label><input type="checkbox" value="屏東縣"> 屏東縣</label>
+            <label><input type="checkbox" value="臺東縣"> 臺東縣</label>
+            <label><input type="checkbox" value="花蓮縣"> 花蓮縣</label>
+            <label><input type="checkbox" value="澎湖縣"> 澎湖縣</label>
+            <label><input type="checkbox" value="基隆市"> 基隆市</label>
+            <label><input type="checkbox" value="新竹市"> 新竹市</label>
+            <label><input type="checkbox" value="嘉義市"> 嘉義市</label>
+            <label><input type="checkbox" value="金門縣"> 金門縣</label>
+            <label><input type="checkbox" value="連江縣"> 連江縣</label>
+            <label><input type="checkbox" value="區域別總計"> 區域別總計</label>
+        </div>
+    </div>
+
+    <!-- 右側圖表 -->
+    <div class=" chart-container">
+        <canvas id="trendChart"></canvas>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    let trendChart;
+
+    // 初始化折線圖
+    function initializeChart(labels, datasets) {
+        if (trendChart) {
+            trendChart.destroy(); // 如果圖表已存在，先銷毀
+        }
+
+        trendChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: datasets
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: '歷年人口變化趨勢'
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: '年份'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: '人口數'
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    // 請求 API 資料並初始化圖表
+    async function fetchData(regions) {
+        const datasets = [];
+        let labels = [];
+
+        for (const region of regions) {
+            const response = await fetch(`/api/population/trend/${region}`);
+            const data = await response.json();
+
+            if (labels.length === 0) {
+                labels = Object.keys(data);
+            }
+
+            const values = Object.values(data);
+
+            datasets.push({
+                label: region,
+                data: values,
+                borderColor: getRandomColor(),
+                fill: false,
+                tension: 0.1
+            });
+        }
+
+        initializeChart(labels, datasets);
+    }
+
+    // 取得隨機顏色
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // 初始載入
+    fetchData(['臺北市']);
+
+    // 當勾選地區時更新圖表
+    document.getElementById('regionCheckboxes').addEventListener('change', function () {
+        const checkboxes = document.querySelectorAll('#regionCheckboxes input[type="checkbox"]');
+        const selectedRegions = Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        fetchData(selectedRegions);
+    });
+</script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .layout-container {
+        display: flex;
+        height: 90vh;
+    }
+
+    .sidebar {
+        width: 20%;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-right: 1px solid #ccc;
+        overflow-y: auto;
+    }
+
+    .chart-container {
+        width: 80%;
+        padding: 20px;
+        position: relative;
+    }
+
+    .chart-container canvas {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+</body>
+</html>

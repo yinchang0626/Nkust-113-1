@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人口統計資料 - 年齡區間分布</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 引入 chartjs-plugin-datalabels -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+
+<!-- 導航列 -->
+<nav>
+    <ul>
+        <li><a href="index.html">年齡區間分布</a></li>
+        <li><a href="trend.html">歷月趨勢</a></li>
+    </ul>
+</nav>
+
+<h1>人口統計資料109年1月-10月 - 年齡區間分布</h1>
+
+<label for="regionSelect">選擇地區：</label>
+<select id="regionSelect">
+    <option value="臺北市">臺北市</option>
+    <option value="新北市">新北市</option>
+    <option value="桃園市">桃園市</option>
+    <option value="臺中市">臺中市</option>
+    <option value="臺南市">臺南市</option>
+    <option value="高雄市">高雄市</option>
+    <option value="宜蘭縣">宜蘭縣</option>
+    <option value="新竹縣">新竹縣</option>
+    <option value="苗栗縣">苗栗縣</option>
+    <option value="彰化縣">彰化縣</option>
+    <option value="南投縣">南投縣</option>
+    <option value="雲林縣">雲林縣</option>
+    <option value="嘉義縣">嘉義縣</option>
+    <option value="屏東縣">屏東縣</option>
+    <option value="臺東縣">臺東縣</option>
+    <option value="花蓮縣">花蓮縣</option>
+    <option value="澎湖縣">澎湖縣</option>
+    <option value="基隆市">基隆市</option>
+    <option value="新竹市">新竹市</option>
+    <option value="嘉義市">嘉義市</option>
+    <option value="金門縣">金門縣</option>
+    <option value="連江縣">連江縣</option>
+    <option value="區域別總計">區域別總計</option>
+</select>
+
+<label for="monthSelect">選擇月份：</label>
+<select id="monthSelect">
+    <option value="1">1 月</option>
+    <option value="2">2 月</option>
+    <option value="3">3 月</option>
+    <option value="4">4 月</option>
+    <option value="5">5 月</option>
+    <option value="6">6 月</option>
+    <option value="7">7 月</option>
+    <option value="8">8 月</option>
+    <option value="9">9 月</option>
+    <option value="10">10 月</option>
+</select>
+
+<div class="chart-container">
+    <canvas id="ageGroupChart"></canvas>
+</div>
+
+<script>
+    const ctx = document.getElementById('ageGroupChart').getContext('2d');
+
+    let ageGroupChart;
+
+    // 初始化圖表
+    function initializeChart(labels, data) {
+        if (ageGroupChart) {
+            ageGroupChart.destroy(); // 如果圖表已存在，先銷毀
+        }
+
+        ageGroupChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: data,
+                    backgroundColor: [
+                        '#FF6384', '#36A2EB', '#FFCE56', '#66BB6A', '#FFA726',
+                        '#AB47BC', '#29B6F6', '#EF5350', '#8D6E63', '#D4E157', '#FF7043'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: '年齡區間人口分布圖'
+                    },
+                    datalabels: {
+                        formatter: (value, context) => {
+                            const total = context.chart.data.datasets[0].data.reduce((sum, val) => sum + val, 0);
+                            const percentage = ((value / total) * 100).toFixed(2) + '%';
+                            return percentage;
+                        },
+                        color: '#000',
+                        font: {
+                            size: 12,
+                            weight: 'bold'
+                        },
+                        anchor: 'end',
+                        align: 'start',
+                        offset: 10,
+                        clip: false
+                    }
+                }
+            },
+            plugins: [ChartDataLabels]
+        });
+    }
+
+    // 請求 API 資料並初始化圖表
+    function fetchData(region, month) {
+        fetch(`/api/population/${region}/${month}`)
+            .then(response => response.json())
+            .then(data => {
+                const labels = Object.keys(data);
+                const values = Object.values(data);
+                initializeChart(labels, values);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // 初始載入
+    fetchData('臺北市', 1);
+
+    // 當選擇地區或月份時更新圖表
+    document.getElementById('regionSelect').addEventListener('change', function () {
+        const region = document.getElementById('regionSelect').value;
+        const month = document.getElementById('monthSelect').value;
+        fetchData(region, month);
+    });
+
+    document.getElementById('monthSelect').addEventListener('change', function () {
+        const region = document.getElementById('regionSelect').value;
+        const month = document.getElementById('monthSelect').value;
+        fetchData(region, month);
+    });
+</script>
+
+</body>
+</html>
